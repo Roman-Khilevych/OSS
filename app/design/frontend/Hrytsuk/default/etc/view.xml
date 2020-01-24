@@ -5,4 +5,12 @@
         <var name="nav">dots</var>
         <var name="loop">false</var>
     </var>
+    <media>
+        <images module="Magento_Catalog">
+            <image id="category_page_grid" type="small_image">
+                <width>340</width>
+                <height>600</height>
+            </image>
+        </images>
+    </media>
 </view>

@@ -5,5 +5,5 @@ Magento Theme Two
 -->
 <theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
     <title>Hrytsuk Theme2</title>
-    <parent>Magento/blank</parent>
+    <parent>Hryts/default</parent>
 </theme>
