@@ -1,0 +1,14 @@
+<!--
+/**
+ * Yuri Chlek
+ *
+ * Smile Magento school
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>ChleckHomework2 myTheme</title>
+    <media>
+        <preview_image>media/logo.jpg</preview_image>
+    </media>
+    <parent>ChleckHomework/walkebeyond</parent>
+</theme>
