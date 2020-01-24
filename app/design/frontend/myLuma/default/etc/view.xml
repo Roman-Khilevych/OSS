@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+    <media>
+        <images module="Magento_Catalog">
+            <image id="category_page_grid" type="small_image">
+                <width>100</width>
+                <height>120</height>
+            </image>
+            <image id="category_page_list" type="small_image">
+                <width>400</width>
+                <height>500</height>
+            </image>
+            <image id="product_page_image_large" type="image"/>
+            <image id="product_page_image_medium" type="image">
+                <width>500</width>
+                <height>500</height>
+            </image>
+        </images>
+    </media>
+    <vars module="Magento_Catalog">
+
+        <var name="gallery">
+            <var name="loop">false</var>
+            <var name="navtype">thumbs</var>
+            <var name="transition">
+                <var name="effect">slide</var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
+                <var name="duration">800</var> <!-- Sets transition duration in ms -->
+            </var>
+            <var name="fullscreen">
+                <var name="arrows">false</var> <!-- Turn on/off arrows on the sides preview in fullscreen (true/false/null) -->
+                <var name="navdir">vertical</var> <!--Sliding direction of thumbnails in fullscreen(horizontal/vertical)  -->
+                <var name="navarrows">true</var> <!-- Turn on/off on the thumbs navigation sides arrows(true/false) -->
+                <var name="navtype">thumbs</var> <!-- Sliding type of thumbnails (slides/thumbs) -->
+            </var>
+        </var>
+
+        <var name="magnifier">
+            <var name="fullscreenzoom">10</var>  <!-- Zoom for fullscreen (integer)-->
+            <var name="width">800</var> <!-- Width of magnifier block -->
+            <var name="height">800</var> <!-- Height of magnifier block -->
+            <var name="enabled">true</var> <!-- Turn on/off magnifier (true/false) -->
+        </var>
+    </vars>
+</view>
