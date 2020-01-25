@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+      layout="2columns-left-edition">
+    <body>
+        <attribute name="class" value="page-layout-2columns-left" />
+        <referenceBlock name="div.sidebar.main.edition">
+            <block class="Magento\Framework\View\Element\Text">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[Hello World]]></argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+       <!-- <move element="header.container" destination="page.wrapper" before="before.body.end"/>
+        <move element="footer-container" destination="page.wrapper" before="main.content"/>-->
+    </body>
+</page>
