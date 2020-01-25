@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/main.css"/>
+        <css src="Magento_Theme::css/main2.css"/>
+        <!--<script src="requirejs/require.js"/>
+        <script src="mage/polyfill.js"/>-->
+    </head>
+</page>
