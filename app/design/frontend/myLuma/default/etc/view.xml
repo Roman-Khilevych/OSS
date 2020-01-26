@@ -22,21 +22,21 @@
             <var name="loop">false</var>
             <var name="navtype">thumbs</var>
             <var name="transition">
-                <var name="effect">slide</var> <!-- Sets transition effect for slides changing (slide/crossfade/dissolve) -->
-                <var name="duration">800</var> <!-- Sets transition duration in ms -->
+                <var name="effect">slide</var>
+                <var name="duration">800</var>
             </var>
             <var name="fullscreen">
-                <var name="arrows">false</var> <!-- Turn on/off arrows on the sides preview in fullscreen (true/false/null) -->
-                <var name="navdir">vertical</var> <!--Sliding direction of thumbnails in fullscreen(horizontal/vertical)  -->
-                <var name="navarrows">true</var> <!-- Turn on/off on the thumbs navigation sides arrows(true/false) -->
-                <var name="navtype">thumbs</var> <!-- Sliding type of thumbnails (slides/thumbs) -->
+                <var name="arrows">false</var>
+                <var name="navdir">vertical</var>
+                <var name="navarrows">true</var>
+                <var name="navtype">thumbs</var>
             </var>
         </var>
         <var name="magnifier">
-            <var name="fullscreenzoom">10</var>  <!-- Zoom for fullscreen (integer)-->
-            <var name="width">800</var> <!-- Width of magnifier block -->
-            <var name="height">800</var> <!-- Height of magnifier block -->
-            <var name="enabled">true</var> <!-- Turn on/off magnifier (true/false) -->
+            <var name="fullscreenzoom">10</var>
+            <var name="width">800</var>
+            <var name="height">800</var>
+            <var name="enabled">true</var>
         </var>
     </vars>
 </view>
