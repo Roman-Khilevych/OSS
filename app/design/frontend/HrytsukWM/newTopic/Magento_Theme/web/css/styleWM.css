@@ -1,0 +1,19 @@
+.somConteiner{
+    font-size: 46px;
+    color: brown;
+    text-align: center;
+    padding: 8px 5px;
+    background-color: gainsboro;
+}
+.newContain{
+    font-size: 36px;
+    color: white;
+    text-align: left;
+    background-color: grey;
+}
+.blockHead{
+    text-align: center;
+    font-size: 28px;
+    color: beige;
+    background-color: #0f5293;
+}
