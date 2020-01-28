@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left-add" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-layout-2columns-left"/> <!--добавление каласса-->
+        <referenceContainer name="my.container"> <!--подключитсья к контейнеру-->
+            <attribute name="class" value="page-layout-2columns-left"/> <!--добавление каласса-->
+            <!-- Force container to render -->
+            <!--<block class="Magento\Framework\View\Element\Text"> &lt;!&ndash;создание блока&ndash;&gt;
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[&nbsp;]]></argument>
+                </arguments>
+            </block>-->
+        </referenceContainer>
+        <referenceContainer name="content">
+            <referenceBlock name="my.block" remove="true"/>
+        </referenceContainer>
+        <!--<move element="header.container" destination="page.wrapper" before="before.body.end"/>--> <!--перемещает блок, контейнер, element что перемещаем, destination куда перемещаем before перед after после-->
+        <!--<move element="footer-container" destination="page.wrapper" before="main.content"/>-->
+    </body>
+</page>

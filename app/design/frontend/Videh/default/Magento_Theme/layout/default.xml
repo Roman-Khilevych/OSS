@@ -1,0 +1,19 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Text"> <!--создание блока-->
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[dsrfgdffffsdsadsdsdsd]]></argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="my.block" template="Magento_Theme::my/myblock.phtml">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">sku demo_link</argument>
+                    <argument name="at_call" xsi:type="string">getDemoLink</argument>
+                    <argument name="at_code" xsi:type="string">demo_link</argument>
+                    <argument name="at_label" xsi:type="string">Demo Link</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
