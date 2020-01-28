@@ -21,7 +21,7 @@
                 </block>
             </container>
         </referenceContainer>
-        <referenceContainer>
+        <referenceContainer name="header.panel">
             <container htmlTag="div" label="elementso" name="somia.container" htmlClass="somConteiner">
                 <block class="Magento\Framework\View\Element\Text">
                     <arguments>
