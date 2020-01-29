@@ -22,22 +22,6 @@
             </container>
         </referenceContainer>
         <referenceContainer name="header.panel">
-            <container htmlTag="div" label="elementso" name="somia.container" htmlClass="somConteiner">
-                <block class="Magento\Framework\View\Element\Text">
-                    <arguments>
-                        <argument name="text" xsi:type="string"><![CDATA[I Helo Smail]]></argument>
-                    </arguments>
-                </block>
-            </container>
-          <container htmlTag="div" htmlClass="newContain" name="new.containers">
-              <block class="Magento\Framework\View\Element\Text">
-                  <arguments>
-                      <argument name="text" xsi:type="string"><![CDATA[Block Two New Container]]></argument>
-                  </arguments>
-              </block>
-          </container>
-        </referenceContainer>
-        <referenceContainer name="header.panel" >
             <container htmlTag="div" htmlClass="blockHead" before="some.container" as="blocHead">
                 <block class="Magento\Framework\View\Element\Text">
                     <arguments >
@@ -46,5 +30,8 @@
                 </block>
             </container>
         </referenceContainer>
+        <referenceContainer name="contents" remove="true" />
+        <referenceBlock name="product_list_toolbar"  remove="true" />
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
     </body>
 </page>
