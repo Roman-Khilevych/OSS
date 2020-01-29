@@ -5,4 +5,4 @@
  * @copyright 2020 Nikolaichuk
  */
 use \Magento\Framework\Component\ComponentRegistrar;
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/childTheme/default', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/layoutTheme/default', __DIR__);
