@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page>
+    <body>
+        <referenceContainer name="content">
+            <container name="my.new.container" htmlTag="div" htmlClass="chlek-class">
+                <block class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[Hello]]></argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

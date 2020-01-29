@@ -1,0 +1,19 @@
+body {
+    background-color: lightgrey;
+}
+
+.chlek-class {
+    background-color: green;
+    font-size: 24px;
+    color: red;
+    text-align: center;
+}
+
+.chlek-class2 {
+    background-color: grey;
+    color: white;
+}
+
+.some-container{
+    background-color: red;
+}

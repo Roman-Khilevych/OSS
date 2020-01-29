@@ -13,4 +13,6 @@
        <!-- <move element="header.container" destination="page.wrapper" before="before.body.end"/>
         <move element="footer-container" destination="page.wrapper" before="main.content"/>-->
     </body>
+    <referenceBlock name="product_list_toolbar" remove="true"/>
+    <referenceBlock name="catalog.compare.sidebar" remove="true"/>
 </page>
