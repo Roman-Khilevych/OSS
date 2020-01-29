@@ -1,6 +1,7 @@
 <?php
 /*
  *Hrytsuk theme one
+ *
  *@author Hrytsuk  vgritsukm@gmail.com
  *@copyright 2020 zevsi
  * */
