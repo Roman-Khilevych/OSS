@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2column-hrytsuk-left-wm" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="my-new-body-class-hrytsuk"/>
+        <referenceContainer name="header.panel">
+            <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container">
+                <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[I Magentooo]]></argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text" ifconfig="section/group/field">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[Activate field]]></argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.panel">
+            <container htmlTag="div" htmlClass="blockHead" before="some.container" as="blocHead">
+                <block class="Magento\Framework\View\Element\Text">
+                    <arguments >
+                        <argument  name="text" xsi:type="string"><![CDATA[Header Block Top]]></argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="contents" remove="true" />
+        <referenceBlock name="product_list_toolbar"  remove="true" />
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+    </body>
+</page>
