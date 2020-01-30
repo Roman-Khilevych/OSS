@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <container name="some.container-one" htmlTag="div" htmlClass="class-some">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getSku</argument>
+                    <argument name="at_code" xsi:type="string">sku</argument>
+                    <argument name="css_class" xsi:type="string">sku</argument>
+                </arguments>
+            </block>
+        </container>
+    </referenceContainer>
+</body>
+</page>

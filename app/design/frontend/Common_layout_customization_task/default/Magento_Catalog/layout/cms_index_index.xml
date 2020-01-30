@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="my-new-body-class"/>
+        <attribute name="data-role" value="my-body-role"/>
+        <attribute name="id" value="my-new-body-id"/>
+        <attribute name="style" value="opacity:1;"/>
+        <referenceContainer name="some.container">
+            <container name="some_paragr" htmlTag="p" htmlClass="class-some">
+                <block name="some_id_block" class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[someText]]></argument>
+                        <!-- Modified block argument -->
+                        <argument name="label" xsi:type="string">New Block Label</argument>
+                        <!-- Newly added block argument -->
+                        <argument name="custom_label" xsi:type="string">Custom Block Label</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="css_class" xsi:type="string">my-new-block-class</argument>
+                <argument name="css_class" xsi:type="string">product</argument>
+                <argument name="add_base_attribute" xsi:type="string">itemprop="name"</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="some.container">
+            <container name="test-container" htmlClass="my-template" htmlTag="div">
+                <block name="test-block" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::product/my_template.phtml"/>
+
+            </container>
+        </referenceContainer>
+    </body>
+</page>

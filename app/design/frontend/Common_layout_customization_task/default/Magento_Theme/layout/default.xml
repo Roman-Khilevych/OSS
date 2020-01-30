@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <container name="welcome" htmlTag="div" htmlCalss="class-some">
+            <container name="some.container" htmlTag="div" htmlClass="class-some">
                 <block class="Magento\Framework\View\Element\Text">
                     <arguments>
                         <argument name="text" xsi:type="string"><![CDATA[WELCOME TO HELL]]></argument>
