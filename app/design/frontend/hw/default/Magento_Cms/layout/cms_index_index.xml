@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="welcome">
+            <container name="test-container" htmlClass="my-template" htmlTag="div">
+                <block name="test-block" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::product/my_template.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
