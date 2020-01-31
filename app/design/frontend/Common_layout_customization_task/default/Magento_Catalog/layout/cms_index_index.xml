@@ -28,7 +28,6 @@
         <referenceContainer name="some.container">
             <container name="test-container" htmlClass="my-template" htmlTag="div">
                 <block name="test-block" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::product/my_template.phtml"/>
-
             </container>
         </referenceContainer>
     </body>
