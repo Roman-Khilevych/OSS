@@ -2,7 +2,17 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::fou/newcms.phtml" />
+            <block name="home-bloc" class="Magento\Framework\View\Element\Template" template="Magento_Cms::hove/home.phtml" >
+                <block name="home.child.bloc" class="Magento\Framework\View\Element\Template" template="Magento_Cms::hove/home_two.phtml" />
+                <arguments>
+                    <argument name="strings"  translate="true" xsi:type="string">New string</argument>
+                    <argument name="bul-argument" xsi:type="boolean">true</argument>
+                    <argument name="string-argument" xsi:type="string">String argument if true</argument>
+                    <argument name="url-check" xsi:type="url" path="checkout/cart/index" />
+                    <argument name="img-name" xsi:type="string">logos.png</argument>
+                    <argument name="img-alt" xsi:type="string">logotip</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
