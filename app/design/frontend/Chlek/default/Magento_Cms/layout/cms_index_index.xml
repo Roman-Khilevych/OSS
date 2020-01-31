@@ -5,6 +5,18 @@
             <container name="my.new.second.container" htmlTag="div" htmlClass="chlek-class3">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::my-template.phtml"/>
             </container>
+            <container name="my.container.translate" htmlClass="translate-test" htmlTag="p">
+                <block name="translate.test" class="Magento\Framework\View\Element\Template" template="Magento_Cms::my-theme-2.phtml">
+                    <block name="translate.test2" class="Magento\Framework\View\Element\Template" template="Magento_Cms::new-template.phtml"/>
+                    <arguments>
+                        <argument name="argument_string" xsi:type="string" translate="true">Argument string.</argument>
+                        <argument name="is_active" xsi:type="boolean">true</argument>
+                        <argument name="has_link" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="image_name" xsi:type="string" >images.jpeg</argument>
+                        <argument name="image_alt" xsi:type="string" >alt</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
     </body>
 </page>

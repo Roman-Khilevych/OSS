@@ -1,0 +1,36 @@
+<?php
+/**
+*Chlek default.
+*@author Yuri Chlek yurichhlek@gmail.com
+*@copyright 2020 Chlek
+ */
+?>
+
+<?php
+$argumentString = $block->hasData('argument_string') ?  $block->getData('argument_string')  : '';
+$argumentBolean = $block->hasData('is_active') ?  $block->getData('is_active') : '';
+$argumentLink = $block->hasData('has_link') ?  $block->getData('has_link') : '';
+$argumentImageName = $block->hasData('image_name') ?  $block->getData('image_name') : '';
+$argumentImageAlt = $block->hasData('image_alt') ?  $block->getData('image_alt') : '';
+?>
+
+<?= __("Hello! My name is Yurii)") ?>
+<br/>
+<!--Виводимо блок в середині другого блоку з темплейтом.-->
+<?= $block->getChildHtml('translate.test2')?>
+
+<!--Виводимо аргумент.-->
+<?= $block->hasData('argument_string') ? $block->getData ('argument_string') : '' ?>
+<?php if ($block->hasData('argument_string')) : ?>
+  <?= $argumentString?>
+<?php endif; ?>
+<?php if ($block->hasData('is_active')) : ?>
+    <?= $argumentBolean?>
+<?php endif; ?>
+<?php if ($block->hasData('has_link')) : ?>
+    <a href="<?=$argumentLink?>">Link</a>
+<?php endif; ?>
+<img src="<?= $block->getViewFileUrl('images/images.jpeg') ?>" alt="<?=__('alt')?>">
+<?php if($argumentImageName) : ?>
+<img src="<?= $block->getViewFileUrl('images/'.$argumentImageName) ?>" alt="<?=__($argumentImageAlt)?>">
+<?php endif; ?>
