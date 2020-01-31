@@ -1,5 +1,17 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/my-banner.css"/>
+    </head>
     <body>
+        <referenceContainer name="after.body.start">
+            <container name="main.banner" htmlTag="div" htmlClass="main-banner">
+                <block class="Magento\Framework\View\Element\Template" name="banners" template="Magento_Theme::banners/banners.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.container">
+            <referenceBlock name="navigation.sections"></referenceBlock>
+        </referenceContainer>
+        <move element="header.container" destination="top.container" before="-"/>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Text"> <!--создание блока-->
                 <arguments>

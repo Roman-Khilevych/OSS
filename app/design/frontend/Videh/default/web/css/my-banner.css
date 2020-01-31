@@ -1,0 +1,29 @@
+.main-banner {
+    max-height: 150px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid white;
+    box-shadow: 0 0 5px black;
+}
+@media all and (min-width: 768px),print {
+    .nav-sections-item-content>.navigation{
+        background: none;
+    }
+}
+
+.main-banner img{
+    width: 100%;
+}
+.main-banner h2{
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-shadow: 0 0 10px black;
+}

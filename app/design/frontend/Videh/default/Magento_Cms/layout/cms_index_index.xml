@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <!--<block class="Magento\Framework\View\Element\Text"> &lt;!&ndash;создание блока&ndash;&gt;
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[dsrfgdffffsdsadsdsdsd]]></argument>
+                </arguments>
+            </block>-->
+            <block class="Magento\Framework\View\Element\Template" name="other.home.page" template="Magento_Cms::home_page/other_home.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="my.home.page" template="Magento_Cms::home_page/home.phtml">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">sku demo_link</argument>
+                        <argument name="at_call" xsi:type="string">getDemoLink</argument>
+                        <argument name="at_code" xsi:type="string">demo_link</argument>
+                        <argument name="at_label" xsi:type="string">Demo Link</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="arguments.test.page" template="Magento_Cms::home_page/arguments.phtml">
+                    <arguments>
+                        <argument name="argument_string" xsi:type="string" translate="true">demo text</argument>
+                        <argument name="is_active" xsi:type="boolean">true</argument>
+                        <argument name="shopping_cart_url" xsi:type="url" path="checkout/cart/index" />
+                        <argument name="shopping_cart_text" xsi:type="string" translate="true">Cart</argument>
+                        <argument name="at_code" xsi:type="string">demo_link</argument>
+                        <argument name="at_label" xsi:type="string">Demo Link</argument>
+                        <argument name="my_image_name" xsi:type="string">23227.jpg</argument>
+                        <argument name="my_image_alt" xsi:type="string">Banner</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

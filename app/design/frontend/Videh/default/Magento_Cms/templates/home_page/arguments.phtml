@@ -1,0 +1,24 @@
+<?php
+/**
+ * Arguments template
+ *
+ * @author Viktor Dehtiarov <videh@smile.fr>
+ * @copyright 2020 Videh
+ */
+?>
+
+<p><?= $block->hasData('argument_string') ? $block->escapeHtml($block->getData('argument_string')) : ''; ?></p>
+<?php if ($block->hasData('is_active') && $block->getData('is_active')) : ?>
+    <div class="boolean-content">
+        <h2><?= $block->escapeHtml(__('Boolean title block')); ?></h2>
+        <p>
+            <a href="<?= $block->hasData('shopping_cart_url') ? $block->getData('shopping_cart_url') : ''; ?>">
+                <?= $block->hasData('shopping_cart_text') ? $block->escapeHtml($block->getData('shopping_cart_text')) : ''; ?>
+            </a>
+        </p>
+        <p><img src="<?= $block->getViewFileUrl('images/11111.jpg'); ?>" alt="" /></p>
+        <?php if ($block->hasData('my_image_name') && $block->getData('my_image_name')): ?>
+            <p><img src="<?= $block->getViewFileUrl('images/' . $block->getData('my_image_name')); ?>" alt="<?= $block->hasData('my_image_alt') ? $block->escapeHtmlAttr($block->escapeHtml($block->getData('my_image_alt'))) : ''; ?>" /></p>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
