@@ -1,0 +1,32 @@
+<?php
+/*
+ * Vlromaniuk. Learn Templates
+ *
+ *@author vlromaniuk  vlad96r@protonmail.com
+ *@copyright 2020 vlromaniuk
+ * */
+?>
+
+<?php
+/* variables */
+$link = $block->hasData('hasLink') ? ($block->getData('hasLink')) : '';
+$ima = $block->getViewFileUrl('images');
+$arg3 = $block->hasData('hasImg') ? $block->getData('hasImg') : "";
+$arg4 = $block->hasData('hasImg') ? $block->getData('hasImg') : "";
+$arg5 = $block->hasData('hasImgAlt') ? $block->getData('hasImgAlt') : "";
+?>
+
+<?= __("Some Text")?>
+<?= $block->getChildHtml('new.template') ?>
+<?= $block->hasData('translate') ? $block->getData('translate') : '' ?>
+<?php if ($block->hasData('hasBool') && ($block->getData('hasBool'))) : ?>
+    <h2><?= __('is True') ?></h2>
+<?php endif;?>
+
+<?php if ($link) : ?>
+    <a href="<?= $link ?>"><?=__("Link")?></a>
+<?php endif;?>
+<br>
+<?php if ($arg3) : ?>
+    <img src="<?= $block->getViewFileUrl('images/' . $arg4); ?>" alt="<?= $arg5 ?>">
+<?php endif;?>
