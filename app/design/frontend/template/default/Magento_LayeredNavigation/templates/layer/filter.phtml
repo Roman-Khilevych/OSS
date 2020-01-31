@@ -1,0 +1,38 @@
+<?php
+/*
+ * Template default layer filter template.
+ *
+ *@author vlromaniuk  vlad96r@protonmail.com
+ *@copyright 2020 vlromaniuk
+ * */
+?>
+<ol class="items">
+    <?= __('UP FILTER')?>
+    <?php foreach ($filterItems as $filterItem) : ?>
+        <li class="item">
+            <?php if ($filterItem->getCount() > 0) : ?>
+                <a href="<?= $block->escapeUrl($filterItem->getUrl()) ?>">
+                    <?= /* @noEscape */ $filterItem->getLabel() ?>
+                    <?php if ($this->helper(\Magento\Catalog\Helper\Data::class)->shouldDisplayProductCountOnLayer()) : ?>
+                        <span class="count"><?= /* @noEscape */ (int)$filterItem->getCount() ?><span class="filter-count-label">
+                            <?php if ($filterItem->getCount() == 1) :
+                                ?> <?= $block->escapeHtml(__('item')) ?><?php
+                            else :
+                                ?> <?= $block->escapeHtml(__('item')) ?><?php
+                            endif;?></span></span>
+                    <?php endif; ?>
+                </a>
+            <?php else :?>
+                <?= /* @noEscape */ $filterItem->getLabel() ?>
+                <?php if ($this->helper(\Magento\Catalog\Helper\Data::class)->shouldDisplayProductCountOnLayer()) : ?>
+                    <span class="count"><?= /* @noEscape */ (int)$filterItem->getCount() ?><span class="filter-count-label">
+                        <?php if ($filterItem->getCount() == 1) :
+                            ?><?= $block->escapeHtml(__('items')) ?><?php
+                        else :
+                            ?><?= $block->escapeHtml(__('items')) ?><?php
+                        endif;?></span></span>
+                <?php endif; ?>
+            <?php endif; ?>
+        </li>
+    <?php endforeach ?>
+</ol>

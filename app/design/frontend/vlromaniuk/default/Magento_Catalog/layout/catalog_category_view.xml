@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2column-empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-layout-2columns-left"/>
+        <referenceContainer name="div.sidebar.main-test">
+            <!-- Force container to render -->
+            <block class="Magento\Framework\View\Element\Text">
+                <arguments>
+                    <argument name="text" xsi:type="string">hello pi</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <move element="header.container" destination="page.wrapper" before="before.body.end"/>
+        <move element="footer-container" destination="page.wrapper" before="main.content"/>
+        <move element="page.top" destination="page.wrapper" after="header.container"/>
+    </body>
+</page>
