@@ -12,6 +12,18 @@
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="firstTemplate" template="Magento_Cms::file.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="secondTemplate" template="Magento_Cms::secondTemplate.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="childTemplate" template="Magento_Cms::childTemplate.phtml">
+                    <arguments>
+                        <argument name="argument-string" xsi:type="string" translate="true">Argument string</argument>
+                        <argument name="arg-string" xsi:type="string" translate="true">Result true</argument>
+                        <argument name="arg-boolean" xsi:type="boolean">true</argument>
+                        <argument name="arg-url" xsi:type="url" path="gear/bags.html"></argument>
+                        <argument name="image" xsi:type="string" translate="true">logo.png</argument>
+                        <argument name="alt" xsi:type="string" translate="true">logo img</argument>
+                    </arguments>
+                </block>
+            </block>
         </referenceContainer>
     </body>
 </page>

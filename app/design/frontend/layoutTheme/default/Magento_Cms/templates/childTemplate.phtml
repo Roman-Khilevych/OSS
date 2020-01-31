@@ -1,0 +1,24 @@
+<?php
+$argString = $block->hasData('arg-string') ? $block->getData('arg-string') : "";
+$argUrl = $block->hasData('arg-url') ? $block->getData('arg-url') : '';
+$image = $block->hasData('image') ? $block->getData('image') : '';
+?>
+<h6>
+    <?=__('Child template')?>
+</h6>
+<!--get arguments data-->
+<?=$block->hasData('argument-string') ? $block->getData('argument-string') : ''?>
+
+<?php if ($block->hasData('arg-boolean') && $block->getData('arg-boolean')) :?>
+    <h2>
+        <?=$argString?>
+    </h2>
+    <a href="<?=$argUrl?>">link</a>
+<?php endif;?>
+
+<img src="<?=$block->getViewFileUrl('images/logo.png')?>" alt="">
+
+<?php if ($image):?>
+    <img src="<?=$block->getViewFileUrl('images/' . $image) ?>"
+         alt="<?=$block->hasData('alt') ? $block->getData('alt') : ''?>">
+<?php endif;?>
