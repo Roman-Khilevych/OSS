@@ -1,10 +1,9 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-/* newTopic template
-template layered navigation
+
+/* HrytsukWM newtopic rewrote the template LayeredNavigation layer view template.
+ *
+ *@author Hrytsuk Walentun vgritsukm@gmail.com
+ *@copyright 2020 zevsi
  * */
 ?>
 <?php
@@ -48,7 +47,7 @@ template layered navigation
             <?php foreach ($block->getFilters() as $filter) : ?>
                 <?php if ($filter->getItemsCount()) : ?>
                     <?php if (!$wrapOptions) : ?>
-                        <h3>Текс над фільтрами добавлений за допомогою переписання template</h3>
+                        <h3>Text over filters added via rewrite template</h3>
                         <div class="filter-options" id="narrow-by-list" data-role="content" data-mage-init='
                         {
                             "accordion":
