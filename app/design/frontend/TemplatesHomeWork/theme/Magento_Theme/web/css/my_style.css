@@ -1,0 +1,16 @@
+.home-work {
+    background-color: red;
+    text-align: center;
+    font-size: 25px;
+    color: #0A246A;
+    margin-top: 10px;
+}
+
+.welcome-to-review,
+.before-wish {
+    background-color: green;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+}
