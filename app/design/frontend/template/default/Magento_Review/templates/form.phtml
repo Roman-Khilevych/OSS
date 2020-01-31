@@ -1,11 +1,3 @@
-<?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-/** @var \Magento\Review\Block\Form $block */
-?>
 <div class="block review-add">
     <div class="block-title"><strong><?= $block->escapeHtml(__('Write Your Own Review')) ?></strong></div>
 <div class="block-content">
@@ -16,7 +8,7 @@
     <fieldset class="fieldset review-fieldset" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
         <legend class="legend review-legend"><span><?= $block->escapeHtml(__("You're reviewing:")) ?></span><strong><?= $block->escapeHtml($block->getProductInfo()->getName()) ?></strong></legend><br />
         <?php if ($block->getRatings() && $block->getRatings()->getSize()) : ?>
-        <p>Here’s how the form will look when the Orange theme is applied in a store:</p>
+        <?= __('Here’s how the form will look when the Orange theme is applied in a store:')?>
         <span id="input-message-box"></span>
         <fieldset class="field required review-field-ratings">
             <legend class="label"><span><?= $block->escapeHtml(__('Your Rating')) ?></span></legend><br/>
