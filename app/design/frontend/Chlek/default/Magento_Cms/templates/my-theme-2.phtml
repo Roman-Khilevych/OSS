@@ -1,11 +1,10 @@
 <?php
 /**
-*Chlek default.
-*@author Yuri Chlek yurichhlek@gmail.com
-*@copyright 2020 Chlek
+ *Chlek default.
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 YuriChlek
  */
 ?>
-
 <?php
 $argumentString = $block->hasData('argument_string') ?  $block->getData('argument_string')  : '';
 $argumentBolean = $block->hasData('is_active') ?  $block->getData('is_active') : '';
@@ -21,7 +20,7 @@ $argumentImageAlt = $block->hasData('image_alt') ?  $block->getData('image_alt')
 
 <!--Виводимо аргумент.-->
 <?= $block->hasData('argument_string') ? $block->getData ('argument_string') : '' ?>
-<?php if ($block->hasData('argument_string')) : ?>
+<?php if ($block->hasData('argument_string')) : ?>w
   <?= $argumentString?>
 <?php endif; ?>
 <?php if ($block->hasData('is_active')) : ?>

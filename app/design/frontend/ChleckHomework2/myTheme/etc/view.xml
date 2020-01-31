@@ -9,7 +9,6 @@
             </image>
         </images>
     </media>
-
     <vars module="Magento_Catalog">
         <!-- Gallery and magnifier theme settings. Start -->
         <var name="gallery">
@@ -21,7 +20,6 @@
             </var>
             <var name="navdir">vertical</var> <!-- Sliding direction of thumbnails (horizontal/vertical) -->
         </var>
-
         <var name="breakpoints">
             <var name="mobile">
                 <var name="conditions">

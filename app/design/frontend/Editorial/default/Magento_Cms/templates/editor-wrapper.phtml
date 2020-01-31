@@ -1,0 +1,19 @@
+<?php
+/**
+ *Chlek default.
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
+ */
+?>
+
+<?php
+$title = $block->hasData('title_string') ? $block->getData('title_string') : '';
+?>
+<div class="page-wrapper">
+    <h2 class="title"><?=$title?></h2>
+    <?= $block->getChildHtml('first.child')?>
+    <?= $block->getChildHtml('second.child')?>
+    <?= $block->getChildHtml('third.child')?>
+    <?= $block->getChildHtml('fourth.child')?>
+    <?= $block->getChildHtml('fifth.child')?>
+</div>

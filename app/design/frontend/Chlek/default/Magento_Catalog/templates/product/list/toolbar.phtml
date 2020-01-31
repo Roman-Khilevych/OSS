@@ -1,24 +1,11 @@
 <?php
 /**
- *Chlek default
- * @author YuriChlek yurichlek@gmail.com
+ *Chlek default.
+ * @author Yuri Chlek yurichhlek@gmail.com
  * @copyright 2020 YuriChlek
  */
 ?>
-
-<?php
-/**
- * Product list toolbar
- *
- * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
- */
-
-// phpcs:disable Magento2.Security.IncludeFile.FoundIncludeFile
-// phpcs:disable PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket
-?>
-
 <span><?= __('Text 11111') ?></span>
-
 <?php if ($block->getCollection()->getSize()) :?>
     <div class="toolbar toolbar-products" data-mage-init='<?= /* @noEscape */ $block->getWidgetOptionsJson() ?>'>
         <?php if ($block->isExpanded()) :?>

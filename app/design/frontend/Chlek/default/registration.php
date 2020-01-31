@@ -1,7 +1,8 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ *Chlek default.
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
  */
 
 use \Magento\Framework\Component\ComponentRegistrar;
