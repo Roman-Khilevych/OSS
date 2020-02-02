@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="2columns-left"/>
+    <referenceContainer name="before.body.end">
+        <container name="div.sidebar.main.edition" htmlTag="div" htmlClass="sidebar-edition" after="main"/>
+        <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header links</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container">
+        <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header links</argument>
+            </arguments>
+        </block>
+    </container>
+</layout>
