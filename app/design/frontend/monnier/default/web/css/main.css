@@ -106,6 +106,7 @@
     text-transform: uppercase;
     width: 245px;
     line-height: 60px;
+    pointer-events: none;
 }
 @media screen and (max-width: 1024px){
     .cart-wrapper-right{
