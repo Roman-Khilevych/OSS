@@ -1,0 +1,38 @@
+<?php
+/*
+ *HrytsukWM newtopic newtopic  Cms hove home template.
+ *
+ *@author Hrytsuk Walentun vgritsukm@gmail.com
+ *@copyright 2020 zevsi
+ */
+?>
+
+<?php
+
+$string1 = $block->hasData("strings") ? $block->getData("strings") : '';                //Якщо аргумент є додаємо строку, якщо ні виводимо пусту строку
+$string2 = $block->hasData("string-argument") ? $block->getData("string-argument") : '';
+$linkIndex = $block->hasData("url-check") ? $block->getData("url-check") : '';
+$altImg = $block->hasData("img-alt") ? $block->getData("img-alt") : '';
+$altImg = $block->hasData("img-name") ? $block->getData("img-name") : '';
+?>
+
+<?= __('Text to template'); ?>
+
+<?= $block->getChildHtml("home.child.bloc") ?>
+<?= $string1?>
+
+<?php if($block->hasData('bul-argument') && $block->getData('bul-argument')) : ?>     <!--Якщо є бульове значення і воно дорівнює true виводми блок -->
+<div>
+    <?= $string2 ?>
+    <a href=<?= $linkIndex?> ><?= __("Link Index") ?></a>
+    <p><?= $string2 ?></p>
+    <img src=" <?= $block->getViewFileUrl('images/logos.png') ?>" alt="<?= __('alt'); ?>">    <!-- Виводимо картинку -->
+
+    <?php if ($block->hasData("img-name")) : ?>
+    <img src=" <?= $block->getViewFileUrl('images/' . $altImg) ?>" alt="<?= $altImg ?>">    <!-- Виводимо картинку за допомогою  getViewFileUrl беремо значення у аргумента-->
+    <?php endif; ?>
+
+</div>
+
+<?php endif;?>
+

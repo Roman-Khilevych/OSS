@@ -33,5 +33,10 @@
         <referenceContainer name="contents" remove="true" />
         <referenceBlock name="product_list_toolbar"  remove="true" />
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceContainer name="div.sidebar.additional">
+            <container htmlTag="div" htmlClass="template-new"  as="sid">
+                <block name="bloc-template" template="Magento_Catalog::new_template.phtml" />
+            </container>
+        </referenceContainer>
     </body>
 </page>

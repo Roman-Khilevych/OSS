@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <body>
+       <referenceContainer name="product.info.media">
+           <container name="over" htmlTag="div" htmlClass="product over" after="product.info.media">
+           <block class="Magento\Framework\View\Element\Template" name="over.tabs"  template="Magento_Catalog::product/over-tabs.phtml" />
+           </container>
+       </referenceContainer>
+   </body>
+</page>
