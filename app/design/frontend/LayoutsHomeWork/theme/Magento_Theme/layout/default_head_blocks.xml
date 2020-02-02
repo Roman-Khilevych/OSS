@@ -5,7 +5,6 @@
         <remove src="css/style.css"/>
         <remove src="js/sample.js"/>
         <remove src="Magento_Theme::js/sample1.js"/>
-        <!--<remove src="Magento_Theme::css/style2.css"/>-->
         <remove src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
         <remove src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"/>
         <remove src="http://fonts.googleapis.com/css?family=Montserrat"/>
