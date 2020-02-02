@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <body>
+       <referenceContainer name="content">
+           <block name="test-block" class="Magento\Framework\View\Element\Template" template="Magento_Cms::product/file.phtml"
+               <arguments>
+                   <argument name="translate" translate="true" xsi:type="string">Translated</argument>
+                   <argument name="hasBool" xsi:type="boolean">true</argument>
+                   <argument name="hasLink" xsi:type="url" path="wishlist/"/>
+                   <argument name="hasImg" xsi:type="string">index.jpeg</argument>
+                   <argument name="hasImgAlt" xsi:type="string">index</argument>
+               </arguments>
+               <block name="new.template" class="Magento\Framework\View\Element\Template" template="Magento_Cms::product/new_template.phtml"/>
+           </block>
+       </referenceContainer>
+   </body>
+</page>
