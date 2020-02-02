@@ -7,6 +7,7 @@
 $argString = $block->hasData('arg-string') ? $block->getData('arg-string') : "";
 $argUrl = $block->hasData('arg-url') ? $block->getData('arg-url') : '';
 $image = $block->hasData('image') ? $block->getData('image') : '';
+$alt = $block->hasData('alt') ? $block->getData('alt') : '';
 ?>
 <h6>
     <?=__('Child template')?>
@@ -25,5 +26,5 @@ $image = $block->hasData('image') ? $block->getData('image') : '';
 
 <?php if ($image):?>
     <img src="<?=$block->getViewFileUrl('images/' . $image) ?>"
-         alt="<?=$block->hasData('alt') ? $block->getData('alt') : ''?>">
+         alt="<?=$alt?>">
 <?php endif;?>

@@ -4,5 +4,8 @@
         <referenceContainer name="myContainer" remove="true"/>
         <referenceBlock name="product_list_toolbar" remove="true"/>
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceContainer name="div.sidebar.additional">
+            <block class="Magento\Framework\View\Element\Template" name="sidebarTemplate" template="Magento_Catalog::sidebarTemplate.phtml"/>
+        </referenceContainer>
     </body>
 </page>
