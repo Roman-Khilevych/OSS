@@ -1,10 +1,9 @@
 <?php
-
 /* HrytsukWM newtopic  LayeredNavigation layer view template.
  *
  *@author Hrytsuk Walentun vgritsukm@gmail.com
  *@copyright 2020 zevsi
- * */
+ */
 ?>
 <?php
 /**
@@ -47,7 +46,7 @@
             <?php foreach ($block->getFilters() as $filter) : ?>
                 <?php if ($filter->getItemsCount()) : ?>
                     <?php if (!$wrapOptions) : ?>
-                        <h3>Text over filters added via rewrite template</h3>
+                        <h3><?=  __("Text over filters added via rewrite template") ?></h3>
                         <div class="filter-options" id="narrow-by-list" data-role="content" data-mage-init='
                         {
                             "accordion":

@@ -1,7 +1,11 @@
-<!--HrytsukWM newtopic Cms hove home template.-->
-<!---->
-<!--@author Hrytsuk Walentun vgritsukm@gmail.com-->
-<!--@copyright 2020 zevsi-->
+<?php
+/*
+ *HrytsukWM newtopic newtopic  Cms hove home template.
+ *
+ *@author Hrytsuk Walentun vgritsukm@gmail.com
+ *@copyright 2020 zevsi
+ */
+?>
 
 <?php
 
@@ -20,7 +24,7 @@ $altImg = $block->hasData("img-name") ? $block->getData("img-name") : '';
 <?php if($block->hasData('bul-argument') && $block->getData('bul-argument')) : ?>     <!--Якщо є бульове значення і воно дорівнює true виводми блок -->
 <div>
     <?= $string2 ?>
-    <a href=<?= $linkIndex?> >Link Index</a>
+    <a href=<?= $linkIndex?> ><?= __("Link Index") ?></a>
     <p><?= $string2 ?></p>
     <img src=" <?= $block->getViewFileUrl('images/logos.png') ?>" alt="<?= __('alt'); ?>">    <!-- Виводимо картинку -->
 
@@ -31,3 +35,4 @@ $altImg = $block->hasData("img-name") ? $block->getData("img-name") : '';
 </div>
 
 <?php endif;?>
+

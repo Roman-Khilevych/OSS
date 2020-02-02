@@ -13,7 +13,7 @@
     <div class="block-title"><strong><?= $block->escapeHtml(__('Write Your Own Review')) ?></strong></div>
 <div class="block-content">
 <?php if ($block->getAllowWriteReviewFlag()) : ?>
-    <p class="text-form-top">Thank you for your feedback, your thoughts are very important to us</p>
+    <p class="text-form-top"><?= __("Thank you for your feedback, your thoughts are very important to us") ?></p>
 <form action="<?= $block->escapeUrl($block->getAction()) ?>" class="review-form" method="post" id="review-form" data-role="product-review-form" data-bind="scope: 'review-form'">
     <?= $block->getBlockHtml('formkey') ?>
     <?= $block->getChildHtml('form_fields_before') ?>
