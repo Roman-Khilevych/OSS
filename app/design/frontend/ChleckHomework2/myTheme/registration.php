@@ -1,6 +1,6 @@
 <?php
 /**
- *ChleckHomework2 myTheme
+ * ChleckHomework2 myTheme theme registration
  * @author YuriChlek yurichlek@gmail.com
  * @copyright 2020 YuriChlek
  */

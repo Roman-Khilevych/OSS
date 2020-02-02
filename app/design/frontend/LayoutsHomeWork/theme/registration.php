@@ -1,6 +1,6 @@
 <?php
 /**
- *LayoutsHomeWork theme.
+ *LayoutsHomeWork theme registration
  * @author Yuri Chlek yurichhlek@gmail.com
  * @copyright 2020 YuriChlek
  */

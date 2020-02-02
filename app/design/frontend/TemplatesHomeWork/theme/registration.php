@@ -1,6 +1,6 @@
 <?php
 /**
- *TemplatesHomeWork
+ *TemplatesHomeWork theme registration
  *@author YuriChlek yurichlek@gmail.com
  *@copyright 2020 YuriChlek
  */

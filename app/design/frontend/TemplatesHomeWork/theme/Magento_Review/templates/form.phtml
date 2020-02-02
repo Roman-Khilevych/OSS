@@ -1,6 +1,6 @@
 <?php
 /**
- *TemplatesHomeWork
+ *TemplatesHomeWork theme LayeredNavigation form template
  * @author YuriChlek yurichlek@gmail.com
  * @copyright 2020 YuriChlek
  */
@@ -11,7 +11,7 @@
     <div class="block-title"><strong><?= $block->escapeHtml(__('Write Your Own Review')) ?></strong></div>
 <div class="block-content">
 <?php if ($block->getAllowWriteReviewFlag()) : ?>
-    <p class="welcome-to-review">Welcome to review form!</p>
+    <p class="welcome-to-review"><?=__("Welcome to review form!")?></p>
 <form action="<?= $block->escapeUrl($block->getAction()) ?>" class="review-form" method="post" id="review-form" data-role="product-review-form" data-bind="scope: 'review-form'">
     <?= $block->getBlockHtml('formkey') ?>
     <?= $block->getChildHtml('form_fields_before') ?>

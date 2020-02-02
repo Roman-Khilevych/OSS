@@ -12,7 +12,7 @@
                         <argument name="argument_string" xsi:type="string" translate="true">Argument string.</argument>
                         <argument name="is_active" xsi:type="boolean">true</argument>
                         <argument name="has_link" xsi:type="url" path="checkout/cart/index"/>
-                        <argument name="image_name" xsi:type="string" >images.jpeg</argument>
+                        <argument name="image_name" xsi:type="string">images.jpeg</argument>
                         <argument name="image_alt" xsi:type="string" >alt</argument>
                     </arguments>
                 </block>
