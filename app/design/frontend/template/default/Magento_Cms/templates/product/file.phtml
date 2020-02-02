@@ -10,10 +10,9 @@
 <?php
 /* variables */
 $link = $block->hasData('hasLink') ? ($block->getData('hasLink')) : '';
-$ima = $block->getViewFileUrl('images');
-$arg3 = $block->hasData('hasImg') ? $block->getData('hasImg') : "";
-$arg4 = $block->hasData('hasImg') ? $block->getData('hasImg') : "";
-$arg5 = $block->hasData('hasImgAlt') ? $block->getData('hasImgAlt') : "";
+$img = $block->hasData('hasImg') ? $block->getData('hasImg') : "";
+$imgAlt = $block->hasData('hasImgAlt') ? $block->getData('hasImgAlt') : "";
+$textTranslate = $block->hasData('translate') ? $block->getData('translate') : '';
 ?>
 
 <?= __("Some Text")?>
@@ -27,6 +26,6 @@ $arg5 = $block->hasData('hasImgAlt') ? $block->getData('hasImgAlt') : "";
     <a href="<?= $link ?>"><?=__("Link")?></a>
 <?php endif;?>
 <br>
-<?php if ($arg3) : ?>
-    <img src="<?= $block->getViewFileUrl('images/' . $arg4); ?>" alt="<?= $arg5 ?>">
+<?php if ($img) : ?>
+    <img src="<?= $block->getViewFileUrl('images/' . $img); ?>" alt="<?= $imgAlt ?>">
 <?php endif;?>
