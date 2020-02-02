@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'AT_Sackers_Heavy_Gothic';
+    src: url("../fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Helvetica Inserat - Roman';
+    src: url("../fonts/HelveticaInserat-Roman.otf") format("opentype");;
+}
+
+.title-page{
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -2.32px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: lowercase;
+    margin-top: 0;
+    font-family: 'AT_Sackers_Heavy_Gothic',sans-serif;
+}
+.wrapper-edit{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+.hero-product{
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.hero-product .description-cart{
+    max-width: 428px;
+    margin: 0 auto;
+}
+main.page-main{
+   max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.wrappers{
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 21px;
+    box-sizing: border-box;
+}
+.cart-wrapper{
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cart-wrapper .block-cart{
+    box-sizing: border-box;
+    width: 50%;
+}
+.cart-wrapper .block-cart:nth-child(odd){
+    padding: 0 11px 10px 0;
+}
+.cart-wrapper .block-cart:nth-child(even){
+    padding: 0 0 10px 11px;
+}
+.cart-wrapper .block-cart:not(:nth-last-child(-n + 2)){
+    margin-bottom: 16px;
+}
+.images-cart img{
+    width: 100%;
+    display: block;
+}
+.images-cart a{
+    display: block;
+    position: relative;
+}
+.hero-product .images-cart .img-href span{
+    font-family: "Helvetica Inserat - Roman",sans-serif ;
+    position: absolute;
+    font-size: 67px;
+    max-width: 245px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #000000;
+    top: 27px;
+    left: 26px;
+}
+.top-catrt-info{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.33px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Montserrat Medium" , sans-serif;
+    margin-bottom: 0;
+}
+.top-catrt-info a{
+    color: #000000;
+}
+.description-cart{
+    font-family: "Montserrat - Regular",sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.33px;
+    line-height: 14px;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+.title-cart{
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 26px;
+    text-transform: lowercase;
+    font-family: 'AT_Sackers_Heavy_Gothic', sans-serif;
+    letter-spacing: -2.32px;
+    margin-top: 0;
+}
+.info-cart{
+    font-weight: 400;
+    letter-spacing: 0.33px;
+    text-align: center;
+    font-size: 11px;
+    padding: 16px 10px 0 10px;
+}
+.cart-links{
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0.33px;
+    line-height: 13.94px;
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+}
+.cart-links:visited{
+    color: #000000;
+}
+@-moz-document url-prefix()
+{
+    .description-cart{
+        line-height: 11px;
+    }
+}
+@media screen and (max-width: 1024px) {
+   .wrapper-edit{
+       flex-direction: column;
+   }
+    .cart-wrapper{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .hero-product .images-cart .img-href span{
+        font-size: 43px;
+        line-height: 45px;
+    }
+    .hero-product{
+        width: 100%;
+        padding-left: 0;
+    }
+    .cart-wrapper{
+        padding-right: 0;
+    }
+    .cart-wrapper .block-cart{
+        width: 65%;
+    }
+    .info-cart{
+        font-size: 14px;
+    }
+    .cart-wrapper .block-cart:nth-child(odd){
+        padding: 0;
+    }
+    .cart-wrapper .block-cart:nth-child(even){
+        padding: 0;
+    }
+    .cart-wrapper .block-cart {
+        margin-bottom: 16px;
+    }
+
+}
+@media screen and (max-width: 480px){
+    .cart-wrapper .block-cart{
+        width: 100%;
+    }
+}
