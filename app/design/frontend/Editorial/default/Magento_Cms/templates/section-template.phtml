@@ -1,0 +1,24 @@
+<?php
+/**
+ * Editorial default Cms section-template template
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
+ */
+?>
+<?php
+$imageName = $block->hasData("image_name") ? $block->getData("image_name") : '';
+$topTitle = $block->hasData('top-title') ? $block->getData('top-title') : '';
+$title = $block->hasData('title') ? $block->getData('title') : '';
+$textAbout = $block->hasData('text-about') ? $block->getData('text-about') : '';
+$linkText = $block->hasData('link-text') ? $block->getData('link-text') : '';
+$linkUrl = $block->hasData('link_url') ? $block->getData('link_url') : '#';
+?>
+<div class="child-section">
+    <img src="<?= $block->getViewFileUrl('images/' . $imageName) ?>" alt="<?= __("photo") ?>">
+    <div class="title-wrap">
+        <p class="top-title"><?= __($topTitle) ?></p>
+        <h4 class="title-about"><?= __($title) ?></h4>
+        <p class="text-about"><?= __($textAbout) ?></p>
+        <a class="read-more-link" href="<?= $linkUrl ?>"><?= __($linkText) ?></a>
+    </div>
+</div>

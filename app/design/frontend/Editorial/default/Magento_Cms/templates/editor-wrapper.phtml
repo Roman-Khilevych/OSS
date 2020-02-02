@@ -1,0 +1,24 @@
+<?php
+/**
+ * Editorial default Cms editor-wrapper template
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
+ */
+?>
+<?php
+$title = $block->hasData('title_string') ? $block->getData('title_string') : 'editorial';
+?>
+<div class="content-wrapper">
+    <h2 class="title-text"><?= __($title) ?></h2>
+    <div class="page-items-wrapper">
+        <div class="section-wrap">
+            <?= $block->getChildHtml('first.child') ?>
+            <?= $block->getChildHtml('second.child') ?>
+            <?= $block->getChildHtml('fourth.child') ?>
+            <?= $block->getChildHtml('fifth.child') ?>
+        </div>
+        <div class="section-wrap second">
+            <?= $block->getChildHtml('third.child') ?>
+        </div>
+    </div>
+</div>
