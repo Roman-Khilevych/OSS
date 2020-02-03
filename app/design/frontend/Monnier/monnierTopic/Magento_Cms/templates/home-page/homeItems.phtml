@@ -1,0 +1,36 @@
+<?php
+/*
+* Monnier monnierTopic Cms home-page homeitems template.
+*
+*@author Hrytsuk Walentun vgritsukm@gmail.com
+*@copyright 2020 zevsi
+*/
+?>
+
+<?php
+$altImg = $block->hasData("img-alt") ? $block->getData("img-alt") : '';
+$nameImg = $block->hasData("img-name") ? $block->getData("img-name") : '';
+$topString = $block->hasData("top-string") ? $block->getData("top-string") : '';
+$title = $block->hasData("title-cart") ? $block->getData("title-cart") : '';
+$descriptionCart = $block->hasData("description-cart") ? $block->getData("description-cart") : '';
+$linkCart = $block->hasData("link-check") ? $block->getData("link-check") : '';
+$nameLink = $block->hasData("name-link") ? $block->getData("name-link") : '';
+$titleRight = $block->hasData("title-bloc-right") ? $block->getData("title-bloc-right") : '';
+?>
+
+<div class="block-cart">
+  <div class="images-cart">
+      <a href="#" class="img-href">
+          <img src="<?= $block->getViewFileUrl('images/' . $nameImg) ?>" alt="<?= $altImg ?>">
+          <?php if ($block->hasData("title-bloc-right")) : ?>
+              <span class="bloc-right-title"><?= $titleRight ?></span>
+          <?php endif; ?>
+      </a>
+  </div>
+    <div class="info-cart">
+        <p class="top-catrt-info"><a href=<?= $linkCart ?>><?= $topString ?></a></p>
+        <h3 class="title-cart"><?= $title?></h3>
+        <p class="description-cart"><?= $descriptionCart?></p>
+        <a class="cart-links" href=<?= $linkCart ?>> <?= $nameLink ?></a>
+    </div>
+</div>

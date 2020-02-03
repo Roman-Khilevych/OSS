@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Cms::css/editorial.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserratdisplay=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block name="home-bloc" class="Magento\Framework\View\Element\Template"
+                   template="Magento_Cms::home-page/home.phtml">
+                <arguments>
+                    <argument name="editorial" translate="true" xsi:type="string">Editorial</argument>
+                </arguments>
+                <block name="home-child1" class="Magento\Framework\View\Element\Template"
+                       template="Magento_Cms::home-page/homeItems.phtml">
+                    <arguments>
+                        <argument name="img-name" xsi:type="string">images2.png</argument>
+                        <argument name="img-alt" xsi:type="string">img1</argument>
+                        <argument name="top-string" translate="true" xsi:type="string">the mock croc rules</argument>
+                        <argument name="title-cart" translate="true" xsi:type="string">trend</argument>
+                        <argument name="description-cart" translate="true" xsi:type="string">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.
+                        </argument>
+                        <argument name="link-check" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="name-link" translate="true" xsi:type="string">DÉCOUVRIR</argument>
+                    </arguments>
+                </block>
+                <block name="home-child2" class="Magento\Framework\View\Element\Template"
+                       template="Magento_Cms::home-page/homeItems.phtml">
+                    <arguments>
+                        <argument name="img-name" xsi:type="string">images1.png</argument>
+                        <argument name="img-alt" xsi:type="string">img2</argument>
+                        <argument name="top-string" translate="true" xsi:type="string">inès longevial</argument>
+                        <argument name="title-cart" translate="true" xsi:type="string">muse</argument>
+                        <argument name="description-cart" translate="true" xsi:type="string">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.
+                        </argument>
+                        <argument name="link-check" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="name-link" translate="true" xsi:type="string">DÉCOUVRIR</argument>
+                    </arguments>
+                </block>
+                <block name="home-child3" class="Magento\Framework\View\Element\Template"
+                       template="Magento_Cms::home-page/homeItems.phtml">
+                    <arguments>
+                        <argument name="img-name" xsi:type="string">images4.png</argument>
+                        <argument name="img-alt" xsi:type="string">img4</argument>
+                        <argument name="top-string" translate="true" xsi:type="string">nodaleto heels</argument>
+                        <argument name="title-cart" translate="true" xsi:type="string">how to</argument>
+                        <argument name="description-cart" translate="true" xsi:type="string">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.
+                        </argument>
+                        <argument name="link-check" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="name-link" translate="true" xsi:type="string">DÉCOUVRIR</argument>
+                    </arguments>
+                </block>
+                <block name="home-child4" class="Magento\Framework\View\Element\Template"
+                       template="Magento_Cms::home-page/homeItems.phtml">
+                    <arguments>
+                        <argument name="img-name" xsi:type="string">images3.png</argument>
+                        <argument name="img-alt" xsi:type="string">img4</argument>
+                        <argument name="top-string" translate="true" xsi:type="string">jacquemus</argument>
+                        <argument name="title-cart" translate="true" xsi:type="string">interview</argument>
+                        <argument name="description-cart" translate="true" xsi:type="string">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.
+                        </argument>
+                        <argument name="link-check" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="name-link" translate="true" xsi:type="string">DÉCOUVRIR</argument>
+                    </arguments>
+                </block>
+                <block name="home-child5" class="Magento\Framework\View\Element\Template"
+                       template="Magento_Cms::home-page/homeItems.phtml">
+                    <arguments>
+                        <argument name="img-name" xsi:type="string">img-right.png</argument>
+                        <argument name="img-alt" xsi:type="string">imgRight</argument>
+                        <argument name="top-string" translate="true" xsi:type="string">fanny bag pack by heron preston
+                        </argument>
+                        <argument name="title-cart" translate="true" xsi:type="string">hero product</argument>
+                        <argument name="description-cart" translate="true" xsi:type="string">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.
+                        </argument>
+                        <argument name="link-check" xsi:type="url" path="checkout/cart/index"/>
+                        <argument name="name-link" translate="true" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="title-bloc-right" translate="true" xsi:type="string">HERO PRODUCT</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
