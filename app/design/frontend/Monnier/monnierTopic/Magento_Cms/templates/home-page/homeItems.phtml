@@ -1,6 +1,6 @@
 <?php
 /*
-*HrytsukWM Monnier monnierTopic Cms home-page homeitems template.
+* Monnier monnierTopic Cms home-page homeitems template.
 *
 *@author Hrytsuk Walentun vgritsukm@gmail.com
 *@copyright 2020 zevsi
@@ -22,7 +22,9 @@ $titleRight = $block->hasData("title-bloc-right") ? $block->getData("title-bloc-
   <div class="images-cart">
       <a href="#" class="img-href">
           <img src="<?= $block->getViewFileUrl('images/' . $nameImg) ?>" alt="<?= $altImg ?>">
-          <span class="bloc-right-title"><?= $titleRight ?></span>
+          <?php if ($block->hasData("title-bloc-right")) : ?>
+              <span class="bloc-right-title"><?= $titleRight ?></span>
+          <?php endif; ?>
       </a>
   </div>
     <div class="info-cart">

@@ -135,12 +135,6 @@ main.page-main{
 .cart-links:visited{
     color: #000000;
 }
-@-moz-document url-prefix()
-{
-    .description-cart{
-        line-height: 11px;
-    }
-}
 @media screen and (max-width: 1024px) {
    .wrapper-edit{
        flex-direction: column;

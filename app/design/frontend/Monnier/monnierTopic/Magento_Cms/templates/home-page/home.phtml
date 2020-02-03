@@ -1,6 +1,6 @@
 <?php
 /*
-*HrytsukWM Monnier monnierTopic Cms home-page home template.
+* Monnier monnierTopic Cms home-page home template.
 *
 *@author Hrytsuk Walentun vgritsukm@gmail.com
 *@copyright 2020 zevsi
@@ -11,13 +11,13 @@
     <h2 class="title-page"><?= $block->hasData('editorial') ? $block->getData('editorial') : "" ?></h2>
     <div class="wrapper-edit">
         <div class="cart-wrapper">
-            <?= $block->getChildHtml("home-shild1") ?>
-            <?= $block->getChildHtml("home-shild2") ?>
-            <?= $block->getChildHtml("home-shild3") ?>
-            <?= $block->getChildHtml("home-shild4") ?>
+            <?= $block->getChildHtml("home-child1") ?>
+            <?= $block->getChildHtml("home-child2") ?>
+            <?= $block->getChildHtml("home-child3") ?>
+            <?= $block->getChildHtml("home-child4") ?>
         </div>
         <div class="hero-product">
-            <?= $block->getChildHtml("home-shild5") ?>
+            <?= $block->getChildHtml("home-child5") ?>
         </div>
     </div>
 </div>

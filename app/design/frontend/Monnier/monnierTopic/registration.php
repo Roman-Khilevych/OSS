@@ -1,6 +1,6 @@
 <?php
 /*
- *Monnier nonnierTopic
+ *Monnier nonnierTopic theme registration.
  *
  *@author Hrytsuk  vgritsukm@gmail.com
  *@copyright 2020 zevsi
