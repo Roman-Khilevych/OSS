@@ -1,0 +1,27 @@
+<?php
+/**
+ * Editorial default Cms child template template
+ * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
+ * @copyright 2020 Nikolaichuk
+ */
+$cardTitle = $block->hasData('card-title') ? $block->getData('card-title') : '';
+$cardSubtitle = $block->hasData('card-subtitle') ? $block->getData('card-subtitle') : '';
+$cardContent = $block->hasData('card-content') ? $block->getData('card-content') : '';
+$cardImage = $block->hasData('card-image') ? $block->getData('card-image') : '';
+$cardImageAlt = $block->hasData('card-image-alt') ? $block->getData('card-image-alt') : '';
+$cardUrl = $block->hasData('card-url') ? $block->getData('card-url') : '';
+?>
+<img class="card__image" src="<?=$block->getViewFileUrl('Magento_Cms::images/' . $cardImage)?>"
+     alt="<?= $cardImageAlt ?>">
+<div class="card__content">
+    <div class="card__content__subtitle">
+        <?= $cardSubtitle ?>
+    </div>
+    <div class="card__content__title">
+        <?= $cardTitle ?>
+    </div>
+    <div class="card__content__text">
+        <?= $cardContent ?>
+    </div>
+    <a class="card__content__link" href="<?= $cardUrl ?>">DÉCOUVRIR</a>
+</div>

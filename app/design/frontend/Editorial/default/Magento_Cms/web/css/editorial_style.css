@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "AT Sackers Heavy Gothic";
+    src: url("../fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Helvetica Inserat - Roman";
+    src: url("../fonts/HelveticaInseratLTStd-Roman.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+#maincontent{
+    max-width: 1366px;
+    padding: 0;
+}
+.editorial-wrapper{
+    width: 100%;
+    color: #000000;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+.editorial__title{
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+    font-family: "AT Sackers Heavy Gothic";
+    text-transform: uppercase;
+    padding: 17px 0;
+}
+.editorial__content{
+    display: flex;
+    justify-content: space-between;
+}
+.editorial__column{
+    padding: 0 10px;
+    width: 50%;
+}
+.editorial__content__right-container{
+    display: inline-block;
+}
+.editorial__content__left-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.editorial__content__left-container .editorial__content__card{
+    display: inline-block;
+    width: calc(50% - 12px);
+}
+.editorial__content__right-container .editorial__content__card{
+    position: relative;
+}
+.editorial__content__right-container .editorial__content__card::before{
+    content: attr(data-note);
+    position: absolute;
+    top: 31px;
+    left: 21px;
+    width: 245px;
+    height: 116px;
+    font-family: "Helvetica Inserat - Roman";
+    font-size: 67px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+.card__image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.card__content{
+    padding: 21px 2px;
+    letter-spacing: 0.33px;
+    text-align: center;
+}
+.card__content__subtitle{
+    font-size: 11px;
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    line-height: 9px;
+    text-transform: uppercase;
+}
+.card__content__title{
+    font-family: "AT Sackers Heavy Gothic";
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -2.32px;
+    text-transform: uppercase;
+}
+.card__content__text{
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 12px;
+    padding: 3px 0 10px
+}
+.editorial__content__right-container .card__content__text{
+    padding: 3px 84px 10px;
+}
+a.card__content__link{
+    display: inline-block;
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 11px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 5px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .editorial__content{
+        flex-direction: column;
+    }
+    .editorial__column{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .editorial__content__left-container{
+        flex-direction: column;
+    }
+    .editorial__content__left-container .editorial__content__card{
+        width: 100%;
+    }
+    .editorial__content__right-container .card__content__text{
+        padding: 3px 0 10px;
+    }
+}
+@media screen and (max-width: 425px){
+    .editorial-wrapper{
+        padding: 0 15px;
+    }
+    .editorial__content__right-container .editorial__content__card::before{
+        font-size: 30px;
+        width: 170px;
+        line-height: 40px;
+    }
+}
