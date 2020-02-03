@@ -7,6 +7,7 @@
 ?>
 <?php
 $imageName = $block->hasData("image_name") ? $block->getData("image_name") : '';
+$decorateText = $block->hasData("decorate_text") ? $block->getData("decorate_text") : '';
 $topTitle = $block->hasData('top-title') ? $block->getData('top-title') : '';
 $title = $block->hasData('title') ? $block->getData('title') : '';
 $textAbout = $block->hasData('text-about') ? $block->getData('text-about') : '';
@@ -15,10 +16,11 @@ $linkUrl = $block->hasData('link_url') ? $block->getData('link_url') : '#';
 ?>
 <div class="child-section">
     <img src="<?= $block->getViewFileUrl('images/' . $imageName) ?>" alt="<?= __("photo") ?>">
+    <span class="decorate-text"><?= $decorateText ?></span>
     <div class="title-wrap">
-        <p class="top-title"><?= __($topTitle) ?></p>
-        <h4 class="title-about"><?= __($title) ?></h4>
-        <p class="text-about"><?= __($textAbout) ?></p>
-        <a class="read-more-link" href="<?= $linkUrl ?>"><?= __($linkText) ?></a>
+        <p class="top-title"><?= $topTitle ?></p>
+        <h4 class="title-about"><?= $title ?></h4>
+        <p class="text-about"><?= $textAbout ?></p>
+        <a class="read-more-link" href="<?= $linkUrl ?>"><?= $linkText ?></a>
     </div>
 </div>

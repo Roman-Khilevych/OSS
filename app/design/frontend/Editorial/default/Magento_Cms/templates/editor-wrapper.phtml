@@ -6,10 +6,14 @@
  */
 ?>
 <?php
-$title = $block->hasData('title_string') ? $block->getData('title_string') : 'editorial';
+$title = $block->hasData('title_string') ? $block->getData('title_string') : __('editorial');
+$bredCramsEditorial = $block->hasData('bred_crams_editorial') ? $block->getData('title_string') : '';
 ?>
 <div class="content-wrapper">
-    <h2 class="title-text"><?= __($title) ?></h2>
+    <h2 class="title-text">
+        <span class="bred-crams-editorial"><?= $bredCramsEditorial ?></span>
+        <?= $title ?>
+    </h2>
     <div class="page-items-wrapper">
         <div class="section-wrap">
             <?= $block->getChildHtml('first.child') ?>

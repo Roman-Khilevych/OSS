@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <css src="css/style.css"/>
+        <css src="Magento_Cms::css/editorial-style.css"/>
         <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Montserrat:400,700,800"
               src_type="url"/>
         <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Oswald:400,700,800"
@@ -14,20 +14,21 @@
             <block name="editorial.wrapper" class="Magento\Framework\View\Element\Template"
                    template="Magento_Cms::editor-wrapper.phtml">
                 <arguments>
-                    <argument name="title_string" xsi:type="string">editorial</argument>
+                    <argument name="title_string" xsi:type="string" translate = "true">editorial</argument>
+                    <argument name="bred_crams_editorial" xsi:type="string" translate = "true">editorial</argument>
                 </arguments>
                 <block name="first.child" class="Magento\Framework\View\Element\Template"
                        template="Magento_Cms::section-template.phtml">
                     <arguments>
                         <argument name="image_name" xsi:type="string">image1.png</argument>
-                        <argument name="top-title" xsi:type="string">the mock croc rules</argument>
-                        <argument name="title" xsi:type="string">trend</argument>
-                        <argument name="text-about" xsi:type="string">
+                        <argument name="top-title" xsi:type="string" translate = "true">the mock croc rules</argument>
+                        <argument name="title" xsi:type="string" translate = "true">trend</argument>
+                        <argument name="text-about" xsi:type="string" translate = "true">
                             Lorem ipsum dolor sit amet, consectetur adip -isicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad deserunt mollit anim id est laborum.
                         </argument>
-                        <argument name="link-text" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="link-text" xsi:type="string" translate = "true">DÉCOUVRIR</argument>
                         <argument name="link_url" xsi:type="url" path="women/tops-women/jackets-women.html"/>
                     </arguments>
                 </block>
@@ -35,14 +36,14 @@
                        template="Magento_Cms::section-template.phtml">
                     <arguments>
                         <argument name="image_name" xsi:type="string">image2.png</argument>
-                        <argument name="top-title" xsi:type="string">inès longevial</argument>
-                        <argument name="title" xsi:type="string">muse</argument>
-                        <argument name="text-about" xsi:type="string">
+                        <argument name="top-title" xsi:type="string" translate = "true">inès longevial</argument>
+                        <argument name="title" xsi:type="string" translate = "true">muse</argument>
+                        <argument name="text-about" xsi:type="string" translate = "true">
                             Lorem ipsum dolor sit amet, consectetur adip -isicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad deserunt mollit anim id est laborum.
                         </argument>
-                        <argument name="link-text" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="link-text" xsi:type="string" translate = "true">DÉCOUVRIR</argument>
                         <argument name="link_url" xsi:type="url" path="women/tops-women/jackets-women.html"/>
                     </arguments>
                 </block>
@@ -50,14 +51,15 @@
                        template="Magento_Cms::section-template.phtml">
                     <arguments>
                         <argument name="image_name" xsi:type="string">image3.png</argument>
-                        <argument name="top-title" xsi:type="string">fanny bag pack by heron preston</argument>
-                        <argument name="title" xsi:type="string">hero product</argument>
-                        <argument name="text-about" xsi:type="string">
+                        <argument name="decorate_text" xsi:type="string">hero product</argument>
+                        <argument name="top-title" xsi:type="string" translate = "true">fanny bag pack by heron preston</argument>
+                        <argument name="title" xsi:type="string" translate = "true">hero product</argument>
+                        <argument name="text-about" xsi:type="string" translate = "true">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad deserunt mollit anim id est laborum.
                         </argument>
-                        <argument name="link-text" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="link-text" xsi:type="string" translate = "true">DÉCOUVRIR</argument>
                         <argument name="link_url" xsi:type="url" path="women/tops-women/jackets-women.html"/>
                     </arguments>
                 </block>
@@ -65,14 +67,14 @@
                        template="Magento_Cms::section-template.phtml">
                     <arguments>
                         <argument name="image_name" xsi:type="string">image4.png</argument>
-                        <argument name="top-title" xsi:type="string">nodaleto heels</argument>
-                        <argument name="title" xsi:type="string">how to</argument>
-                        <argument name="text-about" xsi:type="string">
+                        <argument name="top-title" xsi:type="string" translate = "true">nodaleto heels</argument>
+                        <argument name="title" xsi:type="string" translate = "true">how to</argument>
+                        <argument name="text-about" xsi:type="string" translate = "true">
                             Lorem ipsum dolor sit amet, consectetur adip -isicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad deserunt mollit anim id est laborum.
                         </argument>
-                        <argument name="link-text" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="link-text" xsi:type="string" translate = "true">DÉCOUVRIR</argument>
                         <argument name="link_url" xsi:type="url" path="women/tops-women/jackets-women.html"/>
                     </arguments>
                 </block>
@@ -80,14 +82,14 @@
                        template="Magento_Cms::section-template.phtml">
                     <arguments>
                         <argument name="image_name" xsi:type="string">image5.png</argument>
-                        <argument name="top-title" xsi:type="string">jacquemus</argument>
-                        <argument name="title" xsi:type="string">interview</argument>
-                        <argument name="text-about" xsi:type="string">
+                        <argument name="top-title" xsi:type="string" translate = "true">jacquemus</argument>
+                        <argument name="title" xsi:type="string" translate = "true">interview</argument>
+                        <argument name="text-about" xsi:type="string" translate = "true">
                             Lorem ipsum dolor sit amet, consectetur adip -isicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad deserunt mollit anim id est laborum.
                         </argument>
-                        <argument name="link-text" xsi:type="string">DÉCOUVRIR</argument>
+                        <argument name="link-text" xsi:type="string" translate = "true">DÉCOUVRIR</argument>
                         <argument name="link_url" xsi:type="url" path="women/tops-women/jackets-women.html"/>
                     </arguments>
                 </block>

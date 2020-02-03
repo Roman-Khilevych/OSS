@@ -27,15 +27,18 @@
     letter-spacing: 2.9px;
 }
 
-.content-wrapper .title-text::before {
+.content-wrapper .title-text .bred-crams-editorial,
+.section-wrap.second .child-section .decorate-text {
     display: block;
-    content: 'EDITORIAL';
     position: absolute;
+    text-transform: uppercase;
+}
+
+.content-wrapper .title-text .bred-crams-editorial {
     left: 10px;
     top: 39%;
     transform: translateX(4%);
     font-size: 10px;
-    text-transform: uppercase;
     letter-spacing: 0.3px;
     font-weight: 500;
     color: #808080;
@@ -83,10 +86,7 @@
     flex-grow: 9;
 }
 
-.section-wrap.second .child-section::before {
-    display: block;
-    content: 'HERO PRODUCT';
-    position: absolute;
+.section-wrap.second .child-section .decorate-text {
     top: 0;
     left: 0;
     font-family: 'Oswald', sans-serif;
