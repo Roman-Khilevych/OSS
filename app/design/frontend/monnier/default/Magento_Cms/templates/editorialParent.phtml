@@ -1,6 +1,6 @@
 <?php
 /*
-*Monnier default title home page.
+*Monnier Monnier default editorial parent template.
 *
 *@author vlromaniuk  vlad96r@protonmail.com
 *@copyright 2020 vlromaniuk
@@ -13,8 +13,9 @@ $block2 = $block->getChildHtml('editorial.child.2');
 $block3 = $block->getChildHtml('editorial.child.3');
 $block4 = $block->getChildHtml('editorial.child.4');
 $block5 = $block->getChildHtml('editorial.child.5');
+$titlePage = $block->hasData('title.page') ? ($block->getData('title.page')) : '';
 ?>
-<h2 class="page-titles"><?= __('EDITORIAL')?></h2>
+<h2 class="page-titles"><?= $titlePage ?></h2>
 <div class="cart-wrapper">
     <div class="cart-wrapper-left">
         <?= $block1 ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-*Monnier default create child.
+*Monnier default editorial child template.
 *
 *@author vlromaniuk  vlad96r@protonmail.com
 *@copyright 2020 vlromaniuk
@@ -17,12 +17,13 @@ $textUrl = $block->hasData('text.url') ? ($block->getData('text.url')) : '';
 $heroProduct = $block->hasData('hero.product') ? ($block->getData('hero.product')) : '';
 ?>
 <div class="card">
-    <div class="blockImg" data-name="<?= $heroProduct ?>">
+    <div class="blockImg"">
         <a href="<?= $cardUrl ?>">
         <?php if ($blockImg) : ?>
             <img src="<?= $block->getViewFileUrl('images/' . $blockImg); ?>"  alt="<?= $topDescription ?>">
         <?php endif;?>
         </a>
+        <p class="heroProduct"><?=$heroProduct?></p>
     </div>
     <div class="description">
         <p><?=$topDescription?></p>

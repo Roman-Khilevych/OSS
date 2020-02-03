@@ -12,7 +12,7 @@
 }
 .page-wrapper .page-main{
     max-width: 1283px;
-    padding: 0 15px;
+    padding: 0;
 }
 .page-wrapper .page-main .page-titles{
     text-align: center;
@@ -31,7 +31,7 @@
 }
 
 .cart-wrapper-left {
-    width: 51%;
+    width: 52%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -58,8 +58,8 @@
 }
 
 .cart-wrapper-left .card {
-    width: calc(50% - 23px);
-    padding-right: 23px;
+    width: calc(50% - 19px);
+    padding-right: 18px;
 }
 
 .cart-wrapper .card .description .title-card {
@@ -96,7 +96,7 @@
     position: relative;
     display: block;
 }
-.blockImg::before{
+.blockImg .heroProduct{
     content: attr(data-name);
     position: absolute;
     top: 32px;
@@ -107,6 +107,11 @@
     width: 245px;
     line-height: 60px;
     pointer-events: none;
+}
+@media screen and (max-width: 1366px){
+    .page-wrapper .page-main{
+        padding: 0 15px;
+    }
 }
 @media screen and (max-width: 1024px){
     .cart-wrapper-right{
