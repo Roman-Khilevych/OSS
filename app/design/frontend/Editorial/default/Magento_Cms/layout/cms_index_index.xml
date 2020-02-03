@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Cms::css/editorial_style.css"/>
+    </head>
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="editorial.parent" template="Magento_Cms::parentTemplate.phtml">
@@ -69,6 +72,7 @@
                         <argument name="card-image" xsi:type="string">5.png</argument>
                         <argument name="card-image-alt" xsi:type="string" translate="true">image</argument>
                         <argument name="card-url" xsi:type="url" path="#"></argument>
+                        <argument name="card-note" xsi:type="string" translate="true">hero product</argument>
                     </arguments>
                 </block>
             </block>

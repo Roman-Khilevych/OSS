@@ -1,6 +1,6 @@
 <?php
 /**
- * Nikolaichuk theme
+ * Editorial default theme registration
  * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
  * @copyright 2020 Nikolaichuk
  */

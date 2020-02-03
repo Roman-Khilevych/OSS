@@ -11,6 +11,9 @@ $cardImage = $block->hasData('card-image') ? $block->getData('card-image') : '';
 $cardImageAlt = $block->hasData('card-image-alt') ? $block->getData('card-image-alt') : '';
 $cardUrl = $block->hasData('card-url') ? $block->getData('card-url') : '';
 ?>
+<?php if ($block->hasData('card-note')):?>
+    <span class="card__note"><?=$block->getData('card-note')?></span>
+<?php endif;?>
 <img class="card__image" src="<?=$block->getViewFileUrl('Magento_Cms::images/' . $cardImage)?>"
      alt="<?= $cardImageAlt ?>">
 <div class="card__content">
@@ -23,5 +26,5 @@ $cardUrl = $block->hasData('card-url') ? $block->getData('card-url') : '';
     <div class="card__content__text">
         <?= $cardContent ?>
     </div>
-    <a class="card__content__link" href="<?= $cardUrl ?>">DÉCOUVRIR</a>
+    <a class="card__content__link" href="<?= $cardUrl ?>"><?=__('DÉCOUVRIR')?></a>
 </div>

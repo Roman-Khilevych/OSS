@@ -63,19 +63,6 @@
 .editorial__content__right-container .editorial__content__card{
     position: relative;
 }
-.editorial__content__right-container .editorial__content__card::before{
-    content: attr(data-note);
-    position: absolute;
-    top: 31px;
-    left: 21px;
-    width: 245px;
-    height: 116px;
-    font-family: "Helvetica Inserat - Roman";
-    font-size: 67px;
-    font-weight: 400;
-    line-height: 60px;
-    text-transform: uppercase;
-}
 .card__image{
     display: block;
     width: 100%;
@@ -106,6 +93,18 @@
     line-height: 14px;
     font-size: 12px;
     padding: 3px 0 10px
+}
+.card__note{
+    position: absolute;
+    top: 31px;
+    left: 21px;
+    width: 245px;
+    height: 116px;
+    font-family: "Helvetica Inserat - Roman";
+    font-size: 67px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
 }
 .editorial__content__right-container .card__content__text{
     padding: 3px 84px 10px;
@@ -145,7 +144,7 @@ a.card__content__link{
     .editorial-wrapper{
         padding: 0 15px;
     }
-    .editorial__content__right-container .editorial__content__card::before{
+    .card__note{
         font-size: 30px;
         width: 170px;
         line-height: 40px;
