@@ -14,8 +14,7 @@ $titleCard = $block->hasData('title.card') ? $block->getData('title.card') : '';
 $bottomDescription = $block->hasData('bottom.description') ? $block->getData('bottom.description') : '';
 $cardUrl = $block->hasData('card.url') ? ($block->getData('card.url')) : '';
 $textUrl = $block->hasData('text.url') ? ($block->getData('text.url')) : '';
-$heroProductValid = $block->hasData('hero.product') ? ($block->getData('hero.product')) : '';
-$heroProduct = '<p class="heroProduct">'.$heroProductValid.'</p>';
+$heroProduct = $block->hasData('hero.product') ? ($block->getData('hero.product')) : '';
 ?>
 <div class="card">
     <div class="blockImg"">
@@ -24,7 +23,9 @@ $heroProduct = '<p class="heroProduct">'.$heroProductValid.'</p>';
             <img src="<?= $block->getViewFileUrl('images/' . $blockImg); ?>"  alt="<?= $topDescription ?>">
         <?php endif;?>
         </a>
-        <?=$heroProduct?>
+    <?php if ($heroProduct) : ?>
+        <p class="heroProduct"><?= $heroProduct?></p>
+    <?php endif; ?>
     </div>
     <div class="description">
         <p><?=$topDescription?></p>
