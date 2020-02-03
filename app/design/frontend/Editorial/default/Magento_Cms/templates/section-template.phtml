@@ -16,7 +16,9 @@ $linkUrl = $block->hasData('link_url') ? $block->getData('link_url') : '#';
 ?>
 <div class="child-section">
     <img src="<?= $block->getViewFileUrl('images/' . $imageName) ?>" alt="<?= __("photo") ?>">
-    <span class="decorate-text"><?= $decorateText ?></span>
+    <?php if ($decorateText): ?>
+        <span class="decorate-text"><?= $decorateText ?></span>
+    <?php endif; ?>
     <div class="title-wrap">
         <p class="top-title"><?= $topTitle ?></p>
         <h4 class="title-about"><?= $title ?></h4>
