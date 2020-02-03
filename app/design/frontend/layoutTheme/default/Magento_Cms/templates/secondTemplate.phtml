@@ -1,0 +1,15 @@
+<?php
+/**
+ * layuotTheme default Cms second template template
+ * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
+ * @copyright 2020 Nikolaichuk
+ */
+?>
+<div>
+    <h2>
+        <?=__("Second Template")?>
+    </h2>
+    <?=__("Text to translate")?>
+    <!--insert child template in to parent template-->
+    <?=$block->getChildHtml('childTemplate')?>
+</div>
