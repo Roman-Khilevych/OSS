@@ -29,6 +29,11 @@
                     </arguments>
                 </block>
             </block>
+            <block class="Magento\Cms\Block\Block" name="test_cms">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">test_cms_block</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
