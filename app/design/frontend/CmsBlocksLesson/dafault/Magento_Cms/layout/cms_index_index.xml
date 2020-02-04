@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" >
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="test_Cms">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">test_Cms</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="Cms_block_child">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">Cms_block_child</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="image_test_block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">image_test_block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
