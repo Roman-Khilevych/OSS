@@ -1,6 +1,6 @@
 <?php
 /**
-Vlromaniuk theme.
+LessonCmsBlcok default theme registration
 @author Vladislav Romaniuk vlad96r@protonmial.com
 @copyright 2020 Vlromaniuk
  */
