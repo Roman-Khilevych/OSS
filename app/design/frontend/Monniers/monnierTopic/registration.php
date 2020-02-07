@@ -8,4 +8,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Monnier/monnierTopic', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Monniers/monnierTopic', __DIR__);

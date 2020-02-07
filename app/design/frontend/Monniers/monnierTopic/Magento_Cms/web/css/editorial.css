@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'AT_Sackers_Heavy_Gothic';
-    src: url("../fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Helvetica Inserat - Roman';
-    src: url("../fonts/HelveticaInserat-Roman.otf") format("opentype");;
-}
 
 .title-page {
     font-size: 29px;
@@ -14,7 +5,7 @@
     line-height: 16px;
     letter-spacing: -2.32px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     text-transform: lowercase;
     margin-top: 0;
     font-family: 'AT_Sackers_Heavy_Gothic', sans-serif;
@@ -203,6 +194,9 @@ main.page-main {
 }
 
 @media screen and (max-width: 480px) {
+    .wrappers{
+        margin-top: 10px;
+    }
     .cart-wrapper .block-cart {
         width: 100%;
     }
