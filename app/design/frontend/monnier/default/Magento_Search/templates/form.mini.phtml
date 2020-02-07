@@ -1,0 +1,29 @@
+<?php
+/*
+*Monnier default Search form template.
+*
+*@author vlromaniuk  vlad96r@protonmail.com
+*@copyright 2020 vlromaniuk
+* */
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+?>
+<div class="block block-search">
+    <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+            <div class="actions">
+                <button type="submit"
+                    title="<?= $block->escapeHtml(__('Search')) ?>"
+                    class="action search"
+                    aria-label="Search"
+                >
+                    <span><?= $block->escapeHtml(__('Search')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

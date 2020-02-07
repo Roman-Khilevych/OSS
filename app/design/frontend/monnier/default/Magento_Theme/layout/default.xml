@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/header_footer.css"/>
+    </head>
+    <body>
+        <referenceBlock name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="promotion.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">promotion.block</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\Link"  name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true"/>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </block>
+            <move element="top.search" destination="top.links" after="my-account-link"/>
+            <move element="minicart" destination="top.links" before="wish-list-link"/>
+            <move element="logo" destination="header.panel" after="top.links"/>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="top.search">
+                <arguments>
+                    <argument name="sortOrder" xsi:type="number">100</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/magento-logo.png</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
