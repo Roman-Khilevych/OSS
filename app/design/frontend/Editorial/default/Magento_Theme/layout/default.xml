@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <css src="Magento_Theme::css/editorial-header-style.css"/>
+        <link rel="stylesheet" type="text/css"
+              src="http://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800"
+              src_type="url"/>
+        <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700,800"
+              src_type="url"/>
+    </head>
+    <body>
+        <referenceContainer name="header.panel.wrapper">
+            <container name="header.livraison.wrapper" htmlClass="livraison-title-wrapper" htmlTag="div"
+                       before="header.panel">
+                <block class="Magento\Cms\Block\Block" name="title top">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">title_top</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="search_button" after="my-account-link">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">search_button</argument>
+                    <!--<argument name="sortOrder" xsi:type="number">50</argument>-->
+                </arguments>
+            </block>
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="search_button">
+                <arguments>
+                    <argument name="sortOrder" xsi:type="number">90</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="wish-list-link"
+                   template="Magento_Checkout::cart/minicart.phtml">
+                <arguments>
+                    <argument name="sortOrder" xsi:type="number">80</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer section first" after="store_switcher">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_section_first</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer section second" after="footer section first">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_section_second</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer section third" after="footer section second">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_section_third</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer section fourth" after="footer section third">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_section_fourth</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="form title" before="form.subscribe">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">form_title</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
