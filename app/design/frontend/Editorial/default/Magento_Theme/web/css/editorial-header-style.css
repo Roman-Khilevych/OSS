@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Oswald:400,500,600,700&display=swap');
+
 .livraison-title-wrapper p {
     font-size: 9px;
     margin-bottom: 0;
@@ -10,15 +12,37 @@
     font-family: Montserrat;
 }
 
+.nav-toggle {
+    top: 5px;
+}
+
+.page-header .header.panel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.panel.header .links {
+    display: inline-block;
+}
+
+.panel .header.panel > .header.links {
+    float: none;
+    margin-left: 0;
+    display: inline-flex;
+}
+
+.header.panel > .header.links > li {
+    list-style-type: none;
+}
+
 .header.panel > .header.links > li a {
-    color: red;
-    content: none;
-    font-size: 0;
+    text-indent: -10000px;
     width: 18px;
     height: 17px;
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .panel .header.panel > .header.links > li {
@@ -43,14 +67,20 @@
     display: block;
 }
 
-.header.panel > .header.links .minicart-wrapper > a {
-    height: 19px;
+.header.panel > .minicart-wrapper {
     width: 19px;
+    height: 19px;
+    margin-left: 13px;
+}
+
+.header.panel > .minicart-wrapper > a {
+    height: 19px;
+    width: 100%;
     background-image: url("../images/panier.png");
     position: relative;
 }
 
-.header.panel > .header.links .minicart-wrapper > a:before {
+.header.panel > .minicart-wrapper > a:before {
     content: '';
 }
 
@@ -62,14 +92,7 @@
 }
 
 .logo img {
-    width: 158px;
-    height: 46px;
     margin-bottom: 10px;
-}
-
-.print .block-search {
-    width: 100%;
-    float: none;
 }
 
 .page-wrapper .page-header .panel.wrapper {
@@ -86,6 +109,10 @@
     float: none;
     width: 100%;
     padding: 0;
+}
+
+.header.content .block-search .label::before {
+    content: '';
 }
 
 .page-wrapper .nav-sections {
@@ -158,12 +185,14 @@
     margin-bottom: 7px;
 }
 
-.footer-section .section-point > p {
+.footer-section .section-point > h3.section-title {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: underline;
     padding: 0;
     margin-bottom: 18px;
+    margin-top: 2px;
+    font-size: 11px;
 }
 
 .footer-section .section-point > a {
@@ -174,27 +203,9 @@
     display: block;
 }
 
-.form-title {
-    position: absolute;
-    right: 68px;
-    transform: translateX(2%);
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    font-family: Montserrat;
-    letter-spacing: 0.33px;
-}
-
 .footer.content .block.newsletter {
     width: 262px;
-    padding-top: 19px;
-}
-
-@media (max-width: 992px) {
-    .footer.content .block.newsletter {
-        float: none;
-    }
+    margin-top: -3px;
 }
 
 .footer.content .block.newsletter .actions {
@@ -206,6 +217,27 @@
     border: none;
     border-bottom: 1px solid #808080;
     background-color: #f7f3ea;
+    padding-left: 1px;
+    font-size: 12px;
+}
+
+.block.newsletter .field .control::before {
+    display: none;
+}
+
+.block.newsletter .label {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    width: 100%;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.33px;
+    font-family: Montserrat;
+    margin-bottom: 3px;
+    height: auto;
 }
 
 .footer.content .block.newsletter .actions .action {
@@ -232,11 +264,6 @@
     .footer.content .footer-section.third,
     .footer.content .footer-section.fourth {
         padding-right: 10px;
-    }
-
-    .form-title {
-        right: auto;
-        left: 30px;
     }
 
     .footer.content .block.newsletter {
@@ -266,7 +293,7 @@
     .block-search .label {
         position: absolute;
         right: 15px;
-        top: 15px;
+        top: 5px;
     }
 
     .footer-section {
@@ -275,7 +302,8 @@
         text-align: center;
     }
 
-    .footer-section .section-point {
+    .footer-section .section-point,
+    .footer-section .section-point > h3.section-title {
         font-size: 18px;
     }
 
@@ -284,5 +312,11 @@
     .footer.content .footer-section.third,
     .footer.content .footer-section.fourth {
         padding: 20px 5px;
+    }
+}
+
+@media (max-width: 639px) {
+    .minicart-wrapper {
+        margin-top: 0;
     }
 }
