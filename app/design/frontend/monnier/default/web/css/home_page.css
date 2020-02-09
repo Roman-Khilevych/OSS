@@ -23,7 +23,7 @@
     line-height: 12px;
     letter-spacing: -0.1px;
     margin-bottom: 24px;
-    margin-top: -3px;
+    margin-top: -1px;
 }
 
 .cart-wrapper {
@@ -141,8 +141,6 @@
     .card:nth-child(2n){
         padding-right: 0;
     }
-}
-@media screen and (max-width: 768px){
     .cart-wrapper-left {
         flex-direction: column;
     }

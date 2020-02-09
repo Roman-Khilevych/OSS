@@ -4,40 +4,61 @@
         <css src="css/header_footer.css"/>
     </head>
     <body>
-        <referenceBlock name="after.body.start">
-            <block class="Magento\Cms\Block\Block" name="promotion.block">
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Cms\Block\Block" name="promotion.block" before="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">promotion.block</argument>
                 </arguments>
             </block>
-        </referenceBlock>
+        </referenceContainer>
         <referenceBlock name="top.links">
-            <block class="Magento\Customer\Block\Account\Link"  name="my-account-link">
+            <referenceBlock class="Magento\Customer\Block\Account\Link" name="my-account-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true"/>
-                    <argument name="sortOrder" xsi:type="number">110</argument>
+                    <argument name="class" xsi:type="string">my-account-link</argument>
                 </arguments>
-            </block>
+            </referenceBlock>
             <move element="top.search" destination="top.links" after="my-account-link"/>
             <move element="minicart" destination="top.links" before="wish-list-link"/>
-            <move element="logo" destination="header.panel" after="top.links"/>
+            <move element="logo" destination="header.panel" before="top.links"/>
+            <referenceBlock class="Magento\Wishlist\Block\Link" name="wish-list-link" after="top.search"/>
         </referenceBlock>
-        <referenceBlock name="top.links">
-            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="top.search">
-                <arguments>
-                    <argument name="sortOrder" xsi:type="number">100</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
+        <move element="top.links" destination="header.panel" after="-" />
         <referenceBlock name="authorization-link" remove="true"/>
-        <referenceBlock name="register-link" remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/magento-logo.png</argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="footer">
+            <container name="footer.block.link" htmlTag="div" htmlClass="footer-block-link" before="-">
+                <block class="Magento\Cms\Block\Block" name="services.exclusifs">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">services.exclusifs</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="besoin.daide">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">besoin.daide</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="a.propos">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">a.propos</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="retrouvez.nous.sur">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">retrouvez.nous.sur</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
     </body>
 </page>
