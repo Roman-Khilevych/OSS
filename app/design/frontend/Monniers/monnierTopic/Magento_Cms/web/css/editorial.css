@@ -113,6 +113,8 @@ main.page-main {
     line-height: 14px;
     padding: 0 10px;
     margin-bottom: 0;
+    overflow: hidden;
+    max-height: 67px;
 }
 
 .title-cart {
@@ -131,6 +133,7 @@ main.page-main {
     text-align: center;
     font-size: 11px;
     padding: 16px 10px 0 10px;
+    overflow: hidden;
 }
 
 .cart-links {
@@ -154,6 +157,7 @@ main.page-main {
 
     .cart-wrapper {
         width: 100%;
+        padding-right: 0;
     }
 }
 
