@@ -1,0 +1,68 @@
+.page-header .panel.wrapper .panel.header{
+    max-width: 100%;
+    padding-right: 96px;
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+.page-wrapper .page-header .panel.wrapper{
+    border-bottom: none;
+}
+.header__promotion{
+    text-align: center;
+    color: #808080;
+    font-family: "Montserrat-Regular";
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.27px;
+    background-color: #f7f3ea;
+    padding: 3px 0;
+}
+.page-header .panel.header .header.links{
+    display: flex;
+    align-items: center;
+}
+.header.panel>.header.links>.block.block-search{
+    display: none;
+}
+.header.panel .header.links > li a {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 18px;
+    height: 17px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header.panel .header.links li:first-child > a{
+    background-image: url("../images/account.png");
+}
+.header.panel .header.links li:nth-child(2) > a{
+    background-image: url("../images/wish.png");
+}
+.header.panel .header.links li:nth-child(3) > a{
+    width: 19px;
+    height: 19px;
+    background-image: url("../images/cart.png");
+}
+.header.links .minicart-wrapper .action.showcart:before{
+    content: "";
+}
+.page-header .header.content{
+    display: flex;
+    padding: 0;
+}
+.header.content .logo{
+    margin: -9px auto;
+}
+.page-wrapper .nav-sections{
+    background-color: white;
+    padding-top: 10px;
+    margin: 0;
+}
+.nav-sections .navigation{
+    background-color: white;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "AT Sackers Heavy Gothic";
+    src: url("../../web/fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Helvetica Inserat - Roman";
+    src: url("../../web/fonts/HelveticaInseratLTStd-Roman.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../../web/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../../web/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

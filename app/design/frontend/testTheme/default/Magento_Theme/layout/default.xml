@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <css src="css/monnier_fonts.css"/>
+        <css src="css/monnier_header.css"/>
+        <css src="css/monnier_footer.css"/>
+    </head>
+    <body>
+        <referenceContainer name="header.panel.wrapper">
+            <block class="Magento\Cms\Block\Block" name="promotion_header" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">promotion_header</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/Logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">158</argument>
+                <argument name="logo_img_height" xsi:type="number">46</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="footer">
+            <container name="footer.links" htmlTag="div" htmlClass="block_links">
+                <block class="Magento\Cms\Block\Block" name="links_column1">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">links_column1</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="links_column2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">links_column2</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="links_column3">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">links_column3</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="links_column4">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">links_column4</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <move element="top.search" destination="top.links"/>
+        <move element="minicart" destination="top.links" before="-"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+    </body>
+</page>

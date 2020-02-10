@@ -1,30 +1,9 @@
-@font-face {
-    font-family: "AT Sackers Heavy Gothic";
-    src: url("../fonts/AT_Sackers_Heavy_Gothic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Helvetica Inserat - Roman";
-    src: url("../fonts/HelveticaInseratLTStd-Roman.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Montserrat-Medium";
-    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Montserrat-Regular";
-    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
 #maincontent{
     max-width: 1366px;
     padding: 0;
+}
+#maincontent .columns .column.main{
+    padding-bottom: 0;
 }
 .editorial-wrapper{
     width: 100%;
@@ -38,7 +17,7 @@
     font-weight: 400;
     font-family: "AT Sackers Heavy Gothic";
     text-transform: uppercase;
-    padding: 17px 0;
+    padding-bottom: 16px;
 }
 .editorial__content{
     display: flex;
