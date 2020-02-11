@@ -3,7 +3,6 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="Magento_Cms::css/editorial.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Montserratdisplay=swap" rel="stylesheet"/>
     </head>
     <body>
         <referenceContainer name="content">

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="top.header.code" htmlClass="header-top-code" htmlTag="div" before="-">
+                <block name="header-code" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_promotions</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.panel.wrapper">
+            <container name="panel.language" htmlClass="panel-language" htmlTag="div" before="-">
+                <block name="header.language" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">language_top_header</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="page.top">
+            <container  htmlTag="div" htmlClass="bread_crums" after="-">
+                <block name="editorial.text" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">bread_crums</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <container name="footer.block.info" htmlTag="div" htmlClass="footer-block-info" before="-">
+                <block name="services.exclusifs" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">services_exclusifs</argument>
+                    </arguments>
+                </block>
+                <block name="besoin.daide.footer" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">besoin_daide_footer</argument>
+                    </arguments>
+                </block>
+                <block name="propos.footer.list" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">propos_footer_list</argument>
+                    </arguments>
+                </block>
+                <block name="retrouvez.nous.sur" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">retrouvez_nous_sur</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/Logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">158</argument>
+                <argument name="logo_img_height" xsi:type="number">46</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="logo" destination="header.panel.wrapper" after="panel.language"/>
+        <move element="top.search" destination="top.links" after="-"/>
+        <move element="minicart" destination="top.links" after="-"/>
+    </body>
+</page>
