@@ -4,24 +4,23 @@
         <css src="css/header_footer.css"/>
     </head>
     <body>
-        <referenceContainer name="page.wrapper">
+        <referenceContainer name="header.container">
             <block class="Magento\Cms\Block\Block" name="promotion.block" before="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">promotion.block</argument>
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceBlock class="Magento\Customer\Block\Account\Link" name="my-account-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true"/>
+                <argument name="class" xsi:type="string">my-account-link</argument>
+            </arguments>
+        </referenceBlock>
         <referenceBlock name="top.links">
-            <referenceBlock class="Magento\Customer\Block\Account\Link" name="my-account-link">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true"/>
-                    <argument name="class" xsi:type="string">my-account-link</argument>
-                </arguments>
-            </referenceBlock>
             <move element="top.search" destination="top.links" after="my-account-link"/>
             <move element="minicart" destination="top.links" before="wish-list-link"/>
             <move element="logo" destination="header.panel" before="top.links"/>
-            <referenceBlock class="Magento\Wishlist\Block\Link" name="wish-list-link" after="top.search"/>
         </referenceBlock>
         <move element="top.links" destination="header.panel" after="-" />
         <referenceBlock name="authorization-link" remove="true"/>
@@ -37,7 +36,7 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="footer">
-            <container name="footer.block.link" htmlTag="div" htmlClass="footer-block-link" before="-">
+            <container name="footer.block.link" htmlTag="div" htmlClass="footer-block-links" before="-">
                 <block class="Magento\Cms\Block\Block" name="services.exclusifs">
                     <arguments>
                         <argument name="block_id" xsi:type="string">services.exclusifs</argument>
