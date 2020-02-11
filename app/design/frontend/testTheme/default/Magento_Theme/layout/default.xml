@@ -48,6 +48,7 @@
         </referenceContainer>
         <move element="top.search" destination="top.links"/>
         <move element="minicart" destination="top.links" before="-"/>
+        <!--<move element="breadcrumbs" destination="header.panel"/>-->
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="authorization-link" remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
