@@ -1,0 +1,149 @@
+.page-header .panel.wrapper .panel.header {
+    max-width: 100%;
+    padding-right: 96px;
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+
+.page-wrapper .page-header .panel.wrapper {
+    border-bottom: none;
+}
+
+.header__promotion {
+    text-align: center;
+    color: #808080;
+    font-family: "Montserrat";
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.27px;
+    background-color: #f7f3ea;
+    padding: 3px 0;
+}
+
+.page-header .panel.header .header.links {
+    display: flex;
+    align-items: center;
+}
+
+.header.panel > .header.links > .block.block-search {
+
+}
+
+.header.links .block-search .label::before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/search.png");
+}
+
+.header.panel .header.links > li a {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 18px;
+    height: 17px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header.panel .header.links li:first-child > a {
+    background-image: url("../images/account.png");
+}
+
+.header.panel .header.links li:nth-child(2) > a {
+    background-image: url("../images/wish.png");
+}
+
+.header.panel .header.links li:nth-child(3) > a {
+    width: 19px;
+    height: 19px;
+    background-image: url("../images/cart.png");
+}
+
+.header.links .minicart-wrapper .action.showcart:before {
+    content: "";
+}
+
+.page-header .header.content {
+    display: flex;
+    padding: 0;
+}
+
+.header.content .logo {
+    margin: -9px auto;
+}
+
+.page-wrapper .nav-sections {
+    background-color: white;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.nav-sections .navigation {
+    background-color: white;
+    text-align: center;
+}
+
+.nav-sections .section-item-content .navigation .ui-menu li > a {
+    line-height: 46px;
+}
+
+.page-wrapper > .breadcrumbs {
+    max-width: 100%;
+    padding: 0 118px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+
+.header.links .block-search {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+}
+
+.form.minisearch .actions {
+    display: none;
+}
+
+.page-header .header.panel > .header.links > li {
+    margin: 0 0 0 10px;
+}
+
+li.wishlist {
+    order: 3;
+}
+
+li.minicart-wrapper {
+    order: 4;
+}
+
+li.block-search {
+    order: 2;
+}
+
+@media screen and (max-width: 1140px) {
+    .page-header .panel.wrapper .panel.header,
+    .page-wrapper > .breadcrumbs {
+        padding: 0 20px;
+    }
+}
+
+.header.links .block-search .label {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+}
+
+.header.links .block-search input {
+    display: none;
+}
