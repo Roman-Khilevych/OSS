@@ -17,7 +17,7 @@
     margin-bottom: 0;
     text-align: center;
     color: #808080;
-    font-family: "Montserrat", sans-serif;
+    /*font-family: "Montserrat", sans-serif;*/
     font-size: 9px;
     font-weight: 500;
     text-transform: uppercase;
@@ -170,7 +170,7 @@ header .header.panel > .header.links > li > a {
 .header.panel > .header.links > li.link.wishlist a::after {
     background: url("../images/coeur.png") no-repeat;
 }
-
+--------------------------
 
 .block.block-search {
     position: absolute;
@@ -247,11 +247,15 @@ label.label.search-lb::after {
     height: 20px;
 }
 
-.minicart-wrapper .action.showcart.active:before,
+
 .block-search .label:before {
     content: '';
 }
-
+.minicart-wrapper .action.showcart.active:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .block.block-search {
     position: relative;
