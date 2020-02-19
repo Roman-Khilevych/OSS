@@ -4,7 +4,7 @@
  * Define Themes
  *
  * area: frontend,
- * name: Newthem/default,
+ * name: Super/default,
  * locale: en_US,
  * files: [
  * 'css/styles-m',
@@ -18,7 +18,7 @@
 module.exports = {
     mythem: {
         area: 'frontend',
-        name: 'Newthem/default',
+        name: 'Super/default',
         locale: 'en_US',
         files: [
             'css/styles-m',
