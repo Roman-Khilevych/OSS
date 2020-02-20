@@ -26,10 +26,6 @@
     align-items: center;
 }
 
-.header.panel > .header.links > .block.block-search {
-
-}
-
 .header.links .block-search .label::before {
     content: "";
     width: 17px;
