@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="css/header_footer.css"/>
+<!--        <css src="css/header_footer.css"/>-->
     </head>
     <body>
         <referenceContainer name="header.container">
@@ -33,6 +33,8 @@
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/magento-logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">158</argument>
+                <argument name="logo_img_height" xsi:type="number">46</argument>
             </arguments>
         </referenceBlock>
         <referenceContainer name="footer">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .page-header .panel.wrapper .header.panel{
     max-width: 1364px;
 }
@@ -235,21 +235,21 @@ div.actions:nth-child(3) {
     display: flex;
     justify-content: space-between;
 }
-.footer-block-link {
+.footer-block-links {
     display: flex;
 }
-.footer-block-link > div img{
+.footer-block-links > div img{
     padding-top: 8px;
 }
-.footer-block-link > div{
+.footer-block-links > div{
     padding-right: 39px;
 }
-.footer-block-link > div > p {
+.footer-block-links > div > p {
     display: flex;
     flex-direction: column;
     margin: 0;
 }
-.footer-block-link > div > p a{
+.footer-block-links > div > p a{
     font-size: 11px;
     letter-spacing: 0.78px;
 }
