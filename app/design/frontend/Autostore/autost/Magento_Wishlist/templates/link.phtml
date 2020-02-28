@@ -1,0 +1,31 @@
+<?php
+/*
+* Monnier monnierTopic Search  link template.
+*
+*@author Hrytsuk Walentun vgritsukm@gmail.com
+*@copyright 2020 zevsi
+*/
+
+/* @var \Magento\Wishlist\Block\Link $block */
+?>
+<div class="link wishlist" data-bind="scope: 'wishlist'">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()) ?>
+        <!-- ko if: wishlist().counter -->
+        <span data-bind="text: wishlist().counter" class="counter qty"></span>
+        <!-- /ko -->
+    </a>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>

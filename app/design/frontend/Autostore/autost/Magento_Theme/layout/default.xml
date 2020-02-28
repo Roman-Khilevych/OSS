@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+            <container name="list.language.currency" htmlClass="list-language-currency" htmlTag="ul" after="-">
+                <block name="currency.list" class="Magento\Framework\View\Element\Template" template="Magento_Theme::list-header/currency-list.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logos.svg</argument>
+                <argument name="logo_img_width" xsi:type="number">179</argument>
+                <argument name="logo_img_height" xsi:type="number">48</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="catalog.topnav">
+                <block class="Magento\Cms\Block\Block" name="auto.store.menu.right">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">menu_navigation</argument>
+                    </arguments>
+                </block>
+        </referenceBlock>
+                <referenceContainer name="footer">
+                    <container name="footer.top.info" htmlTag="div" htmlClass="top-footer" before="-">
+                    <container name="footer.wrapper" htmlTag="div" htmlClass="footer-wrapper" before="-">
+                        <container name="ul.footer.block" htmlTag="div" htmlClass="ul-footer-bloc" before="-">
+                            <block name="contact.us" class="Magento\Cms\Block\Block">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">contact_us</argument>
+                                </arguments>
+                            </block>
+                            <block name="store.location" class="Magento\Cms\Block\Block">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">store_location</argument>
+                                </arguments>
+                            </block>
+                            <block name="customer.service" class="Magento\Cms\Block\Block">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">customer_service</argument>
+                                </arguments>
+                            </block>
+                            <block name="information.footer" class="Magento\Cms\Block\Block">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">information_footer</argument>
+                                </arguments>
+                            </block>
+                        </container>
+                    </container>
+                    </container>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="footer.bottom" htmlTag="div" htmlClass="footer-bottom" after="-">
+               <container name="footer.bottom.payment" htmlTag="div" htmlClass="footer-mod-bottom footer content">
+                   <block name="payment.footer" class="Magento\Cms\Block\Block">
+                       <arguments>
+                           <argument name="block_id" xsi:type="string">payment_footer</argument>
+                       </arguments>
+                   </block>
+               </container>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="sidebar.additional">
+            <block name="action.sidebar.additional" class="Magento\Cms\Block\Block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">action_sidebar</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <move element="store_language" destination="list.language.currency" before="-"/>
+        <move element="wish-list-link" destination="header-wrapper" after="top.search"/>
+        <move element="minicart" destination="header-wrapper" after="-"/>
+        <move element="copyright" destination="footer.bottom"/>
+    </body>
+</page>

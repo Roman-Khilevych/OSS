@@ -1,0 +1,169 @@
+& when (@media-common = true) {
+
+    .page-products {
+        .toolbar {
+            .limiter {
+                display: block;
+            }
+        }
+
+        .toolbar-products {
+            display: flex;
+            align-items: center;
+            padding: 11px 15px 10px 11px;
+            border-radius: 5px;
+            background-color: @toolbar-bacground;
+            color: @sorted-color-tundora;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            .toolbar-amount {
+                flex-grow: 1;
+                text-align: left;
+                padding-top: 0;
+            }
+
+            .toolbar-sorter.sorter {
+                margin-left: 46px;
+                padding-top: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                &::before{
+                    content: "\2039";
+                    position: absolute;
+                    transform: translateY(-50%) rotate(-90deg);
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    font-size: 16px;
+                    top: 50%;
+                    right: 23px;
+                }
+                .sorter-action{
+                    left: 5px;
+                    &::before {
+                        content: "\f30c";
+                        font-weight: @font-weight-max-bolds;
+                        font-family: Font Awesome\ 5 Free;
+                        color:@autostore-color-black ;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .modes {
+                .modes-mode {
+                    padding: 6px;
+                    border-radius: 5px;
+
+                    &:last-child {
+                        margin-left: 3px;
+                    }
+                    &::before{
+                        font-weight:@font-weight-max-bolds ;
+                        font-family: Font Awesome\ 5 Free;
+                        font-size:@font-size-modes-mode ;
+                    }
+                }
+                .mode-grid{
+                    &::before{
+                        content: "\f00a";
+                    }
+                }
+                .mode-list{
+                    &::before{
+                        content: "\f00b";
+                    }
+                }
+
+                strong.modes-mode {
+                    background-color: @autostore-color-efect;
+
+                    &::before {
+                        color: @autostore-color-merino;
+                    }
+                }
+            }
+
+            .control,
+            .toolbar-sorter.sorter {
+                select {
+                    height: 31px;
+                    padding: 5px 15px 4px;
+                    background-color: @toolbar-bacground;
+                    border: 1px solid @autostore-color-line;
+                    color: @sorted-color-tundora;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                }
+            }
+
+            .control,
+            .select-bloc-toolbar {
+                position: relative;
+
+                &::after {
+                    content: '\2039';
+                    transform: translateY(-50%) rotate(-90deg);
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    font-size: @font-size-toolbar;
+                    top: 50%;
+                    right: 16px;
+                }
+            }
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+    .page-products{
+        .toolbar-products{
+            flex-wrap: wrap;
+            .toolbar-amount{
+                width: 40%;
+            }
+            div.toolbar-sorter.sorter{
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-products{
+        .toolbar.toolbar-products{
+            justify-content: space-between;
+            .toolbar-amount{
+                width: 90%;
+            }
+            .limiter{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .page-products{
+        .toolbar-products{
+            justify-content: center;
+            .field.limiter{
+                margin-top: 15px;
+            }
+        }
+    }
+
+}

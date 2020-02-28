@@ -1,10 +1,10 @@
 & when (@media-common = true) {
     .title-page {
         .lib-typography(
-            @_font-family:@font-family__bas,
-            @_color :@default-color,
+            @_font-family:@font-family__sackers,
+            @_color :@autostore-color-black,
             @_font-size : @font-size-title,
-            @_font-weight : @font-weight-regulars,
+            @_font-weight : @font-weight__regular,
             @_line-height : @line-height-strong);
         letter-spacing: @letter-spacing-title-strong;
         text-align: center;
@@ -34,9 +34,9 @@
             .bloc-right-title {
                 .lib-typography(
                     @_font-family:@font-family__helveti,
-                    @_color :@default-color,
+                    @_color :@autostore-color-black,
                     @_font-size : @font-size-product,
-                    @_font-weight : @font-weight-regulars,
+                    @_font-weight : @font-weight__regular,
                     @_line-height : @line-height-title-cart);
                 position: absolute;
                 max-width: 245px;
@@ -102,7 +102,7 @@
         .lib-typography(
             @_font-family:@font-family__monsterrat,
             @_font-size : @font-size-eleven,
-            @_font-weight : @font-weight-heaviers,
+            @_font-weight : @font-weight__heavier,
             @_line-height : @line-height-cart-info);
         letter-spacing: @letter-spacing-cart;
         text-transform: uppercase;
@@ -110,13 +110,13 @@
         margin-bottom: 0;
 
         a {
-            color: @default-color;
+            color: @autostore-color-black;
         }
     }
 
     .description-cart {
         font-family: @font-family__monsterrat;
-        font-weight: @font-weight-regulars;
+        font-weight: @font-weight__regular;
         letter-spacing: @letter-spacing-cart;
         line-height: @line-height-fourteen;
         padding: 0 10px;
@@ -127,27 +127,27 @@
 
     .title-cart {
         .lib-typography(
-            @_font-family:@font-family__bas,
+            @_font-family:@font-family__sackers,
             @_font-size : @font-size-title,
             @_font-weight : @font-weight-bolds,
-            @_line-height : @line-height-title-catr);
+            @_line-height : @line-height-title);
         text-transform: lowercase;
         letter-spacing: @letter-spacing-title-strong;
         margin-top: 0;
     }
 
     .info-cart {
-        font-weight: @font-weight-regulars;
+        font-weight: @font-weight__regular;
         letter-spacing: @letter-spacing-cart;
-        font-size: @font-size-eleven;
+        font-size: @font-size-autostore-small;
         text-align: center;
         padding: 16px 10px 0 10px;
         overflow: hidden;
     }
 
     .cart-links {
-        color: @default-color;
-        font-weight: @font-weight-regulars;
+        color: @autostore-color-black;
+        font-weight: @font-weight__regular;
         letter-spacing: @letter-spacing-cart;
         line-height: @line-height-fourteen;
         text-decoration: none;
@@ -155,7 +155,7 @@
         display: block;
 
         &:visited {
-            color: @default-color;
+            color: @autostore-color-black;
         }
     }
 }
@@ -189,7 +189,7 @@
             .images-cart {
                 span.bloc-right-title {
                     font-size: @font-size-product2;
-                    line-height: @line-height-title-cart2;
+                    line-height: @line-height-product;
                 }
             }
         }
@@ -215,7 +215,7 @@
     }
     .block-cart {
         .info-cart {
-            font-size: @font-size-default;
+            font-size: @autostore-body-font-size;
         }
     }
 

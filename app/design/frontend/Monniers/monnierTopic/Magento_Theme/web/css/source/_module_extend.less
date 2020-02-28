@@ -1,19 +1,19 @@
 & when (@media-common = true) {
     .header_promotions {
         padding: 7px 20px 5px 20px;
-        background-color: @color-background-bloc;
+        background-color: @autostore-color-merino;
 
         & > p {
             .lib-typography(
                 @_font-family:@font-family__monsterrat,
-                @_color :@color-text-param,
-                @_font-size : @font-size-nine,
-                @_font-weight : @font-weight-heaviers,
+                @_color :@autostore-color-text-gray,
+                @_font-size : @font-size-minimal-autostore,
+                @_font-weight : @font-weight__heavier,
                 @_line-height : @line-height-strong);
             margin-bottom: 0;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: @letter-spacing-param;
+            letter-spacing: @letter-spacing-small;
         }
     }
 
@@ -62,8 +62,8 @@
         li {
             .lib-typography(
                 @_font-family:@font-family__monsterrat,
-                @_font-size : @font-size-ten,
-                @_font-weight : @font-weight-heaviers,
+                @_font-size : @font-size-list-text,
+                @_font-weight : @font-weight__heavier,
                 @_line-height : @line-height-level-top);
             letter-spacing: @letter-spacing-cart;
             text-transform: uppercase;
@@ -77,7 +77,7 @@
                     width: 1px;
                     height: 11px;
                     display: block;
-                    background-color: @default-color;
+                    background-color: @autostore-color-black;
                     position: absolute;
                     top: 13px;
                     right: 5px;
@@ -220,9 +220,9 @@
     .bread_crums {
         .lib-typography(
             @_font-family:@font-family__monsterrat,
-            @_color :@color-text-param,
-            @_font-size : @font-size-ten,
-            @_font-weight : @font-weight-heaviers,
+            @_color :@autostore-color-text-gray,
+            @_font-size : @font-size-list-text,
+            @_font-weight : @font-weight__heavier,
             @_line-height : @line-height-fourteen);
         text-transform: uppercase;
         letter-spacing: @letter-spacing-cart;
@@ -251,7 +251,7 @@
                 height: 17px;
                 background: none;
                 min-width: 11px;
-                color: @default-color;
+                color: @autostore-color-black;
                 line-height: @line-height-twents;
             }
         }
@@ -309,7 +309,7 @@
     }
 
     .page-footer {
-        background-color: @white-shade-gray;
+        background-color: @color-merino;
         margin-top: 15px;
 
         .footer.content {
@@ -341,8 +341,8 @@
 
         .title-footer-block {
             font-family: @font-family__monsterrat;
-            font-size: @font-size-eleven;
-            font-weight: @font-weight-semibolds;
+            font-size: @font-size-autostore-small;
+            font-weight: @font-weight__semibold;
             text-decoration: underline;
             text-transform: uppercase;
             margin-bottom: 17px;
@@ -350,7 +350,7 @@
 
         .list-footer-block {
             font-family: @font-family__monsterrat;
-            font-weight: @font-weight-regulars;
+            font-weight: @font-weight__regular;
 
             li {
                 line-height: @line-height-strong;
@@ -358,8 +358,8 @@
         }
 
         a {
-            color: @default-color;
-            font-size: @font-size-eleven;
+            color: @autostore-color-black;
+            font-size: @font-size-autostore-small;
             letter-spacing: @letter-spacing-cart;
         }
     }
@@ -420,7 +420,7 @@
             padding-left: 0;
             background: none;
             border: none;
-            border-bottom: 1px solid @color-text-param;
+            border-bottom: 1px solid @autostore-color-text-gray;
             height: 28px;
         }
 
@@ -431,14 +431,14 @@
         .action.subscribe {
             .lib-typography(
                 @_font-family:@font-family__monsterrat,
-                @_color :@color-text-param,
+                @_color :@autostore-color-text-gray,
                 @_font-size : @font-size-eleven,
-                @_font-weight : @font-weight-regulars,
+                @_font-weight : @font-weight__regular,
                 @_line-height : @line-height-fourteen);
             width: 122px;
             text-transform: uppercase;
             letter-spacing: @letter-spacing-cart;
-            background-color: @default-color;
+            background-color: @autostore-color-black;
             border: 0;
 
             &:hover {
@@ -456,10 +456,10 @@
     .block {
         .title {
             strong {
-                color: @default-color;
+                color: @autostore-color-black;
                 font-family: @font-family__monsterrat;
-                font-size: @font-size-eleven;
-                font-weight: @font-weight-regulars;
+                font-size: @font-size-autostore-small;
+                font-weight: @font-weight__regular;
                 line-height: @line-height-strong;
                 text-decoration: underline;
                 text-transform: uppercase;
@@ -606,28 +606,42 @@
         flex-direction: column;
     }
 
-    .panel.wrapper .logo {
-        max-width: 80%;
+    .panel.wrapper {
+        .logo {
+            max-width: 80%;
+        }
     }
 
-    header.page-header .panel.wrapper {
-        padding: 0 10px;
+    header.page-header {
+        .panel.wrapper {
+            padding: 0 10px;
+        }
+
     }
 
-    .page-header .panel.wrapper .panel.header {
-        width: 80%;
-        align-self: flex-end;
-        padding-left: 20px;
+    .page-header {
+        .panel.wrapper {
+            .panel.header {
+                width: 80%;
+                align-self: flex-end;
+                padding-left: 20px;
+            }
+        }
+
     }
 
-    .page-header .footer-block-info {
-        flex-direction: column;
-        justify-content: center;
+    .page-header {
+        .footer-block-info {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
-    .footer-block-info > div {
-        width: 100%;
-        margin-bottom: 30px;
+    .footer-block-info{
+        & > div {
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
 
     .title-footer-block {
@@ -638,7 +652,9 @@
         text-align: center;
     }
 
-    .footer.content .block.newsletter {
-        width: 80%;
+    .footer.content {
+        .block.newsletter {
+            width: 80%;
+        }
     }
 }

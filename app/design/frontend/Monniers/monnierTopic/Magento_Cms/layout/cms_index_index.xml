@@ -86,6 +86,8 @@
                     </arguments>
                 </block>
             </block>
+            <block name="script.tempalate.block" class="Magento\Framework\View\Element\Template"
+                   template="Magento_Cms::file_js_template.phtml" />
         </referenceContainer>
     </body>
 </page>
