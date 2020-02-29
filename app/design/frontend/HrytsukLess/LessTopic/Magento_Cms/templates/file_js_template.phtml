@@ -1,0 +1,44 @@
+<?php
+/*
+* Monnier monnierTopic Cms cart file_js_template template.
+*
+*@author Hrytsuk Walentun vgritsukm@gmail.com
+*@copyright 2020 zevsi
+*/
+?>
+<!---->
+<!--<script type="text/x-magento-init">-->
+<!--    {-->
+<!--        "*": {-->
+<!--            "Magento_Cms/js/customer-js": {-->
+<!--                "baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--</script>-->
+<!---->
+<!--<div class="customer-js-content">-->
+<!--    <span class="customer-text">Text one</span>-->
+<!--</div>-->
+<!---->
+<!---->
+<!--<script type="text/x-magento-init">-->
+<!--    {-->
+<!--        ".customer-js-content": {-->
+<!--            "Magento_Cms/js/customer-js": {-->
+<!--                "baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--</script>-->
+
+
+<div class="custom-js-text-container" data-mage-init='{"customJs": {
+        "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>",
+        "text": "my new text"}}'>
+    <span class="custom-text">my text 2 base</span>
+    <span class="custom-text-two">TExt Color base</span>
+</div>
+

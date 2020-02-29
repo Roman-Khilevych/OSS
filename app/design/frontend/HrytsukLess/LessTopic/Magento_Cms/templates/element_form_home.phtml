@@ -1,0 +1,20 @@
+<div id="my-collapsible" data-mage-init='{"collapsible": {"animate" : {"duration" : 1000,"easing":"easeOutCubic"}, "saveState" : true}}'>
+    <div data-role="title">
+        <h2 data-role="trigger">Title Formb</h2>
+    </div>
+    <div data-role="content">
+        <form data-mage-init='{"validation" :{} , "valintinValidationForms" : {}} '>
+            <div class="control">
+                <input type="email" name="email" id="email" class="input-text" placeholder="<?= __('Your Email') ?>"
+                       data-validate='{"required":true, "validate-email":true}' />
+
+                <input type="password" name="password" id="pass" class="input-text" placeholder="<?= __('Password') ?>"
+                       data-validate='{"required":true, "custimized-validate-password":true}' data-password-min-length ="8" />
+            </div>
+            <button type="submit" class="action primary">
+                <?= __('Submit')?>
+            </button>
+        </form>
+    </div>
+</div>
+

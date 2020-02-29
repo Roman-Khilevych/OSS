@@ -1,12 +1,13 @@
 define([
         'jquery',
+        'owl.carousel.min'
     ],
     function ($) {
         'use strict' ;
 
-        return function () {
+        return function (config, element) {
             $(document).ready(function(){
-                $(".owl-carousel").owlCarousel({
+                $(element).owlCarousel({
                     margin:20,
                     nav:true,
                     items : 4,
