@@ -1,0 +1,134 @@
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+@page__max-width: 1230px;
+@layout__max-width: @page__max-width;
+@sidebar__width: 3;
+@layout-column__sidebar-width: @sidebar__width;
+@auto-store__point-desctop: 1200px;
+@currency-choice__width: 132px;
+@image__url: '../images/';
+@h1__font-size: 30px;
+@h3__font-size: 24px;
+@h4__font-size: 22px;
+@h5__font-size: 18px;
+@_breadcrumbs-font-size: 14px;
+@number_of_cards: 3;
+
+// Theme colors
+@autostore-color-nero: #282828;
+@autostore-color-alizarin: #FF2D37;
+@autostore-color-whisper: #E5E5E5;
+@autostore-color-white-smoke: #f5f5f5;
+@autostore-color-white: #ffffff;
+@autostore-color-black: #000000;
+@autostore-color-cod-gray: #181818;
+@autostore-color-silver: #CCCCCC;
+@autostore-color-alto: #DDDDDD;
+@autostore-color-scorpion: #575757;
+@autostore-color-dove-gray: #686868;
+@autostore-color-alabaster: #F8F8F8;
+@autostore-color-tundora: #484848;
+@autostore-color-silver: #C5C5C5;
+@autostore-color-dodger-blue: #3599FF;
+@autostore-color-endeavour: #0055AC;
+@autostore-color-monarch: #950C20;
+
+//  Colors
+//  Header
+@panel-wrapper__background-color: @autostore-color-nero;
+@panel-wrapper__color: @autostore-color-alizarin;
+@panel-links__color: @autostore-color-whisper;
+@panel-links-hover__color: @autostore-color-alizarin;
+@label__background-color: @autostore-color-white-smoke;
+@label-hover__outline-color: @autostore-color-alizarin;
+@label-hover__color: @autostore-color-alizarin;
+@currency-choice__background-color: @autostore-color-white;
+@label__color: @autostore-color-black;
+@input-outline__color: @autostore-color-alizarin;
+@action-search__background-color: @autostore-color-alizarin;
+@action-search-before__color: @autostore-color-white;
+@nav-sections__background-color: @autostore-color-white;
+@navigation__background-color: @autostore-color-white;
+@menu-button-wrapper__color: @autostore-color-white;
+@menu-button-wrapper__background-color: @autostore-color-alizarin;
+@tab-points__color: @autostore-color-nero;
+@hover-text_colot: @autostore-color-alizarin;
+@link-hover__color: @autostore-color-white;
+@attr-swatch-option__background: @autostore-color-white;
+@attr-swatch-option__color: @autostore-color-nero;
+@attr-swatch-option__selected__background: @autostore-color-alizarin;
+@attr-swatch-option__selected__color: @autostore-color-white;
+@dropdown__link-color: @autostore-color-nero;
+@counter-label__color: @autostore-color-nero;
+@dropdown__li-background-color: @autostore-color-white-smoke;
+@dropdown__link-hover-color: @autostore-color-alizarin;
+@product-item-name-link__color: @autostore-color-nero;
+@menu-tab__hover-background-color: @autostore-color-white;
+@menu-tab__link-color: @autostore-color-scorpion;
+//  Content
+@modes-mode__background-color: @autostore-color-alizarin;
+@modes-mode__color: @autostore-color-white;
+@modes-mode-before__color: @autostore-color-white;
+@swatch-options__color: @autostore-color-dove-gray;
+@swatch-options__hover-background-color:  @autostore-color-alizarin;
+@swatch-options__hover-color:  @autostore-color-white;
+@filter-options-link__color: @autostore-color-nero;
+@filter-options-title__color: @autostore-color-nero;
+@action-visited__color: @autostore-color-nero;
+@action-visited-hover__color: @autostore-color-alizarin;
+@counter__color: @autostore-color-white;
+@toolbar-products__background-color: @autostore-color-alabaster;
+@sorter-options__background-color: @autostore-color-alabaster;
+@sorter-options__color: @autostore-color-nero;
+@action__background-color: @autostore-color-nero;
+@action__color: @autostore-color-white;
+@action__hover-background-color: @autostore-color-alizarin;
+@special-price__color: @autostore-color-alizarin;
+@old-price__color: @autostore-color-silver;
+@sale-product-label__color: @autostore-color-white;
+@new-product-label__background-color: @autostore-color-dodger-blue;
+@sale-product-label__background-color: @autostore-color-alizarin;
+//  Footer
+@page-footer__background-color: @autostore-color-cod-gray;
+@page-footer__color: @autostore-color-white;
+@footer-li__color: @autostore-color-white;
+
+//  Borders, box-shadows, outlines
+@currency-choice-before__border: 1px solid @autostore-color-silver;
+@currency-choice__border: 1px solid @autostore-color-whisper;
+@switcher-before__border: 1px solid @autostore-color-silver;
+@control-input__border: 2px solid @autostore-color-whisper;
+@minicart-wrapper__border: 2px solid @autostore-color-whisper;
+@link-wishlist__border: 2px solid @autostore-color-whisper;
+@nav-sections__border-bottom: 2px solid @autostore-color-alizarin;
+@menu-row__border: 2px solid @autostore-color-white;
+@currency-choice__box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+@dropdown__border: 1px solid @autostore-color-whisper;
+@dropdown__box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+@minicart__border-bottom: 1px solid @autostore-color-alto;
+@product-image-container__border: 1px solid @autostore-color-alto;
+@details-qty-input__border: 1px solid @autostore-color-whisper;
+@block-minicart__border: 1px solid @autostore-color-whisper;
+@subtotal__border-bottom: 1px solid @autostore-color-alto;
+@menu-tab__border-bottom: 1px solid @autostore-color-alto;
+@dropdown-li__outline: 1px solid @autostore-color-alizarin;
+@section__border-bottom: 1px solid @autostore-color-white;
+@filter-content__border: 1px solid @autostore-color-whisper;
+@swatch-options__border: 1px solid @autostore-color-whisper;
+@filter-options__border-bottom: 1px solid @autostore-color-whisper;
+@filter-actions__border-bottom: 1px solid @autostore-color-whisper;
+@block-content__border: 1px solid @autostore-color-whisper;
+@toolbar-products__border: 1px solid @autostore-color-whisper;
+@modes-mode__border: 1px solid @autostore-color-tundora;
+@sorter-options__border: 1px solid @autostore-color-whisper;
+@product-image-wrapper__border-bottom: 1px solid @autostore-color-whisper;
+@wishlist__border-right: 1px solid @autostore-color-white;
+@wishlist__border-left: 1px solid @autostore-color-white;
+@product-item-info__border: 1px solid @autostore-color-whisper;
+@new-product-label__border-top: 12px solid @autostore-color-endeavour;
+@sale-product-label__border-top: 12px solid @autostore-color-monarch;

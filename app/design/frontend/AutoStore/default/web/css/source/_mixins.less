@@ -1,0 +1,61 @@
+.pseudo-elements-mixin(@content: '', @display: block, @position: absolute) {
+    display: @display;
+    content: @content;
+    position: @position;
+}
+
+.hover-point-mixin (
+    @color: @autostore-color-alizarin,
+    @outline: none,
+    @background-color: @autostore-color-white) {
+    color: @color;
+    outline: @outline;
+    background-color: @background-color;
+}
+
+.border-mixin (
+    @box-shadow: 0 0 10px rgba(0, 0, 0, 0.25),
+    @border: 1px solid @autostore-color-whisper,
+    @background-color: @autostore-color-white) {
+    box-shadow: @box-shadow;
+    border: @border;
+    background-color: @background-color;
+}
+
+.tab-points-mixin {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 15px;
+    z-index: 5;
+    border-top: 2px solid @autostore-color-alizarin;
+    border-radius: 0 0 5px 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.filter-titles-mixin(
+    @background-color: @autostore-color-alizarin,
+    @color: @autostore-color-white,
+    @border-radius: 5px 5px 0 0,
+    @padding: 11px 22px) {
+    background-color: @background-color;
+    color: @color;
+    border-radius: @border-radius;
+    padding: @padding;
+}
+
+.auto-store-button-mixin(
+    @button-padding:5px 20px,
+    @button-color: @autostore-color-white,
+    @button-text-transform: uppercase,
+    @button-hover-background-color: @autostore-color-alizarin,
+    @button-background-color: @autostore-color-nero) {
+    padding: @button-padding;
+    color:@button-color;
+    text-transform: @button-text-transform;
+    background-color: @button-background-color;
+    &:hover {
+        background-color: @button-hover-background-color;
+    }
+}
