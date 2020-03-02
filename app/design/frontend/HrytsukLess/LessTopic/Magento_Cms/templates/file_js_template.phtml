@@ -6,35 +6,32 @@
 *@copyright 2020 zevsi
 */
 ?>
-<!---->
-<!--<script type="text/x-magento-init">-->
-<!--    {-->
-<!--        "*": {-->
-<!--            "Magento_Cms/js/customer-js": {-->
-<!--                "baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"-->
-<!--            }-->
-<!--        }-->
-<!--    }-->
-<!---->
-<!--</script>-->
-<!---->
-<!--<div class="customer-js-content">-->
-<!--    <span class="customer-text">Text one</span>-->
-<!--</div>-->
-<!---->
-<!---->
-<!--<script type="text/x-magento-init">-->
-<!--    {-->
-<!--        ".customer-js-content": {-->
-<!--            "Magento_Cms/js/customer-js": {-->
-<!--                "baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"-->
-<!--            }-->
-<!--        }-->
-<!--    }-->
-<!---->
-<!--</script>-->
 
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Cms/js/customer-js": {
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+            }
+        }
+    }
 
+</script>
+
+<div class="customer-js-content">
+    <span class="customer-text">Text one</span>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".customer-js-content": {
+            "Magento_Cms/js/customer-js": {
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+            }
+        }
+    }
+
+</script>
 <div class="custom-js-text-container" data-mage-init='{"customJs": {
         "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>",
         "text": "my new text"}}'>

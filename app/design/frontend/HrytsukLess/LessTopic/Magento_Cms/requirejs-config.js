@@ -5,9 +5,4 @@ var config = {
             valintinValidationForms : 'Magento_Cms/js/valintin-validate-password',
         }
     },
-
-
-
-
-
 };

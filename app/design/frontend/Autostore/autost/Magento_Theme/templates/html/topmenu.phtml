@@ -20,14 +20,15 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
     <div class="all-categories-block">
         <span class="all-categories">All Categories</span>
         <span class="menu-burgers-icon"></span>
-        <ul class="menu-ul"  data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
-            <?= /* @noEscape */ $_menuHtml?>
+        <ul class="menu-ul"
+            data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+            <?= /* @noEscape */
+            $_menuHtml ?>
         </ul>
     </div>
     <div class="child-navigation">
         <span class="burger-menu-right">
-            Menu
-            <span></span>
+            <?=__("Menu") ?>
         </span>
         <?= $block->getChildHtml() ?>
     </div>

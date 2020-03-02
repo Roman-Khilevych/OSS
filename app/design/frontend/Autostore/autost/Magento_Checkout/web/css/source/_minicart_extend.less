@@ -1,5 +1,4 @@
 & when (@media-common = true) {
-
     .block-content {
         & > button.action.close {
             display: none;
@@ -34,19 +33,23 @@
 
     .mage-dropdown-dialog {
         .block-minicart {
-            .item.product.product-item{
-                & > div.product{
+            .item.product.product-item {
+                & > div.product {
                     padding: 18px 25px;
                 }
+
                 .product {
                     padding: 0;
                 }
-                .product.options.list{
+
+                .product.options.list {
                     margin-bottom: 0;
                     display: flex;
-                    & > .label{
+
+                    & > .label {
                         margin: 0 5px 0 2px;
-                        &:not(:first-of-type){
+
+                        &:not(:first-of-type) {
                             margin-left: 10px;
                         }
                     }
@@ -58,30 +61,33 @@
     .minicart-items .product-item-details {
         padding-left: 0;
         margin-top: 10px;
-        .product.options{
+
+        .product.options {
             position: relative;
             margin-top: 10px;
-                .toggle{
-                    &::after{
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        font-size: 22px;
-                        line-height: 22px;
-                        color: inherit;
-                        content: '\e622';
-                        font-family: 'icons-blank-theme';
-                        margin: 0;
-                        vertical-align: top;
-                        display: inline-block;
-                        font-weight: normal;
-                        overflow: hidden;
-                        speak: none;
-                        text-align: center;
-                    }
+
+            .toggle {
+                &::after {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: 22px;
+                    line-height: 22px;
+                    color: inherit;
+                    content: '\e622';
+                    font-family: 'icons-blank-theme';
+                    margin: 0;
+                    vertical-align: top;
+                    display: inline-block;
+                    font-weight: normal;
+                    overflow: hidden;
+                    speak: none;
+                    text-align: center;
                 }
-            &.active{
-                .toggle{
-                    &::after{
+            }
+
+            &.active {
+                .toggle {
+                    &::after {
                         transform: rotate(180deg);
                     }
                 }

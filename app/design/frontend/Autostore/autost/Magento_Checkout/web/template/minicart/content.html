@@ -10,9 +10,9 @@
     <strong>
         <span class="text" translate="'My Cart'"/>
         <span
-            class="qty empty"
-            text="getCartParam('summary_count')"
-            data-bind="css: { empty: !!getCartParam('summary_count') == false },
+                class="qty empty"
+                text="getCartParam('summary_count')"
+                data-bind="css: { empty: !!getCartParam('summary_count') == false },
                        attr: { title: $t('Items in Cart') }">
         </span>
     </strong>
@@ -75,33 +75,33 @@
         </if>
     </ifnot>
 
-   <div class="button-minicart-bootom">
-       <div class="actions" if="getCartParam('summary_count')">
-           <div class="secondary">
-               <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-                   <span translate="'View Cart'"/>
-               </a>
-           </div>
-       </div>
-       <div class="actions" if="getCartParam('possible_onepage_checkout')">
-           <div class="primary">
-               <button
-                       id="top-cart-btn-checkout"
-                       type="button"
-                       class="action primary checkout"
-                       data-action="close"
-                       data-bind="
+    <div class="button-minicart-bootom">
+        <div class="actions" if="getCartParam('summary_count')">
+            <div class="secondary">
+                <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+                    <span translate="'View Cart'"/>
+                </a>
+            </div>
+        </div>
+        <div class="actions" if="getCartParam('possible_onepage_checkout')">
+            <div class="primary">
+                <button
+                        id="top-cart-btn-checkout"
+                        type="button"
+                        class="action primary checkout"
+                        data-action="close"
+                        data-bind="
                             attr: {
                                 title: $t('Proceed to Checkout')
                             },
                             click: closeMinicart()
                         "
-                       translate="'Checkout'"
-               />
-               <div data-bind="html: getCartParam('extra_actions')"></div>
-           </div>
-       </div>
-   </div>
+                        translate="'Checkout'"
+                />
+                <div data-bind="html: getCartParam('extra_actions')"></div>
+            </div>
+        </div>
+    </div>
 
 
     <div id="minicart-widgets" class="minicart-widgets" if="getRegion('promotion').length">

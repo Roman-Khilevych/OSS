@@ -1,9 +1,9 @@
 define([],
     function () {
-        'use strict' ;
+        'use strict';
 
         return function (checkoutData) {
-           var orig = checkoutData.getSelectedShippingAddress;
+            var orig = checkoutData.getSelectedShippingAddress;
 
             checkoutData.getSelectedShippingAddress = function () {
                 var address = orig.bind(checkoutData)();

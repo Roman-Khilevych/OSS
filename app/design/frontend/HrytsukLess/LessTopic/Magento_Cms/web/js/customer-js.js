@@ -10,8 +10,8 @@ define([
             options: {
                 customTextSelector: '.custom-text',
                 text: 'My new txt form JS',
-                customColorText : '.custom-text-two',
-                textColor : 'red',
+                customColorText: '.custom-text-two',
+                textColor: 'red',
             },
 
             _create: function () {
@@ -21,7 +21,7 @@ define([
                     color = this.options.textColor;
 
                 this._changeText(customTextSelector, text);
-                this._colorText(colorText,color)
+                this._colorText(colorText, color)
             },
 
             _changeText: function (elementPar, textPar) {
@@ -30,7 +30,7 @@ define([
                 $(element).find(elementPar).text($.mage.__(textPar));
             },
 
-            _colorText : function (elementText,color) {
+            _colorText: function (elementText, color) {
                 var element = this.element;
 
                 $(element).find(elementText).css("color", color);

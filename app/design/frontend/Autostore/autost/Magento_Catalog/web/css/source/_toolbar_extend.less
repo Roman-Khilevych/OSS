@@ -1,5 +1,4 @@
 & when (@media-common = true) {
-
     .page-products {
         .toolbar {
             .limiter {
@@ -35,7 +34,8 @@
                 display: flex;
                 align-items: center;
                 position: relative;
-                &::before{
+
+                &::before {
                     content: "\2039";
                     position: absolute;
                     transform: translateY(-50%) rotate(-90deg);
@@ -46,13 +46,15 @@
                     top: 50%;
                     right: 23px;
                 }
-                .sorter-action{
+
+                .sorter-action {
                     left: 5px;
+
                     &::before {
                         content: "\f30c";
                         font-weight: @font-weight-max-bolds;
                         font-family: Font Awesome\ 5 Free;
-                        color:@autostore-color-black ;
+                        color: @autostore-color-black;
                         font-size: 16px;
                     }
                 }
@@ -66,19 +68,22 @@
                     &:last-child {
                         margin-left: 3px;
                     }
-                    &::before{
-                        font-weight:@font-weight-max-bolds ;
+
+                    &::before {
+                        font-weight: @font-weight-max-bolds;
                         font-family: Font Awesome\ 5 Free;
-                        font-size:@font-size-modes-mode ;
+                        font-size: @font-size-modes-mode;
                     }
                 }
-                .mode-grid{
-                    &::before{
+
+                .mode-grid {
+                    &::before {
                         content: "\f00a";
                     }
                 }
-                .mode-list{
-                    &::before{
+
+                .mode-list {
+                    &::before {
                         content: "\f00b";
                     }
                 }
@@ -129,38 +134,46 @@
         }
     }
 }
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
-    .page-products{
-        .toolbar-products{
+    .page-products {
+        .toolbar-products {
             flex-wrap: wrap;
-            .toolbar-amount{
+
+            .toolbar-amount {
                 width: 40%;
             }
-            div.toolbar-sorter.sorter{
+
+            div.toolbar-sorter.sorter {
                 margin-left: 0;
                 margin-top: 15px;
             }
         }
     }
 }
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .page-products{
-        .toolbar.toolbar-products{
+    .page-products {
+        .toolbar.toolbar-products {
             justify-content: space-between;
-            .toolbar-amount{
+
+            .toolbar-amount {
                 width: 90%;
             }
-            .limiter{
+
+            .limiter {
                 margin-right: 15px;
             }
         }
     }
 }
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .page-products{
-        .toolbar-products{
+    .page-products {
+        .toolbar-products {
             justify-content: center;
-            .field.limiter{
+
+            .field.limiter {
                 margin-top: 15px;
             }
         }

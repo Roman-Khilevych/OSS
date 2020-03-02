@@ -43,7 +43,6 @@
     }
 
 
-
 }
 
 //
@@ -52,38 +51,31 @@
 
 & when (@media-target = 'desktop'), (@media-target = 'all') {
 
-    @media all and (min-width: @screen__m),
-    print {
+    @media all and (min-width: @screen__m), print {
         .media-width('min', @screen__m);
     }
 
-    @media all and (min-width: (@screen__m + 1)),
-    print {
+    @media all and (min-width: (@screen__m + 1)), print {
         .media-width('min', (@screen__m + 1));
     }
 
-    @media all and (min-width: (@screen__l + 1)),
-    print {
+    @media all and (min-width: (@screen__l + 1)), print {
         .media-width('min', @screen__l);
     }
 
-    @media all and (min-width: @screen__xl),
-    print {
+    @media all and (min-width: @screen__xl), print {
         .media-width('min', @screen__xl);
     }
 
-    @media all and (max-width:( @screen__xl - 1)),
-     print {
+    @media all and (max-width: ( @screen__xl - 1)), print {
         .media-width('max', @screen__xl);
     }
 
-    @media all and (max-width: @screen__l),
-    print {
+    @media all and (max-width: @screen__l), print {
         .media-width('max', @screen__l);
     }
 
-    @media all and (max-width: @screen__ls),
-    print {
+    @media all and (max-width: @screen__ls), print {
         .media-width('max', @screen__ls);
     }
 

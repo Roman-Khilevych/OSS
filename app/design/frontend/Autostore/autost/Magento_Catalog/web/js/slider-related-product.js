@@ -3,26 +3,26 @@ define([
         'owl.carousel.min'
     ],
     function ($) {
-        'use strict' ;
+        'use strict';
 
         return function (config, element) {
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $(element).owlCarousel({
-                    margin:20,
-                    nav:true,
-                    items : 4,
-                    responsive:{
-                        0:{
-                            items:1,
+                    margin: 20,
+                    nav: true,
+                    items: 4,
+                    responsive: {
+                        0: {
+                            items: 1,
                         },
-                        480:{
-                          items:2,
+                        480: {
+                            items: 2,
                         },
-                        768:{
-                            items:3,
+                        768: {
+                            items: 3,
                         },
-                        1024:{
-                            items:4,
+                        1024: {
+                            items: 4,
                         }
                     }
                 });
