@@ -11,7 +11,6 @@
             margin-top: 0;
             background-color: @footer__bg-color;
             font-family: @font-family__Montserrat;
-            color: @text__color__base;
             font-weight: 400;
             letter-spacing: .33px;
             font-size: @footer__font-size;
@@ -56,17 +55,15 @@
         }
     }
 
-    .block_links .links_column:first-child .links_column__content > li:last-child {
+    .block_links .links_column .image-link {
         margin-top: 9px;
+        display: inline-block;
     }
 
     .links_column__link {
-        color: @text__color__base;
-
         &:hover,
         &:visited {
             text-decoration: none;
-            color: @text__color__base;
         }
 
         img {
@@ -87,8 +84,8 @@
 
         input {
             padding-left: 0;
-            color: @color-gray127;
-            border-bottom: 2px solid @color-gray127;
+            color: @testTheme-color-grey;
+            border-bottom: 2px solid @testTheme-color-grey;
         }
 
         .action.subscribe {
@@ -107,7 +104,7 @@
 
     .footer .block .title strong {
         font-weight: bold;
-        font-size: @font-size__base - 1px;
+        font-size: @font-size__xs;
     }
 }
 

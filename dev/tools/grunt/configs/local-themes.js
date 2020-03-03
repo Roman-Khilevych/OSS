@@ -23,11 +23,35 @@
  * ],
  * dsl: dynamic stylesheet language (less|sass)
  *
+ * area: frontend,
+ * name: autoStore/default,
+ * locale: en-US,
+ * files: [
+ * 'css/styles-m',
+ * 'css/styles-l'
+ * 'css/email'
+ * 'css/email-inline'
+ * ],
+ * dsl: dynamic stylesheet language (less|sass)
  */
 module.exports = {
     gruntWork: {
         area: 'frontend',
         name: 'gruntWork/default',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l',
+            'css/email',
+            'css/email-inline'
+        ],
+        dsl: 'less'
+    }
+};
+module.exports = {
+    autoStore: {
+        area: 'frontend',
+        name: 'autoStore/default',
         locale: 'en_US',
         files: [
             'css/styles-m',
