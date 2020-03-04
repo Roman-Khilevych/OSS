@@ -1,9 +1,4 @@
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
+
 <div class="block-title">
     <strong>
         <span class="text" translate="'My Cart'"/>
@@ -24,9 +19,6 @@
             data-bind="attr: { title: $t('Close') }">
         <span translate="'Close'"/>
     </button>
-
-
-    </if>
 
     <if args="getCartParam('summary_count')">
         <strong class="subtitle" translate="'Recently added item(s)'"/>
@@ -55,7 +47,6 @@
         </if>
     </ifnot>
 
-    <!-------->
     <div class="actions view-cart" if="getCartParam('summary_count')">
         <div class="secondary">
             <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
@@ -97,6 +88,7 @@
                 <div data-bind="html: getCartParam('extra_actions')"></div>
             </div>
         </div>
+    </if>
 
     <div id="minicart-widgets" class="minicart-widgets" if="getRegion('promotion').length">
         <each args="getRegion('promotion')" render=""/>

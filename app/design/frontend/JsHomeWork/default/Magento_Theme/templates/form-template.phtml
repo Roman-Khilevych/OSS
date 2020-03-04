@@ -1,0 +1,28 @@
+<style>
+    .home-work-form{
+        margin-bottom: 15px;
+    }
+   .label-tile-home-work{
+       margin-bottom: 10px;
+       display: inline-block;
+   }
+</style>
+
+<div class="form-wrapper-test" data-mage-init='{"collapsible": {"animate": 1000, "saveState": true}}'>
+    <div data-role="title">
+        <h2>Title
+            <button data-role="trigger">Go</button>
+        </h2>
+    </div>
+    <form data-role="content">
+        <label for="mail-adress">
+            <span class="label-tile-home-work"><?= _("First Name") ?></span>
+            <input class="home-work-form" type="email" name="mail-adress" placeholder="<?= _('Your email') ?>"/>
+        </label>
+        <label for="mail-pasword">
+            <span class="label-tile-home-work"><?= _("Your Password") ?></span>
+            <input class="home-work-form" type="password" name="mail-pasword" placeholder="<?= _('Your Password') ?>"/>
+        </label>
+        <button type="submit"><?= _("Submit") ?></button>
+    </form>
+</div>

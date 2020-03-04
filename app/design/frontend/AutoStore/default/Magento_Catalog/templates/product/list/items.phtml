@@ -182,9 +182,6 @@ $shuffle ?>">
                     </div>
                 <?php endif; ?>
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
-                    <!----------------------------
-                    ------------------------------
-                    ------------------------------>
                     <ol class="products list items product-items owl-carousel">
                         <?php foreach ($items as $_item) : ?>
                             <?php $available = ''; ?>
@@ -290,11 +287,10 @@ $shuffle ?>">
             </div>
         </div>
         <?php endif; ?>
-
 <script type="text/x-magento-init">
     {
         ".owl-carousel":{
-            "Magento_Catalog/js/owl-include":{}
+            "owlInclude":{}
         }
     }
 </script>

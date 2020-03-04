@@ -1,0 +1,21 @@
+<div class="form-wrapper-test" data-mage-init='{"collapsible": {"animate": 1000, "saveState": true}}'>
+    <div data-role="title">
+        <h2>Title
+            <button data-role="trigger">Go</button>
+        </h2>
+    </div>
+    <form data-mage-init='{"validation": {}, "validateMyForms": {}}' data-role="content">
+        <label for="mail-adress">
+            <span><?= _("First Name") ?></span>
+            <input type="email" name="mail-adress" placeholder="<?= _('Your email') ?>"
+                   data-validate="{'required': true, 'validate-email': true}"/>
+        </label>
+        <label for="mail-pasword">
+            <span><?= _("Your Password") ?></span>
+            <input type="password" name="mail-pasword" placeholder="<?= _('Your Password') ?>"
+                   data-validate="{'required': true, 'chlek-validate-password': true}"
+                   data-password-min-length="10"/>
+        </label>
+        <button type="submit"><?= _("Submit") ?></button>
+    </form>
+</div>

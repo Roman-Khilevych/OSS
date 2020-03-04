@@ -1,13 +1,13 @@
 define([
         'jquery',
+        'addOwlCarousel'
     ],
     function ($) {
         'use strict';
 
         return function () {
             $(document).ready(function () {
-                console.log($('.owl-carousel'));
-               /* $('.owl-carousel').owlCarousel({
+                $('.owl-carousel').owlCarousel({
                     loop: true,
                     margin: 10,
                     responsiveClass: true,
@@ -26,7 +26,7 @@ define([
                             loop: false
                         }
                     }
-                })*/
+                })
             })
         }
     });
