@@ -1,6 +1,7 @@
 <?php
 /**
- * TestTheme default Cms parentTemplate template
+ * Test Theme default Cms parentTemplate template
+ *
  * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
  * @copyright 2020 Nikolaichuk
  */
@@ -8,26 +9,26 @@ $title = $block->hasData('header') ? $block->getData('header') : '';
 ?>
 <div class="editorial-wrapper">
     <h1 class="editorial__title">
-        <?=$title?>
+        <?= $title ?>
     </h1>
     <div class="editorial__content">
         <div class="editorial__content__left-container editorial__column">
             <div class="editorial__content__card">
-                <?=$block->getChildHtml('editorial.child1')?>
+                <?= $block->getChildHtml('editorial.child1'); ?>
             </div>
             <div class="editorial__content__card">
-                <?=$block->getChildHtml('editorial.child2')?>
+                <?= $block->getChildHtml('editorial.child2'); ?>
             </div>
             <div class="editorial__content__card">
-                <?=$block->getChildHtml('editorial.child3')?>
+                <?= $block->getChildHtml('editorial.child3'); ?>
             </div>
             <div class="editorial__content__card">
-                <?=$block->getChildHtml('editorial.child4')?>
+                <?= $block->getChildHtml('editorial.child4'); ?>
             </div>
         </div>
         <div class="editorial__content__right-container editorial__column">
             <div class="editorial__content__card">
-                <?=$block->getChildHtml('editorial.child5')?>
+                <?= $block->getChildHtml('editorial.child5'); ?>
             </div>
         </div>
     </div>

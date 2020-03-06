@@ -1,6 +1,7 @@
 <?php
 /**
- * TestTheme default Theme html breadcrumbs template
+ * Test Theme default Theme html breadcrumbs template
+ *
  * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
  * @copyright 2020 Nikolaichuk
  */
@@ -9,16 +10,16 @@
 <div class="breadcrumbs">
     <ul class="items">
         <?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
-            <li class="item <?= $block->escapeHtmlAttr($crumbName) ?>">
+            <li class="item <?= $block->escapeHtmlAttr($crumbName); ?>">
             <?php if ($crumbInfo['link']) : ?>
-                <a href="<?= $block->escapeUrl($crumbInfo['link']) ?>"
-                   title="<?= $block->escapeHtml($crumbInfo['title']) ?>">
-                    <?= $block->escapeHtml($crumbInfo['label']) ?>
+                <a href="<?= $block->escapeUrl($crumbInfo['link']); ?>"
+                   title="<?= $block->escapeHtml($crumbInfo['title']); ?>">
+                    <?= $block->escapeHtml($crumbInfo['label']); ?>
                 </a>
             <?php elseif ($crumbInfo['last']) : ?>
-                <strong><?= $block->escapeHtml($crumbInfo['label']) ?></strong>
+                <strong><?= $block->escapeHtml($crumbInfo['label']); ?></strong>
             <?php else : ?>
-                <?= $block->escapeHtml($crumbInfo['label']) ?>
+                <?= $block->escapeHtml($crumbInfo['label']); ?>
             <?php endif; ?>
             </li>
         <?php endforeach; ?>
@@ -27,7 +28,7 @@
 <?php else:?>
     <div class="breadcrumbs">
         <ul class="items">
-            <li><?=__("Editorial")?></li>
+            <li><?= __("Editorial"); ?></li>
         </ul>
     </div>
 <?php endif; ?>

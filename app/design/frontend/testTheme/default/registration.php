@@ -1,6 +1,7 @@
 <?php
 /**
- * Test theme registration
+ * Test Theme default theme registration
+ *
  * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
  * @copyright 2020 Nikolaichuk
  */

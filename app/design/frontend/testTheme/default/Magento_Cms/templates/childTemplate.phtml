@@ -1,6 +1,7 @@
 <?php
 /**
- * TestTheme default Cms child template template
+ * Test Theme default Cms child template template
+ *
  * @author Nikolaichuk Oleksandr nikolaychuk.alexander@gmail.com
  * @copyright 2020 Nikolaichuk
  */
@@ -12,9 +13,9 @@ $cardImageAlt = $block->hasData('card-image-alt') ? $block->getData('card-image-
 $cardUrl = $block->hasData('card-url') ? $block->getData('card-url') : '';
 ?>
 <?php if ($block->hasData('card-note')):?>
-    <span class="card__note"><?=$block->getData('card-note')?></span>
+    <span class="card__note"><?=$block->getData('card-note'); ?></span>
 <?php endif;?>
-<img class="card__image" src="<?=$block->getViewFileUrl('Magento_Cms::images/' . $cardImage)?>"
+<img class="card__image" src="<?=$block->getViewFileUrl('Magento_Cms::images/' . $cardImage); ?>"
      alt="<?= $cardImageAlt ?>">
 <div class="card__content">
     <div class="card__content__subtitle">
@@ -26,5 +27,5 @@ $cardUrl = $block->hasData('card-url') ? $block->getData('card-url') : '';
     <div class="card__content__text">
         <?= $cardContent ?>
     </div>
-    <a class="card__content__link" href="<?= $cardUrl ?>"><?=__('DÉCOUVRIR')?></a>
+    <a class="card__content__link" href="<?= $cardUrl ?>"><?= __('DÉCOUVRIR'); ?></a>
 </div>
