@@ -1,0 +1,20 @@
+body{
+    background-color: lightgrey;
+}
+.some-container{
+    background-color: #801c00;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sku-tag{
+    color: #0A246A;
+    font-size: 36px;
+}
+.my-new-block-class-ivan{
+    display: flex;
+    justify-content: center;
+}

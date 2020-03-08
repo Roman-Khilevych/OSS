@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left-additional" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-layout-2columns-left"/>
+        <referenceContainer name="div.before.body.end.additional">
+            <!-- Force container to render -->
+            <block class="Magento\Framework\View\Element\Text">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[PAGE TEST LAYOUT]]></argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <move element="header.container" destination="page.wrapper" before="main.body.end"/>
+        <move element="footer-container" destination="page.wrapper" before="main.content"/>
+    </body>
+</page>

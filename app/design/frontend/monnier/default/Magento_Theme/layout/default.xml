@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="promotion.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">promotion.block</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/header-icons/Logo.png</argument>
+                <argument name="logo_img_height" xsi:type="number">55</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock class="Magento\Customer\Block\Account\Link" name="top.search">
+            <arguments>
+                <argument name="sortOrder" xsi:type="number">50</argument>
+            </arguments>
+        </referenceBlock>
+        <move element="top.search" destination="top.links"/>
+        <move element="minicart" destination="top.links"/>
+        <move element="wish-list-link" destination="top.links"/>
+        <referenceBlock name="header"  remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="authorization-link"  remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer.navigation" remove="true"/>
+        <referenceContainer name="footer">
+            <container htmlTag="div" htmlClass="footer-navigation">
+                <block class="Magento\Cms\Block\Block" name="footer.links.child1">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer.links.child1</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="footer.links.child2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer.links.child2</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="footer.links.child3">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer.links.child3</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="footer.links.child4">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer.links.child4</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

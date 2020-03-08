@@ -1,0 +1,23 @@
+<div class="wrap">
+    <form data-mage-init='{"validation": {}, "validate_password": {}}'>
+        <div class="control">
+
+            <input type="text"
+                   name="email"
+                   id="email"
+                   class="input-text"
+                   placeholder="<?= __('Your email'); ?>"
+                   data-validate="{'required': true, 'validate-email': true}"/>
+
+            <input type="password"
+                   name="password"
+                   id="password"
+                   class="input-text"
+                   placeholder="<?= __('Your password'); ?>"
+                   data-validate="{'required': true, 'customized-validate-password': true}"
+                   data-password-min-length="8"/>
+        </div>
+
+        <button type="submit" class="action primary"><?= __('Submit'); ?></button>
+    </form>
+</div>

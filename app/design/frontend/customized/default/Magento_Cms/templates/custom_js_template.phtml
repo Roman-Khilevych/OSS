@@ -1,0 +1,41 @@
+<!--<script type="text/x-magento-init">-->
+<!--    {-->
+<!--        "*": {-->
+<!--            "Magento_Cms/js/custom-js": {}-->
+<!--             }-->
+<!--         }-->
+<!--</script>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--<div class="custom-js-text-container">-->
+<!--    <span class="custom-text">my text 1</span>-->
+<!--</div>-->
+<!---->
+<!--<script type="text/x-magento-init">-->
+<!--    {-->
+<!--        ".custom-js-text-container": {-->
+<!--            "Magento_Cms/js/custom-js": {-->
+<!--                "baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"-->
+<!--                }-->
+<!--             }-->
+<!--         }-->
+<!--</script>-->
+
+
+
+<!--<div class="custom-js-text-container" data-mage-init='{"Magento_Cms/js/custom-js": {"baseUrl": "--><?//= $block->escapeJs($block->getBaseUrl()) ?><!--"}}'>-->
+<!--    <span class="custom-text">my text 2</span>-->
+<!--</div>-->
+
+<div class="custom-js-text-container" data-mage-init='{"customJS": {
+        "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>",
+        "text": "my new text"}}'>
+    <span class="custom-text">my text 2 base</span>
+    <span class="custom-color">my new colored text</span>
+</div>
+

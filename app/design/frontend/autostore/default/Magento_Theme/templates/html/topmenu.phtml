@@ -1,0 +1,28 @@
+<?php
+/**
+ *autostore default Theme html topmenu template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+    <nav class="navigation" data-action="navigation">
+        <div class="all-categories-btn">
+            <span class="all-categories-title">all categories</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <ul class="all-categories-menu" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+                <?= /* @noEscape */ $_menuHtml?>
+            </ul>
+        </div>
+        <div class="child-navigation"><?= $block->getChildHtml() ?></div>
+    </nav>

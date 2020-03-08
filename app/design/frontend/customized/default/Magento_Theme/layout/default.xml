@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-layout-2columns-left"/>
+        <referenceContainer name="content">
+            <container name="lfmao" htmlTag="div" htmlClass="lmfao">
+                <block class="Magento\Framework\View\Element\Text" name="testdrive">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[WELCOME TO HELL]]></argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.panel">
+            <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container">
+                <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[WELCOME TO HELL]]></argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text" ifconfig="section/group/field">
+                    <arguments>
+                        <argument name="text" xsi:type="string"><![CDATA[Activate field]]></argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="sku.test" as="sku.test" label="sku test" htmlTag="div" htmlClass="skutest">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute.phtml" after="product.info.type">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getSku</argument>
+                        <argument name="at_code" xsi:type="string">sku</argument>
+                        <argument name="css_class" xsi:type="string">sku</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="page.wrapper" htmlClass="my-new-page-wrapper-class-ivan second-class-ivanTest" htmlId="MyWrapper"/>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/index.png</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="css_class" xsi:type="string">my-new-block-class-ivan</argument>
+                <argument name="add_base_attribute" xsi:type="string">itemprop="type-of-product"</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="template" xsi:type="string">Magento_Catalog::new_template.phtml</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="div.breadcrumbs">
+            <arguments>
+                <argument name="div" xsi:type="string">New Block ul</argument>
+                <argument name="custom_div" xsi:type="string">Custom Block ul</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

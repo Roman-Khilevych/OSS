@@ -1,0 +1,36 @@
+<?php
+/**
+ *monnier default Cms editorial template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php
+$image_name = $block->hasData('img_name') && $block->getData('img_name');
+$image_subtitle = $block->hasData('img_subtitle') && $block->getData('img_subtitle');
+$image_title = $block->hasData('img_title') && $block->getData('img_title');
+$image_text = $block->hasData('img_text') && $block->getData('img_text');
+$hero_product = $block->hasData('hero_product') ? ($block->getData('hero_product')) : '';
+?>
+<div class="images">
+    <div class="image_block">
+        <?php if ($image_name) : ?>
+            <img class="monnier-product-cart-image" src="<?= $block->getViewFileUrl('images/' . $block->getData('img_name')); ?>" alt="<?= $block->getData('img_alt') ?>">
+        <?php endif;?>
+        <?php if ($hero_product) : ?>
+            <span class="hero_product"><?= $hero_product?></span>
+        <?php endif; ?>
+    </div>
+    <div class="image_content">
+            <?php if ($image_subtitle) : ?>
+                <h6 class="monnier-cart-subtitle"><?= $block->getData('img_subtitle')?></h6>
+            <?php endif;?>
+            <?php if ($image_title) : ?>
+                <h3 class="monnier-cart-title"><?= $block->getData('img_title')?></h3>
+            <?php endif;?>
+            <?php if ($image_text) : ?>
+                <p class="monnier-cart-textcontent"><?= $block->getData('img_text')?></p>
+            <?php endif;?>
+        <a href="#" class="monnier-cart-link"><?= __('link') ?></a>
+    </div>
+</div>

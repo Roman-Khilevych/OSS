@@ -1,0 +1,21 @@
+<?php
+/**
+ *monnier default Cms editorial template.
+ *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
+ *@copyright 2020 worzewolf.
+ */
+?>
+<?php if($block->hasData('editorial_title') && $block->getData('editorial_title')) : ?>
+    <h2 class="monnier-category-title"><?= $block->getData('editorial_title') ?></h2>
+<?php endif;?>
+<div class="editorial">
+    <div class="left_side">
+        <?= $block->getChildHtml('editorial.child.block1') ?>
+        <?= $block->getChildHtml('editorial.child.block2') ?>
+        <?= $block->getChildHtml('editorial.child.block3') ?>
+        <?= $block->getChildHtml('editorial.child.block4') ?>
+    </div>
+    <div class="right_side">
+        <?= $block->getChildHtml('editorial.child.block5') ?>
+    </div>
+</div>

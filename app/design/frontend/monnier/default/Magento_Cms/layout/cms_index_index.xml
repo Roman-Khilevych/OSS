@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+                <block class="Magento\Framework\View\Element\Template" name="editorial.parent" template="Magento_Cms::editorial.phtml">
+                    <arguments>
+                        <argument name="editorial_title" xsi:type="string">editorial</argument>
+                    </arguments>
+                    <block class="Magento\Framework\View\Element\Template" name="editorial.child.block1" template="Magento_Cms::editorial_child.phtml">
+                        <arguments>
+                            <argument name="img_name" xsi:type="string" >1.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image 1</argument>
+                            <argument name="img_subtitle" xsi:type="string">the mock croc rules</argument>
+                            <argument name="img_title" xsi:type="string">trend</argument>
+                            <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="editorial.child.block2" template="Magento_Cms::editorial_child.phtml">
+                        <arguments>
+                            <argument name="img_name" xsi:type="string" >2.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image 2</argument>
+                            <argument name="img_subtitle" xsi:type="string">inès longevial</argument>
+                            <argument name="img_title" xsi:type="string">muse</argument>
+                            <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="editorial.child.block3" template="Magento_Cms::editorial_child.phtml">
+                        <arguments>
+                            <argument name="img_name" xsi:type="string" >3.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image 3</argument>
+                            <argument name="img_subtitle" xsi:type="string">nodaleto heels</argument>
+                            <argument name="img_title" xsi:type="string">how to</argument>
+                            <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="editorial.child.block4" template="Magento_Cms::editorial_child.phtml">
+                        <arguments>
+                            <argument name="img_name" xsi:type="string" >4.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image 4</argument>
+                            <argument name="img_subtitle" xsi:type="string">jacquemus</argument>
+                            <argument name="img_title" xsi:type="string">interview</argument>
+                            <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="editorial.child.block5" template="Magento_Cms::editorial_child.phtml">
+                        <arguments>
+                            <argument name="img_name" xsi:type="string" >5.png</argument>
+                            <argument name="img_alt" xsi:type="string">logo image 5</argument>
+                            <argument name="img_subtitle" xsi:type="string">fanny bag pack by heron preston</argument>
+                            <argument name="img_title" xsi:type="string">hero product</argument>
+                            <argument name="img_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad deserunt mollit anim id est laborum.</argument>
+                            <argument name="hero_product" translate="true" xsi:type="string">hero product</argument>
+                        </arguments>
+                    </block>
+                </block>
+        </referenceContainer>
+    </body>
+</page>

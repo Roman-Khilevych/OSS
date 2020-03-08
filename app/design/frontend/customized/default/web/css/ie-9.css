@@ -1,0 +1,6 @@
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" media="all" href="<your_store_web_address>/pub/static/frontend/OrangeCo/orange/en_US/css/ie-9.css" />
+<![endif]-->
+body{
+    background-color:lightblue;
+}
