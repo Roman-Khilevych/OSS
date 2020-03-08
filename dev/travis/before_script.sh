@@ -77,8 +77,8 @@ case $TEST_SUITE in
         cd ../../..
         ;;
     js)
-        cp package.json.sample package.json
-        cp Gruntfile.js.sample Gruntfile.js
+        cp package.json package.json
+        cp Gruntfile.js Gruntfile.js
         yarn
 
         if [[ $GRUNT_COMMAND != "static" ]]; then
