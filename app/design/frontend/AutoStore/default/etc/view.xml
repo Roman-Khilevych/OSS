@@ -12,6 +12,22 @@
                 <width>270</width>
                 <height>270</height>
             </image>
+            <image id="product_page_image_medium" type="image">
+                <width>410</width>
+                <height>410</height>
+            </image>
+            <image id="product_page_image_small" type="thumbnail">
+                <width>95</width>
+                <height>95</height>
+            </image>
+            <image id="related_products_list" type="small_image">
+                <width>268</width>
+                <height>268</height>
+            </image>
+            <image id="upsell_products_list" type="small_image">
+                <width>90</width>
+                <height>90</height>
+            </image>
         </images>
     </media>
 </view>

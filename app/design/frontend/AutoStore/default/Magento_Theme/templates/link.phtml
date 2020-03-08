@@ -1,13 +1,14 @@
 <?php
 /**
  * AutoStore default Theme link template
+ *
  * @author Yuri Chlek yurichhlek@gmail.com
  * @copyright 2020 Chlek
  */
 
 ?>
 <div class="link wishlist" data-bind="scope: 'wishlist'">
-    <a <?= /* @noEscape */ $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()) ?>
+    <a <?= /* @noEscape */ $block->getLinkAttributes(); ?>><?= $block->escapeHtml($block->getLabel()); ?>
         <!-- ko if: wishlist().counter -->
         <span data-bind="text: wishlist().counter" class="counter qty"></span>
         <!-- /ko -->

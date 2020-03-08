@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalog.product.related">
+            <block class="Magento\Catalog\Block\Product\ProductList\Item\Container"
+                   name="product.wishlist.button.parent" as="product.wishlist.button.parent"/>
+        </referenceBlock>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="customer.tab.details" as="custom_tab" group="detailed_info"
+                   after="-" template="Magento_Catalog::custom-tab.phtml">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+                    <argument name="sort_order" xsi:type="string">50</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="related.product.addto.wishlist" destination="product.wishlist.button.parent"/>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="catalog.product.related" destination="main.content" after="-"/>
+        <move element="product.info.upsell" destination="div.sidebar.main" before="-"/>
+        <move element="product.info.type" destination="product.info.stock.sku" after="-"/>
+        <move element="product.info" destination="product.info.main" after="-"/>
+        <move element="product.info.addto" destination="product.info.form.content"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+    </body>
+</page>

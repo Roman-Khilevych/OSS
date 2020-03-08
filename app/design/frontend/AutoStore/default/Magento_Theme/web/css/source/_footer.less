@@ -1,3 +1,9 @@
+//  Variables
+@page-footer__background-color: @autostore-color-cod-gray;
+@page-footer__color: @autostore-color-white;
+@footer-li__color: @autostore-color-white;
+@bottom-section__background-color: @autostore-color-very-dark-gray;
+
 & when (@media-common = true) {
     .page-footer {
         background-color: @page-footer__background-color;
@@ -151,6 +157,44 @@
             }
         }
     }
+
+    .bottom-section {
+        background-color: @bottom-section__background-color;
+
+        .wrapper {
+            max-width: 1230px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom-section {
+            padding: 25px 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pay-cards {
+            max-width: 370px;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .copyright {
+            max-width: 570px;
+            text-align: right;
+
+            & > span {
+                width: 100%;
+                display: block;
+                font-size: 13px;
+                line-height: 30px;
+            }
+
+
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @auto-store__point-desctop){
@@ -203,6 +247,19 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .page-footer {
+        .bottom-section {
+            .pay-cards {
+                max-width: 300px;
+                margin-bottom: 5px;
+            }
+
+            .footer-bottom-section {
+                flex-direction: column;
+                align-items: center;
             }
         }
     }

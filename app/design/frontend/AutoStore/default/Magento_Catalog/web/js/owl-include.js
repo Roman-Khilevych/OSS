@@ -9,11 +9,16 @@ define([
             $(document).ready(function () {
                 $('.owl-carousel').owlCarousel({
                     loop: true,
-                    margin: 10,
+                    margin: 0,
+                    nav: true,
                     responsiveClass: true,
                     responsive: {
                         0: {
                             items: 1,
+                            nav: false
+                        },
+                        480: {
+                            items: 2,
                             nav: false
                         },
                         768: {
@@ -21,7 +26,7 @@ define([
                             nav: false
                         },
                         1024: {
-                            items: 5,
+                            items: 4,
                             nav: true,
                             loop: false
                         }

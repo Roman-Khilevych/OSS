@@ -1,6 +1,7 @@
 <?php
 /**
  * AutoStore default Catalog product list template
+ *
  * @author Yuri Chlek yurichhlek@gmail.com
  * @copyright 2020 Chlek
  */
@@ -23,11 +24,11 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 ?>
 <?php if (!$_productCollection->count()) : ?>
     <div class="message info empty">
-        <div><?= $block->escapeHtml(__('We can\'t find products matching the selection.')) ?></div>
+        <div><?= $block->escapeHtml(__('We can\'t find products matching the selection.')); ?></div>
     </div>
 <?php else : ?>
-    <?= $block->getToolbarHtml() ?>
-    <?= $block->getAdditionalHtml() ?>
+    <?= $block->getToolbarHtml(); ?>
+    <?= $block->getAdditionalHtml(); ?>
     <?php
     if ($block->getMode() == 'grid') {
         $viewMode = 'grid';
@@ -55,12 +56,12 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                     <div class="product-item-info" data-container="product-<?= /* @noEscape */ $viewMode ?>">
                         <?php if ($_product->getSale()) : ?>
                             <span class="sale-product-label">
-                                <?= __('Sale') ?>
+                                <?= __('Sale'); ?>
                             </span>
                         <?php endif; ?>
                         <?php if ($_product->getNew()) : ?>
                             <span class="new-product-label">
-                                <?= __('New') ?>
+                                <?= __('New'); ?>
                             </span>
                         <?php endif; ?>
                         <?php
@@ -71,10 +72,10 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                         }
                         ?>
                         <?php // Product Image ?>
-                        <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>"
+                        <a href="<?= $block->escapeUrl($_product->getProductUrl()); ?>"
                            class="product photo product-item-photo"
                            tabindex="-1">
-                            <?= $productImage->toHtml() ?>
+                            <?= $productImage->toHtml(); ?>
                         </a>
                         <div class="product details product-item-details">
                             <?php
@@ -85,15 +86,15 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                     <div data-role="add-to-links"
                                          class="actions-secondary wishlist"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : '' ?>>
                                         <?php if ($addToBlock = $block->getChildBlock('catalog.category.wishlist.parent')) : ?>
-                                            <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+                                            <?= $addToBlock->setProduct($_product)->getChildHtml(); ?>
                                         <?php endif; ?>
                                     </div>
                                     <div class="actions-primary"<?= strpos($pos, $viewMode . '-primary') ? $block->escapeHtmlAttr($position) : '' ?>>
                                         <?php if ($_product->isSaleable()) : ?>
                                             <?php $postParams = $block->getAddToCartPostParams($_product); ?>
                                             <form data-role="tocart-form"
-                                                  data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>"
-                                                  action="<?= $block->escapeUrl($postParams['action']) ?>"
+                                                  data-product-sku="<?= $block->escapeHtml($_product->getSku()); ?>"
+                                                  action="<?= $block->escapeUrl($postParams['action']); ?>"
                                                   method="post">
                                                 <input type="hidden"
                                                        name="product"
@@ -103,65 +104,65 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                                 Action::PARAM_NAME_URL_ENCODED ?>"
                                                        value="<?= /* @noEscape */
                                                        $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
-                                                <?= $block->getBlockHtml('formkey') ?>
+                                                <?= $block->getBlockHtml('formkey'); ?>
                                                 <button type="submit"
-                                                        title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                                        title="<?= $block->escapeHtmlAttr(__('Add to Cart')); ?>"
                                                         class="action tocart primary">
-                                                    <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    <span><?= $block->escapeHtml(__('Add to Cart')); ?></span>
                                                 </button>
                                             </form>
                                         <?php else : ?>
                                             <?php if ($_product->isAvailable()) : ?>
                                                 <div class="stock available">
-                                                    <span><?= $block->escapeHtml(__('In stock')) ?></span></div>
+                                                    <span><?= $block->escapeHtml(__('In stock')); ?></span></div>
                                             <?php else : ?>
                                                 <div class="stock unavailable">
-                                                    <span><?= $block->escapeHtml(__('Out of stock')) ?></span></div>
+                                                    <span><?= $block->escapeHtml(__('Out of stock')); ?></span></div>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     </div>
                                     <div data-role="add-to-links"
                                          class="actions-secondary compare"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : '' ?>>
                                         <?php if ($addToBlock = $block->getChildBlock('addto')) : ?>
-                                            <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+                                            <?= $addToBlock->setProduct($_product)->getChildHtml(); ?>
                                         <?php endif; ?>
                                     </div>
                                 </div>
                                 <?php if ($showDescription) : ?>
                                     <div class="product description product-item-description">
                                         <?= /* @noEscape */
-                                        $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
-                                        <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>"
+                                        $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description'); ?>
+                                        <a href="<?= $block->escapeUrl($_product->getProductUrl()); ?>"
                                            title="<?= /* @noEscape */
                                            $_productNameStripped ?>"
-                                           class="action more"><?= $block->escapeHtml(__('Learn More')) ?></a>
+                                           class="action more"><?= $block->escapeHtml(__('Learn More')); ?></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
                             <strong class="product name product-item-name">
                                 <a class="product-item-link"
-                                   href="<?= $block->escapeUrl($_product->getProductUrl()) ?>">
+                                   href="<?= $block->escapeUrl($_product->getProductUrl()); ?>">
                                     <?= /* @noEscape */
-                                    $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                                    $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
                                 </a>
                             </strong>
-                            <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
+                            <?= $block->getReviewsSummaryHtml($_product, $templateType); ?>
                             <?= /* @noEscape */
-                            $block->getProductPrice($_product) ?>
-                            <?= $block->getProductDetailsHtml($_product) ?>
+                            $block->getProductPrice($_product); ?>
+                            <?= $block->getProductDetailsHtml($_product); ?>
                         </div>
                     </div>
                 </li>
             <?php endforeach; ?>
         </ol>
     </div>
-    <?= $block->getToolbarHtml() ?>
+    <?= $block->getToolbarHtml(); ?>
     <?php if (!$block->isRedirectToCartEnabled()) : ?>
         <script type="text/x-magento-init">
         {
             "[data-role=tocart-form], .form.map.checkout": {
                 "catalogAddToCart": {
-                    "product_sku": "<?= $block->escapeJs($_product->getSku()) ?>"
+                    "product_sku": "<?= $block->escapeJs($_product->getSku()); ?>"
                 }
             }
         }

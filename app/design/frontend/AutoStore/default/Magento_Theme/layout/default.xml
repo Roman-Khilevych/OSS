@@ -9,8 +9,6 @@
                 <argument name="logo_img_height" xsi:type="number">48</argument>
             </arguments>
         </referenceBlock>
-        <referenceBlock name="header" remove="true"/>
-        <referenceBlock name="my-account-link" remove="true"/>
         <referenceBlock name="wish-list-link" template="Magento_Theme::link.phtml"/>
         <referenceContainer name="header.panel">
             <block class="Magento\Cms\Block\Block" name="currency.choice" after="store_language">
@@ -26,9 +24,6 @@
                 </arguments>
             </block>
         </referenceBlock>
-        <referenceBlock name="wishlist_sidebar" remove="true"/>
-        <referenceBlock name="footer_links" remove="true"/>
-        <referenceBlock name="form.subscribe" remove="true"/>
         <referenceContainer name="footer">
             <block class="Magento\Cms\Block\Block" name="footer.auto.store" after="store_switcher">
                 <arguments>
@@ -43,9 +38,16 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
         <move element="store_language" destination="header.panel" after="top.links"/>
         <move element="wish-list-link" destination="header-wrapper" after="minicart"/>
         <move element="page.main.title" destination="content" before="category.products"/>
         <move element="sidebar.additional" destination="div.sidebar.main" after="sidebar.main"/>
+        <move element="copyright" destination="footer-container" after="footer"/>
     </body>
 </page>
