@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+insert core_config_data (config_id, scope, scope_id, path, value) values (null, 'default', 0, 'dev/static/sign', 0);#!/usr/bin/env php
 <?php
 /**
  * Copyright © Magento, Inc. All rights reserved.
