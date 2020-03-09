@@ -400,3 +400,30 @@
     transform: translateY(38px);
   }
 }
+
+.leftnav-priceblock {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.minimum-price {
+  margin-right: 10px;
+}
+
+.maximum-price {
+  margin-left: 10px;
+}
+
+.maximum-price,
+.minimum-price {
+  color: @link__color;
+  border: 1px solid @border-color__base;
+  border-radius: 5px;
+  padding: 7px 14px;
+
+  &:hover {
+    color: @link__color;
+  }
+}

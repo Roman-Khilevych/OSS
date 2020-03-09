@@ -8,7 +8,7 @@
 
     .footer-navigation {
       display: flex;
-      flex-flow: row;
+      flex-flow: row wrap;
       justify-content: space-between;
       line-height: 23px;
       padding: 0 0 65px;
@@ -110,6 +110,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow: row wrap;
     padding: 25px 20px 15px;
     color: @autostore_color-silver;
     font-size: 13px;
@@ -156,6 +157,30 @@
 
     .copyright-info {
       padding-bottom: 15px;
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .page-footer .footer.content .footer-navigation {
+    &>li {
+      margin: 0 10px 10px 0;
+    }
+
+    .info {
+      width: auto;
     }
   }
 }

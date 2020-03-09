@@ -1,6 +1,6 @@
 <?php
 /**
- *autostore default Catalog product list items template.
+ *avto avtostore Catalog product list items template.
  *@author Ivan Havryliuk ivan.havryliuk95@gmail.com.
  *@copyright 2020 worzewolf.
  */
@@ -175,7 +175,7 @@ switch ($type = $block->getType()) {
                     </div>
                 <?php endif; ?>
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
-                    <ol class="products list items product-items owl-carousel owl-theme">
+                    <ol class="products list items product-items <?= ($type === 'related' && $type !== 'upsell') ? 'owl-carousel owl-theme' : ''; ?>" data-mage-init='{"carousel":{"baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>"}}'>
                         <?php foreach ($items as $_item) :?>
                             <?php $available = ''; ?>
                             <?php if (!$_item->isComposite() && $_item->isSaleable() && $type == 'related') :?>
@@ -259,21 +259,4 @@ switch ($type = $block->getType()) {
                 </div>
             </div>
         </div>
-        <script>
-            require([
-                'jquery',
-                'owlcarousel'
-            ], function () {
-                'use strict';
-                jQuery.noConflict();
-                jQuery(".owl-carousel").owlCarousel({
-                    nav: true,
-                    navText:["<",">"],
-                    loop: true,
-                    autoplay: true,
-                    autoplayHoverPause: true,
-                    items : 3
-                });
-            });
-        </script>
         <?php endif;?>

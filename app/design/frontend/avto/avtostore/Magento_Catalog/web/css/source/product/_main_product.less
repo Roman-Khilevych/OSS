@@ -1,0 +1,257 @@
+& when (@media-common = true) {
+
+    .product-info-main .page-title-wrapper .page-title {
+        text-transform: uppercase;
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 14px;
+    }
+
+    .product-info-main .product-info-stock-sku {
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+
+
+        .product.attribute.sku {
+            text-transform: uppercase;
+        }
+
+        .stock.available {
+            color: @autostore_color-green;
+            position: relative;
+            text-transform: initial;
+
+            &:before {
+                content: '';
+                background: url("@{baseDir}images/instock.png") no-repeat center center;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: -15px;
+                top: 5px;
+            }
+        }
+
+        .product.attribute.sku {
+            color: @autostore_color-gray;
+        }
+    }
+
+    .product-reviews-summary .reviews-actions .action.view {
+        position: relative;
+        margin-right: 20px;
+
+        &:after {
+            content: '|';
+            position: absolute;
+            right: -10px;
+            top: -7px;
+            color: @color-black;
+        }
+    }
+
+    .product-info-main .price-box {
+        margin-top: 24px;
+
+        .special-price {
+            color: @autostore_color-alizarin;
+        }
+
+        .old-price {
+            color: @autostore_color-silver;
+        }
+    }
+
+    .price-box.price-final_price .price-label,
+    .product-info-main .price-box .price-wrapper .price, .product-options-bottom .price-box .price-wrapper .price {
+        font-size: 24px;
+    }
+
+    .product-info-main .box-tocart {
+        width: 100%;
+
+        .fieldset {
+            display: flex;
+            width: 100%;
+
+            .field.qty {
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                .control .input-text.qty {
+                    height: 40px;
+                    margin-left: 10px;
+                    border-radius: 5px;
+                }
+            }
+
+            .actions {
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                padding: 0;
+
+                .action.primary.tocart {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    background: @button__background;
+                    border: @button__border;
+                    border-radius: 5px;
+                    padding: 8px 17px;
+
+                    &:hover {
+                        background: @button__hover__color;
+                        border: @button__hover__color;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-social-links {
+        width: max-content;
+
+        .product-addto-links {
+            display: flex;
+
+            .action.tocompare,
+            .action.towishlist {
+                background: @color-black;
+                border-radius: 5px;
+                padding: 12px;
+                margin-left: 5px;
+
+                span {
+                    display: none;
+                }
+
+                &:hover {
+                    background: @button__background;
+                }
+            }
+
+            .action.tocompare::before,
+            .action.towishlist::before {
+                color: @autostore_input-icon-color;
+                font-family: @autostore_icons-font-family;
+                font-weight: @font-weight__bolder;
+                font-size: 18px;
+            }
+
+            .action.towishlist::before {
+                content: @autostore-icon-wishlist;
+            }
+
+            .tocompare::before {
+                content: @autostore-icon-compare;
+            }
+        }
+    }
+
+    .products-grid .item.product.product-item {
+        width: calc(~"100% - 10px");
+    }
+
+    .product-item-info {
+        width: 100%;
+    }
+
+    .owl-item.active .product-item-info {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border: 1px solid @border-color__base;
+    }
+
+    .products-upsell .owl-item.active {
+        min-width: 100%;
+    }
+
+    .sidebar .product-items .product-item-details {
+        padding-left: 60px;
+        height: 145px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .block.related .block-title.title {
+        text-align: center;
+        margin-top: 40px;
+
+        strong {
+            font-size: 34px;
+            text-transform: uppercase;
+        }
+    }
+
+    .block.related .block-actions {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 40%;
+        left: -25px;
+
+        button.owl-prev,
+        button.owl-next {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: @autostore_color-alizarin;
+            border-radius: 50%;
+        }
+
+        .owl-prev {
+            left: 0;
+        }
+
+        .owl-next {
+            right: -40px;
+        }
+    }
+
+    .sidebar .owl-nav,
+    .sidebar .owl-dots {
+        display: none;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+    .page-main .columns {
+        display: flex;
+    }
+
+    .products-upsell .owl-stage {
+        display: none;
+    }
+
+    .sidebar .sidebar-banner {
+        text-align: center;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .products-upsell .owl-stage {
+        display: none;
+    }
+
+    .sidebar .sidebar-banner {
+        text-align: center;
+    }
+}
