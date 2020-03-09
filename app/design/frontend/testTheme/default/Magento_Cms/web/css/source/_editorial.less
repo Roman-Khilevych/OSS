@@ -1,0 +1,183 @@
+//
+//  Variables
+//  _____________________________________________
+
+@editorial-main-column__width: 50%;
+@editorial-main-title__font-size: @font-size__xl;
+@card-subtitle__font-size: @font-size__xs;
+@card-text__font-size: @font-size__base;
+@card-note__font-size: @font-size__note;
+@card-note__font-size__xs: @font-size__note__xs;
+@card-link__font-size: @font-size__xs;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    #maincontent {
+        padding: 0;
+
+        .columns .column.main {
+            padding-bottom: 0;
+        }
+    }
+
+    .editorial {
+        &-wrapper {
+            width: 100%;
+            padding: 0 32px;
+            box-sizing: border-box;
+        }
+
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+            padding-bottom: 24px;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__column {
+            padding: 0 10px;
+            width: @editorial-main-column__width;
+        }
+    }
+
+    .editorial__content {
+        &__right-container {
+            display: inline-block;
+
+            .editorial__content__card {
+                position: relative;
+            }
+
+            .card__content__text {
+                padding: 3px 84px 10px;
+            }
+        }
+
+        &__left-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .editorial__content__card {
+                display: inline-block;
+                width: calc(~'50% - 12px');
+            }
+        }
+    }
+
+    .card {
+        &__image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &__content {
+            padding: 21px 2px;
+            letter-spacing: .33px;
+            text-align: center;
+
+            &__subtitle {
+                font-size: @card-subtitle__font-size;
+                font-family: @font-family__Montserrat;
+                font-weight: 500;
+                line-height: 9px;
+                text-transform: uppercase;
+            }
+
+            &__title {
+                letter-spacing: -2.32px;
+                text-transform: uppercase;
+            }
+
+            &__text {
+                font-family: @font-family__Montserrat;
+                font-weight: 400;
+                line-height: 14px;
+                font-size: @card-text__font-size;
+                padding: 3px 0 10px;
+            }
+        }
+
+        &__note {
+            position: absolute;
+            top: 31px;
+            left: 21px;
+            width: 245px;
+            height: 116px;
+            font-family: @font-family__HelveticaInserat;
+            font-size: @card-note__font-size;
+            font-weight: 400;
+            line-height: 60px;
+            text-transform: uppercase;
+        }
+    }
+
+    a.card__content__link {
+        display: inline-block;
+        font-family: @font-family__Montserrat;
+        font-weight: 400;
+        font-size: @card-link__font-size;
+        text-decoration: underline;
+        text-transform: uppercase;
+        padding: 5px 0;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .editorial__content {
+        &__left-container.editorial__column {
+            flex-direction: column;
+            width: 100%;
+
+            .editorial__content__card {
+                width: 100%;
+            }
+        }
+
+        &__right-container.editorial__column .card__content__text {
+            padding: 3px 0 10px;
+            width: 100%;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .main .editorial-wrapper {
+        padding: 0 15px;
+    }
+
+    .editorial__content__card .card__note {
+        font-size: @card-note__font-size__xs;
+        width: 170px;
+        line-height: 40px;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+    .editorial {
+        &__content {
+            flex-direction: column;
+
+            .editorial__column {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
