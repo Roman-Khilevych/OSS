@@ -81,9 +81,9 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                         <div class="product-item-inner">
                             <div class="product actions product-item-actions"<?= strpos($pos, $viewMode . '-actions') ? $block->escapeHtmlAttr($position) : ''; ?>>
                                 <div data-role="add-to-links"
-                                     class="actions-secondary wishlist"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : '' ?>>
+                                     class="actions-secondary wishlist"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : ''; ?>>
                                     <?php if ($addToBlock = $block->getChildBlock('wishlist.parent')) : ?>
-                                        <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+                                        <?= $addToBlock->setProduct($_product)->getChildHtml(); ?>
                                     <?php endif; ?>
                                 </div>
                                 <div class="actions-primary"<?= strpos($pos, $viewMode . '-primary') ? $block->escapeHtmlAttr($position) : ''; ?>>
@@ -114,9 +114,9 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                     <?php endif; ?>
                                 </div>
                                 <div data-role="add-to-links"
-                                     class="actions-secondary compare"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : '' ?>>
+                                     class="actions-secondary compare"<?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : ''; ?>>
                                     <?php if ($addToBlock = $block->getChildBlock('addto')) : ?>
-                                        <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+                                        <?= $addToBlock->setProduct($_product)->getChildHtml(); ?>
                                     <?php endif; ?>
                                 </div>
                             </div>

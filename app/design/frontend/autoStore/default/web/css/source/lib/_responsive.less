@@ -49,6 +49,10 @@
     @media all and (max-width: @screen__laptop){
         .media-width('max', @screen__laptop);
     }
+
+    @media all and (max-width: (@screen__l - 1)){
+        .media-width('max', (@screen__l - 1));
+    }
 }
 
 //
@@ -70,6 +74,11 @@
     @media all and (min-width: @screen__l),
     print {
         .media-width('min', @screen__l);
+    }
+
+    @media all and (max-width: (@screen__l - 1)),
+    print {
+        .media-width('max', (@screen__l - 1));
     }
 
     @media all and (min-width: @screen__xl),
