@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="my-account-link" remove="true" />
+    <referenceBlock name="catalog.compare.link" remove="true"/>
+    <referenceBlock name="header" remove="true"/>
+    <referenceBlock name="form.subscribe" remove="true"/>
+    <referenceBlock name="report.bugs" remove="true"/>
+    <referenceBlock name="footer_links" remove="true"/>
+    <referenceBlock name="copyright" remove="true"/>
+    <move element="currency" destination="top.links" after="register-link"/>
+    <move element="store_language" destination="top.links" before="currency"/>
+    <move element="top.search" destination="header-wrapper" after="logo"/>
+    <move element="wish-list-link" destination="header-wrapper" after="top.search"/>
+    <move element="autostore.menu" destination="store.menu" after="catalog.topnav"/>
+    <referenceBlock name="logo">
+        <arguments>
+            <argument name="logo_file" xsi:type="string">images/magento-logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">179</argument>
+            <argument name="logo_img_height" xsi:type="number">48</argument>
+        </arguments>
+    </referenceBlock>
+    <block class="Magento\Cms\Block\Block" name="autostore.menu">
+        <arguments>
+            <argument name="block_id" xsi:type="string">autostore.menu</argument>
+        </arguments>
+    </block>
+    <referenceContainer name="footer">
+        <block class="Magento\Cms\Block\Block" name="autostore.footer">
+            <arguments>
+                <argument name="block_id" xsi:type="string">autostore.footer</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceContainer name="footer-container">
+        <block class="Magento\Cms\Block\Block" name="autostore.copyright">
+            <arguments>
+                <argument name="block_id" xsi:type="string">autostore.copyright</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceBlock name="sidebar.additional">
+        <block name="autostore.ads" class="Magento\Cms\Block\Block">
+            <arguments>
+                <argument name="block_id" xsi:type="string">autostore.ads</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+</page>
+
+
+

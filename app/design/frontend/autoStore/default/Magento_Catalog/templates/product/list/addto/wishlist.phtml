@@ -1,0 +1,17 @@
+<?php
+/**
+ *autoSTore default Catalog templates product list addto wishlist.
+ *@author Vladislav Romaniuk vlad96r@protonmial.com
+ *@copyright 2020 Vlromaniuk
+ */
+
+/** @var $block Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare */
+?>
+<a href="#"
+   class="action towishlist"
+   title="<?= $block->escapeHtml(__('Add to Wishlist')) ?>"
+   aria-label="<?= $block->escapeHtml(__('Add to Wishlist')) ?>"
+   data-post='<?= /* @noEscape */ $block->getCompareHelper()->getPostDataParams($block->getProduct()) ?>'
+   role="button">
+    <span><?= $block->escapeHtml(__('Add to Wishlist')) ?></span>
+</a>

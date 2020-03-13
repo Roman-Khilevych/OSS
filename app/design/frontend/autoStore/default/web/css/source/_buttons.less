@@ -1,8 +1,3 @@
-// /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Common
 //  _____________________________________________
@@ -26,6 +21,19 @@
     }
 
     .action.primary {
-        .lib-button-primary();
+        background-color: @autostore_color_mostly-black;
+        font-weight: 400;
+        width: 100%;
+        color: @autostore_color_mostly-white;
+        border-radius: 0;
+        font-family: @font-family__Rubik-Regular;
+        text-transform: uppercase;
+        line-height: 21px;
+        border: none;
+        border-left: 1px solid @autostore_color_Whisper;
+        border-right: 1px solid @autostore_color_Whisper;
+        &:hover{
+            background-color: @autostore_color_vivid-red;
+        }
     }
 }
