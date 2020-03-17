@@ -99,7 +99,7 @@
                     <div ng-controller="statusController">
                         <h3><?php echo $headerTitle . ' Status:' ;?></h3>
                         <div id="status">
-                            <?php echo $isUpdateInProgress ? "Update application is running" : ($pending ? "Update pending" : "Update application is not running") ?>
+                            <?php echo $isUpdateInProgress ? "Update application is running" : ($pending ? "Update pending" : "Update application is not running"); ?>
                         </div>
                         <br/>
                         <div class="message message-error" ng-show="error">

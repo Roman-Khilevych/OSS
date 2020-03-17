@@ -1,0 +1,29 @@
+<?php
+/*
+* Autostore autos Catalog product  view  custom_tubs template.
+*
+*@author Hrytsuk Walentun vgritsukm@gmail.com
+*@copyright 2020 zevsi
+*/
+?>
+
+<?php
+$helper = $this->helper('Magento\Catalog\Helper\Output');
+$product = $block->getProduct();
+$code = $block->getAtCode();
+$className = $block->getCssClass();
+$attributeLabel = $block->getAtLabel();
+$attributeType = $block->getAtType();
+$attributeAddAttribute = $block->getAddAttribute();
+
+if ($attributeLabel && $attributeLabel == 'default') {
+    $attributeLabel = $product->getResource()->getAttribute($code)->getFrontendLabel();
+}
+$attributeValue = $product->getResource()->getAttribute($code)->getFrontend()->getValue($product);
+?>
+
+<?php if ($attributeValue): ?>
+    <div class="packaging-content" <?php  echo $attributeAddAttribute;?>>
+        <?php echo $attributeValue; ?>
+    </div>
+<?php endif; ?>

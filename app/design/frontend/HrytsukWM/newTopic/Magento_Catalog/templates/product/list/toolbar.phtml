@@ -19,19 +19,19 @@
 <span><?=  __('Text 1111111');  ?></span>
 
 <?php if ($block->getCollection()->getSize()) :?>
-    <div class="toolbar toolbar-products" data-mage-init='<?= /* @noEscape */ $block->getWidgetOptionsJson() ?>'>
+    <div class="toolbar toolbar-products" data-mage-init='<?= /* @noEscape */ $block->getWidgetOptionsJson(); ?>'>
         <?php if ($block->isExpanded()) :?>
-            <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/viewmode.phtml')) ?>
+            <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/viewmode.phtml')); ?>
         <?php endif; ?>
 
-        <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>
+        <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')); ?>
 
-        <?= $block->getPagerHtml() ?>
+        <?= $block->getPagerHtml(); ?>
 
-        <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/limiter.phtml')) ?>
+        <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/limiter.phtml')); ?>
 
         <?php if ($block->isExpanded()) :?>
-            <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/sorter.phtml')) ?>
+            <?php include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/sorter.phtml')); ?>
         <?php endif; ?>
     </div>
 <?php endif ?>

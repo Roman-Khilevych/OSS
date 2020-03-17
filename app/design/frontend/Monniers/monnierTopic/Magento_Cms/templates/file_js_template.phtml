@@ -11,7 +11,7 @@
     {
         "*": {
             "Magento_Cms/js/customer-js": {
-                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
             }
         }
     }
@@ -27,7 +27,7 @@
     {
         ".customer-js-content": {
             "Magento_Cms/js/customer-js": {
-                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
             }
         }
     }

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" src_type="url"/>
+    </head>
+</page>

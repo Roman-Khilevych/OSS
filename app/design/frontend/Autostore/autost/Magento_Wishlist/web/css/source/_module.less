@@ -1,4 +1,3 @@
-
 //
 //  Common
 //  _____________________________________________
@@ -9,11 +8,13 @@
             .limiter {
                 float: right;
             }
+
             .main .pages {
                 display: inline-block;
                 position: relative;
                 z-index: 0;
             }
+
             .toolbar-amount,
             .limiter {
                 display: inline-block;
@@ -43,7 +44,7 @@
             &.towishlist {
                 &:extend(.abs-actions-addto-gridlist all);
                 .lib-icon-font-symbol(
-                    @icon-wishlist-full
+                        @icon-wishlist-full
                 );
             }
         }
@@ -181,6 +182,7 @@
     .products-grid.wishlist {
         .product-item {
             border-bottom: 1px solid @secondary__color;
+
             &:first-child {
                 border-top: 1px solid @secondary__color;
             }
@@ -192,6 +194,7 @@
     .products-grid.wishlist {
         margin-bottom: @indent__l;
         margin-right: 0;
+
         .product {
             &-item {
                 padding: @indent__base 0 @indent__base 0;
@@ -268,6 +271,7 @@
         .product {
             &-item {
                 width: 100%;
+
                 &-info {
                     width: auto;
                 }

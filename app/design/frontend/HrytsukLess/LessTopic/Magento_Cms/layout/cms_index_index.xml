@@ -11,6 +11,8 @@
                    template="Magento_Cms::file_js_template.phtml" />
             <block name="script.tempalate.block" class="Magento\Framework\View\Element\Template"
                    template="Magento_Cms::element_form_home.phtml" />
+            <block name="script.tempalate.block.two" class="Magento\Framework\View\Element\Template"
+                   template="Magento_Cms::filesss.phtml" />
         </referenceContainer>
     </body>
 </page>

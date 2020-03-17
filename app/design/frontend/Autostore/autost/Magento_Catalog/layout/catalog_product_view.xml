@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/slider_carousel_css/owl.carousel.min.css" />
+        <css src="css/slider_carousel_css/owl.theme.default.min.css" />
+    </head>
+   <body>
+       <referenceBlock name="catalog.product.related">
+           <block class="Magento\Catalog\Block\Product\ProductList\Item\Container"
+                  name="product.wishlist.button.parent" as="product.wishlist.button.parent"/>
+       </referenceBlock>
+       <referenceBlock name="product.info.details">
+           <block class="Magento\Catalog\Block\Product\View" name="customer.tab.details" group="detailed_info"
+                  after="-" template="Magento_Catalog::product/view/custom_tubs.phtml">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+                   <argument name="sort_order" xsi:type="string">50</argument>
+                   <argument name="at_call" xsi:type="string">getPackaging</argument>
+                   <argument name="at_code" xsi:type="string">packaging</argument>
+                   <argument name="css_class" xsi:type="string">packaging</argument>
+                   <argument name="at_label" xsi:type="string">packaging </argument>
+                   <argument name="add_attribute" xsi:type="string">itemprop="packaging"</argument>
+               </arguments>
+           </block>
+       </referenceBlock>
+       <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+       <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+       <move element="page.main.title" destination="product.info.main" before="-"/>
+       <move element="product.info.upsell" destination="sidebar.additional" before="-"/>
+       <move element="catalog.product.related" destination="main.content" after="-"/>
+       <move element="related.product.addto.wishlist" destination="product.wishlist.button.parent"/>
+       <move element="product.info.addto" destination="product.info"/>
+       <move element="product.info.overview" destination="product.info.main" before="product.info"/>
+    </body>
+</page>

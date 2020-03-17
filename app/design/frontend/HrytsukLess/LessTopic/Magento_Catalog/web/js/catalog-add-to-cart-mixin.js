@@ -8,17 +8,25 @@ define([
         return function (widget) {
             $.widget('mage.catalogAddToCart', widget, {
 
+                options: {
+                    classOprionFilter : '.swatch-opt-',
+                    classAudit : 'activeElement',
+                    parentProduct : '.product-item-details',
+                },
+
                 submitForm: function (form) {
                     var element = this.element,
                         numberProduct = form[0].product.value,
-                        classOpt = '.swatch-opt-' + numberProduct;
+                        classOpt = this.options.classOprionFilter + numberProduct,
+                        parentProductFilter = this.options.parentProduct,
+                        classAuditFilter = this.options.classAudit;
 
-                    if (element.hasClass('activeElement')) {
-                        element.removeClass('activeElement');
+                    if (element.hasClass(classAuditFilter)) {
+                        element.removeClass(classAuditFilter);
                         return this._super(form);
                     } else {
-                        element.addClass('activeElement');
-                        element.parents('.product-item-details').children(classOpt).toggle();
+                        element.addClass(classAuditFilter);
+                        element.parents(parentProductFilter).children(classOpt).toggle();
                         return false;
                     }
 

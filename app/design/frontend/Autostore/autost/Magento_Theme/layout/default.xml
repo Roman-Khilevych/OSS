@@ -4,8 +4,11 @@
     <body>
         <referenceContainer name="header.panel">
             <container name="list.language.currency" htmlClass="list-language-currency" htmlTag="ul" after="-">
-                <block name="currency.list" class="Magento\Framework\View\Element\Template"
-                       template="Magento_Theme::list-header/currency-list.phtml"/>
+                <block class="Magento\Cms\Block\Block" name="currency.header.top">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">currency_list_header</argument>
+                    </arguments>
+                </block>
             </container>
         </referenceContainer>
         <referenceBlock name="logo">

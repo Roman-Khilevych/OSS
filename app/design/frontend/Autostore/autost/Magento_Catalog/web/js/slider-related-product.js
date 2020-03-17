@@ -1,12 +1,11 @@
 define([
         'jquery',
-        'owl.carousel.min'
+        'Magento_Catalog/js/owl.carousel.min',
     ],
     function ($) {
         'use strict';
 
         return function (config, element) {
-            $(document).ready(function () {
                 $(element).owlCarousel({
                     margin: 20,
                     nav: true,
@@ -26,6 +25,5 @@ define([
                         }
                     }
                 });
-            });
         }
     });

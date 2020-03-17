@@ -1,6 +1,6 @@
 <?php
 /*
-* Monnier monnierTopic Cms cart file_js_template template.
+* HrytsukLess LessTopic Cms templates file_js_template template.
 *
 *@author Hrytsuk Walentun vgritsukm@gmail.com
 *@copyright 2020 zevsi
@@ -11,7 +11,7 @@
     {
         "*": {
             "Magento_Cms/js/customer-js": {
-                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
             }
         }
     }
@@ -26,14 +26,14 @@
     {
         ".customer-js-content": {
             "Magento_Cms/js/customer-js": {
-                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
             }
         }
     }
 
 </script>
 <div class="custom-js-text-container" data-mage-init='{"customJs": {
-        "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>",
+        "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()); ?>",
         "text": "my new text"}}'>
     <span class="custom-text">my text 2 base</span>
     <span class="custom-text-two">TExt Color base</span>

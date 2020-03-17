@@ -1,6 +1,6 @@
 <?php
 /*
- *Autostore theme one
+ *Autostore autost
  *
  *@author Hrytsuk  vgritsukm@gmail.com
  *@copyright 2020 zevsi

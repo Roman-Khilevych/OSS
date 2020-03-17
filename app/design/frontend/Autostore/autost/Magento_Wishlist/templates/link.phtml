@@ -10,7 +10,7 @@
 ?>
 <div class="link wishlist" data-bind="scope: 'wishlist'">
     <a <?= /* @noEscape */
-    $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()) ?>
+    $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()); ?>
         <!-- ko if: wishlist().counter -->
         <span data-bind="text: wishlist().counter" class="counter qty"></span>
         <!-- /ko -->
@@ -28,6 +28,5 @@
             }
         }
     }
-
 
 </script>

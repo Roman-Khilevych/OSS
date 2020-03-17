@@ -28,17 +28,17 @@
             }
         }
     }'>
-        <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
+        <?php $filtered = count($block->getLayer()->getState()->getFilters()); ?>
         <div class="block-title filter-title" data-count="<?= /* @noEscape */ $filtered ?>">
             <strong data-role="title"><?= $block->escapeHtml(__('Shop By')); ?></strong>
         </div>
         <div class="block-content filter-content">
-            <?= $block->getChildHtml('state') ?>
+            <?= $block->getChildHtml('state'); ?>
 
             <?php if ($block->getLayer()->getState()->getFilters()) : ?>
                 <div class="block-actions filter-actions">
-                    <a href="<?= $block->escapeUrl($block->getClearUrl()) ?>" class="action clear filter-clear">
-                        <span><?= $block->escapeHtml(__('Clear All')) ?></span>
+                    <a href="<?= $block->escapeUrl($block->getClearUrl()); ?>" class="action clear filter-clear">
+                        <span><?= $block->escapeHtml(__('Clear All')); ?></span>
                     </a>
                 </div>
             <?php endif; ?>
@@ -46,7 +46,7 @@
             <?php foreach ($block->getFilters() as $filter) : ?>
                 <?php if ($filter->getItemsCount()) : ?>
                     <?php if (!$wrapOptions) : ?>
-                        <h3><?=  __("Text over filters added via rewrite template") ?></h3>
+                        <h3><?=  __("Text over filters added via rewrite template"); ?></h3>
                         <div class="filter-options" id="narrow-by-list" data-role="content" data-mage-init='
                         {
                             "accordion":
@@ -61,7 +61,7 @@
                         endif; ?>
                     <div data-role="collapsible" class="filter-options-item">
                         <div data-role="title" class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
-                        <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
+                        <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter); ?></div>
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
