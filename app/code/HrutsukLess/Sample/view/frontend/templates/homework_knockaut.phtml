@@ -13,7 +13,7 @@
     }
 </script>
 
-<div class="title" data-bind="scope: 'simpleComponent'">
+<div class="wrapper" data-bind="scope: 'simpleComponent'">
     <h3 data-bind="text: label"></h3>
   <table>
       <tr>
@@ -36,6 +36,18 @@
       </tr>
       <!-- /ko-->
   </table>
+    <div class="final-result">
+        <div>
+         <span>
+             <!-- ko i18n: 'Additional change' -->  <!-- /ko -->
+             <!-- ko text: additional_charge -->  <!-- /ko -->
+        </span> </br>
+            <span style="font-weight: 900">
+            <!-- ko i18n: 'Total' --><!-- /ko -->
+                <!-- ko text: total($data) --> <!-- /ko -->
+         </span>
+        </div>
+    </div>
     <button type="button" class="action" data-trigger="trigger">
         <span data-bind="i18n: 'Add Item'"></span>
     </button>
@@ -52,26 +64,15 @@
         }}">
         <div class="content">
             <form id="addItem" action="#" data-bind="submit: addItem">
-                <label for="name1" data-bind="i18n: 'Name'"></label>
-                <input type="text" name="nameItem">
-                <label for="qty1" data-bind="i18n: 'Qty'"></label>
-                <input type="number" name="qtyItem">
-                <label for="price1" data-bind="i18n: 'Price'"></label>
-                <input type="number" name="priceItem">
+                <label for="name" data-bind="i18n: 'Name'"></label>
+                <input id="name" type="text" name="nameItem">
+                <label for="qty" data-bind="i18n: 'Qty'"></label>
+                <input id="qty" type="number" name="qtyItem">
+                <label for="price" data-bind="i18n: 'Price'"></label>
+                <input id="price" type="number" name="priceItem">
                 <button type="submit">Add Message</button>
             </form>
         </div>
     </div>
 </div>
-<div data-bind="scope: 'simpleComponent'">
-    <div>
-         <span>
-             <!-- ko i18n: 'Additional change' -->  <!-- /ko -->
-             <!-- ko text: additional_charge -->  <!-- /ko -->
-        </span> </br>
-        <span style="font-weight: 900">
-            <!-- ko i18n: 'Total' --><!-- /ko -->
-            <!-- ko text: total($data) --> <!-- /ko -->
-         </span>
-    </div>
-</div>
+

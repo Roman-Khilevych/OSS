@@ -1,6 +1,6 @@
 <?php
 /*
- *HrytsukLess lessTopic theme registration.
+ *HrytsukLess Sample module registration.
  *
  *@author Hrytsuk  vgritsukm@gmail.com
  *@copyright 2020 zevsi
