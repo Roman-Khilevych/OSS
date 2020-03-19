@@ -21,7 +21,7 @@ $titleRight = $block->hasData("title-bloc-right") ? $block->getData("title-bloc-
 <div class="block-cart">
   <div class="images-cart">
       <a href="#" class="img-href">
-          <img src="<?= $block->getViewFileUrl('Magento_Cms::images/' . $nameImg) ?>" alt="<?= $altImg ?>">
+          <img src="<?= $block->getViewFileUrl('Magento_Cms::images/' . $nameImg); ?>" alt="<?= $altImg ?>">
           <?php if ($block->hasData("title-bloc-right")) : ?>
               <span class="bloc-right-title"><?= $titleRight ?></span>
           <?php endif; ?>

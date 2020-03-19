@@ -1,0 +1,29 @@
+<?php
+/*
+ *HrytsukLess lessTopic LayeredNavigation layer filter_price_slider template.
+ *
+ *@author Hrytsuk Walentun vgritsukm@gmail.com
+ *@copyright 2020 zevsi
+ */
+?>
+
+<div class="slider-range-price">
+    <div id="slider-range"></div>
+    <form name="priceForm" action="#" class="form-slider-ui input-renge">
+        <label class="amount_one">
+            <input type="text" class="one-input-ui" id="amount1">
+        </label>
+        <label class="amount_two">
+            <input type="text" class="two-input-ui" id="amount2">
+        </label>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+               {
+                   ".slider-range-price": {
+                   "Magento_Catalog/js/slider-ua-price": {}
+                    }
+               }
+
+</script>

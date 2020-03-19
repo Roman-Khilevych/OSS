@@ -1,0 +1,65 @@
+<?php
+/*
+ *HrytsukLess lessTopic LayeredNavigation layer view template.
+ *
+ *@author Hrytsuk Walentun vgritsukm@gmail.com
+ *@copyright 2020 zevsi
+ */
+?>
+<?php
+/**
+ * Category layered navigation
+ *
+ * @var $block \Magento\LayeredNavigation\Block\Navigation
+ */
+?>
+
+<?php if ($block->canShowBlock()) : ?>
+    <div class="block filter">
+        <div class="block-title filter-title">
+            <strong><?= $block->escapeHtml(__('Shop By')); ?></strong>
+        </div>
+
+        <div class="block-content filter-content">
+            <?= $block->getChildHtml('state'); ?>
+
+            <?php if ($block->getLayer()->getState()->getFilters()) : ?>
+                <div class="block-actions filter-actions">
+                    <a href="<?= $block->escapeUrl($block->getClearUrl()); ?>"
+                       class="action clear filter-clear"><span><?= $block->escapeHtml(__('Clear All')); ?></span></a>
+                </div>
+            <?php endif; ?>
+            <?php $wrapOptions = false; ?>
+            <?php foreach ($block->getFilters() as $filter) : ?>
+        <?php if (!$wrapOptions) : ?>
+            <strong role="heading" aria-level="2"
+                    class="block-subtitle filter-subtitle"><?= $block->escapeHtml(__('Shopping Options')); ?></strong>
+            <dl class="filter-options" id="narrow-by-list" data-mage-init='{
+                                                                 "accordion":{
+                                                                 "active": [0,1,2,3,4,5,6,7,8,9,10],
+                                                                "collapsible": true,
+                                                                "openedState": "active",
+                                                                "multipleCollapsible": true
+                                                            }}'>
+                <?php $wrapOptions = true;
+                endif; ?>
+                <?php if ($filter->getItemsCount()) : ?>
+                    <dt data-role="collapsible" role="heading" aria-level="3"
+                        class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?></dt>
+                    <dd data-role="content" class="filter-options-content">
+                        <?php if ($filter->getName() == 'Price') : ?>
+                            <?= /* @noEscape */ $block->getChildHtml('price.filter')?>
+                        <?php else : ?>
+                            <?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter); ?>
+                        <?php endif; ?>
+                    </dd>
+                <?php endif; ?>
+                <?php endforeach; ?>
+                <?php if ($wrapOptions) : ?>
+            </dl>
+        <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
+

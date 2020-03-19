@@ -1,0 +1,78 @@
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "simpleComponent": {
+                        "component": "HrutsukLess_Sample/js/homework_knocaut",
+                        "base_url": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<div class="wrapper" data-bind="scope: 'simpleComponent'">
+    <h3 data-bind="text: label"></h3>
+  <table>
+      <tr>
+          <th data-bind="i18n: 'Currency to'"></th>
+          <th data-bind="i18n: 'Qty'"></th>
+          <th data-bind="i18n: 'Price'"></th>
+          <th data-bind="i18n: 'Total'"></th>
+      </tr>
+      <!-- ko foreach: items -->
+      <tr>
+          <td data-bind="text: name"></td>
+          <td>
+              <button data-bind="click: $parent.addQuantity.bind($parent)">+</button>
+              <span data-bind="text: qty"></span>
+              <button data-bind="click: $parent.subtractAmount.bind($parent)">-</button>
+          </td>
+          <td data-bind="text: price"></td>
+          <td data-bind="text: $parent.rowTotal($data)"></td>
+          <td><button data-bind="click: $parent.removeItems.bind($parent)">Remove</button></td>
+      </tr>
+      <!-- /ko-->
+  </table>
+    <div class="final-result">
+        <div>
+         <span>
+             <!-- ko i18n: 'Additional change' -->  <!-- /ko -->
+             <!-- ko text: additional_charge -->  <!-- /ko -->
+        </span> </br>
+            <span style="font-weight: 900">
+            <!-- ko i18n: 'Total' --><!-- /ko -->
+                <!-- ko text: total($data) --> <!-- /ko -->
+         </span>
+        </div>
+    </div>
+    <button type="button" class="action" data-trigger="trigger">
+        <span data-bind="i18n: 'Add Item'"></span>
+    </button>
+    <div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Title Form',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: jQuery.mage.__('Submit'),
+                class: 'action'
+            }]
+        }}">
+        <div class="content">
+            <form id="addItem" action="#" data-bind="submit: addItem">
+                <label for="name" data-bind="i18n: 'Name'"></label>
+                <input id="name" type="text" name="nameItem">
+                <label for="qty" data-bind="i18n: 'Qty'"></label>
+                <input id="qty" type="number" name="qtyItem">
+                <label for="price" data-bind="i18n: 'Price'"></label>
+                <input id="price" type="number" name="priceItem">
+                <button type="submit">Add Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+

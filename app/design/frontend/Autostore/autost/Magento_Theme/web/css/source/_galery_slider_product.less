@@ -1,0 +1,78 @@
+& when (@media-common = true) {
+    .fotorama__stage {
+        box-sizing: border-box;
+        border: 1px solid @autostore-color-line;
+        margin-bottom: 10px;
+    }
+
+    .fotorama__nav-wrap {
+        .fotorama__thumb {
+            background-color: @autostore-color-line;
+        }
+
+        .fotorama__thumb-border {
+            border-color: @autostore-color-efect;
+            background-image: none;
+        }
+
+        .fotorama__thumb__arr {
+            .flex-element-center();
+            border: 1px solid @autostore-link-silver;
+            background-color: @autostore-color-white;
+            position: absolute;
+            cursor: pointer;
+            width: 27px;
+            height: 49px;
+            outline: 0;
+            transform: translateY(50%);
+
+            &:hover {
+                background-color: @autostore-color-efect;
+                border-color: @autostore-color-efect;
+            }
+
+            .fotorama__thumb--icon {
+                .flex-element-center();
+                background-image: none;
+                height: 100%;
+                padding-bottom: 0;
+                .lib-icon-font(
+                    @icon-down,
+                    @font-icon-blanc-theme,
+                    @_icon-font-size: @font-size-autostore-extra-large,
+                    @_icon-font-line-height: 23px,
+                    @_icon-font-color: @autostore-link-silver,
+                    @_icon-font-margin : 0,
+                    @_icon-font-vertical-align: center,
+                    @_icon-font-display: flex
+                );
+
+                &::before {
+                    overflow: visible;
+                }
+
+                &:hover {
+                    &::before {
+                        color: @autostore-color-white;
+                    }
+                }
+            }
+
+            &.fotorama__thumb__arr--left {
+                .fotorama__thumb--icon {
+                    &::before {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            &.fotorama__thumb__arr--right {
+                .fotorama__thumb--icon {
+                    &::before {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+}

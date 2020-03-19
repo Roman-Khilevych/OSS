@@ -18,18 +18,18 @@ $altImg = $block->hasData("img-name") ? $block->getData("img-name") : '';
 
 <?= __('Text to template'); ?>
 
-<?= $block->getChildHtml("home.child.bloc") ?>
+<?= $block->getChildHtml("home.child.bloc"); ?>
 <?= $string1?>
 
 <?php if($block->hasData('bul-argument') && $block->getData('bul-argument')) : ?>     <!--Якщо є бульове значення і воно дорівнює true виводми блок -->
 <div>
     <?= $string2 ?>
-    <a href=<?= $linkIndex?> ><?= __("Link Index") ?></a>
+    <a href=<?= $linkIndex?> ><?= __("Link Index"); ?></a>
     <p><?= $string2 ?></p>
-    <img src=" <?= $block->getViewFileUrl('images/logos.png') ?>" alt="<?= __('alt'); ?>">    <!-- Виводимо картинку -->
+    <img src=" <?= $block->getViewFileUrl('images/logos.png'); ?>" alt="<?= __('alt'); ?>">    <!-- Виводимо картинку -->
 
     <?php if ($block->hasData("img-name")) : ?>
-    <img src=" <?= $block->getViewFileUrl('images/' . $altImg) ?>" alt="<?= $altImg ?>">    <!-- Виводимо картинку за допомогою  getViewFileUrl беремо значення у аргумента-->
+    <img src=" <?= $block->getViewFileUrl('images/' . $altImg); ?>" alt="<?= $altImg ?>">    <!-- Виводимо картинку за допомогою  getViewFileUrl беремо значення у аргумента-->
     <?php endif; ?>
 
 </div>
