@@ -1,6 +1,7 @@
 <?php
 /**
  * TestJs default theme registration
+ *
  * @author Yuri Chlek yurichhlek@gmail.com
  * @copyright 2020 Chlek
  */

@@ -25,7 +25,7 @@ define(['ko', 'jquery'], function (ko, $) {
             },
             reduceQty: function (item) {
                 var indexItem = this.items.indexOf(item);
-                return (item.qty <= 0) ? 0 : this.items.splice(indexItem, 1, {
+                return (item.qty) ? 0 : this.items.splice(indexItem, 1, {
                     name: item.name,
                     qty: --item.qty,
                     price: item.price

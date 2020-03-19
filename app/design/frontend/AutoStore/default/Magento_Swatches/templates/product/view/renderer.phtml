@@ -1,16 +1,18 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * AutoStore default Swatches product view renderer template
+ *
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
  */
 ?>
 
 <?php
-/** @var $block \Magento\ConfigurableProduct\Block\Product\View\Type\Configurable*/
-$_product    = $block->getProduct();
+/** @var $block \Magento\ConfigurableProduct\Block\Product\View\Type\Configurable */
+$_product = $block->getProduct();
 $_attributes = $block->decorateArray($block->getAllowAttributes());
 ?>
-<?php if ($_product->isSaleable() && count($_attributes)) :?>
+<?php if ($_product->isSaleable() && count($_attributes)) : ?>
     <?php foreach ($_attributes as $_attribute) : ?>
         <div class="field configurable required">
             <label class="label" for="attribute<?= $block->escapeHtmlAttr($_attribute->getAttributeId()); ?>">
@@ -31,7 +33,8 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
         {
             "#product_addtocart_form": {
                 "configurable": {
-                    "spConfig": <?= /* @noEscape */ $block->getJsonConfig(); ?>,
+                    "spConfig": <?= /* @noEscape */
+        $block->getJsonConfig(); ?>,
                     "gallerySwitchStrategy": "<?= $block->escapeJs($block->getVar(
             'gallery_switch_strategy',
             'Magento_ConfigurableProduct'
@@ -43,4 +46,4 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
             }
         }
     </script>
-<?php endif;?>
+<?php endif; ?>
