@@ -99,11 +99,11 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                                 <input type="hidden"
                                                        name="product"
                                                        value="<?= /* @noEscape */
-                                                       $postParams['data']['product'] ?>">
+                                                       $postParams['data']['product']; ?>">
                                                 <input type="hidden" name="<?= /* @noEscape */
                                                 Action::PARAM_NAME_URL_ENCODED ?>"
                                                        value="<?= /* @noEscape */
-                                                       $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                                       $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
                                                 <?= $block->getBlockHtml('formkey'); ?>
                                                 <button type="submit"
                                                         title="<?= $block->escapeHtmlAttr(__('Add to Cart')); ?>"

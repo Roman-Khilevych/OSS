@@ -29,8 +29,7 @@
                            data-toggle="trigger"
                            href="#<?= $block->escapeUrl($alias); ?>"
                            id="tab-label-<?= $block->escapeHtmlAttr($alias); ?>-title">
-                            <?= /* @noEscape */
-                            $label ?>
+                            <?= /* @noEscape */ $label; ?>
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -48,8 +47,7 @@
                     <div class="data item content"
                          aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias); ?>-title"
                          id="<?= $block->escapeHtmlAttr($alias); ?>" data-role="content">
-                        <?= /* @noEscape */
-                        $html ?>
+                        <?= /* @noEscape */ $html; ?>
                     </div>
                 <?php endforeach; ?>
             </div>

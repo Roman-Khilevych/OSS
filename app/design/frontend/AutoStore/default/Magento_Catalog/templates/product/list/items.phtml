@@ -227,8 +227,7 @@ $shuffle; ?>">
                                                             </button>
                                                         <?php else : ?>
                                                             <?php $postDataHelper = $this->helper(Magento\Framework\Data\Helper\PostHelper::class);
-                                                            $postData = $postDataHelper->getPostData($block->escapeUrl($block->getAddToCartUrl($item)), ['product' => $item->getEntityId()])
-                                                            ?>
+                                                            $postData = $postDataHelper->getPostData($block->escapeUrl($block->getAddToCartUrl($item)), ['product' => $item->getEntityId()]); ?>
                                                             <button class="action tocart primary"
                                                                     data-post='<?= /* @noEscape */
                                                                     $postData ?>'
@@ -279,12 +278,12 @@ $shuffle; ?>">
                 </div>
             </div>
         </div>
-        <?php endif; ?>
-        <script type="text/x-magento-init">
+<?php endif; ?>
+
+<script type="text/x-magento-init">
     {
         ".owl-carousel":{
             "owlInclude":{}
         }
     }
-
-        </script>
+</script>

@@ -36,5 +36,4 @@ define(
                 menu: $.mage.menu
             };
         };
-
     });
