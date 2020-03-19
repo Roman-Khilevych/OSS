@@ -1,8 +1,7 @@
 <?php
 
 /**
-
-autoStore module.
+autoStore Sample module registration.
 @author Vladislav Romaniuk vlad96r@protonmial.com
 @copyright 2020 Vlromaniuk
  */
