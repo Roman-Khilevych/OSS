@@ -4,75 +4,81 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                         "simpleComponent": {
-                            "component": "autoStore_Sample/js/sample-view-model_1",
-                            "base_url": "<?= $block->escapeJs($block->getBaseUrl());?>"
+                            "component": "autoStore_Sample/js/sample-view-model_2",
+                            "base_url": "<?= $block->escapeJs($block->getBaseUrl()); ?>"
                         }
                     }
                 }
             }
     }
+
 </script>
-
-
-<div class="classes" data-bind="scope: 'simpleComponent'">
-<!--    <h2 data-bind="text: title">-->
-<!---->
-<!--    </h2>-->
-<!--    <pre data-bind="text: JSON.stringify(config, null, 2)">
-
-    </pre>-->
-<!--    <pre data-bind="text: output"> </pre>-->
-    <div data-bind="scope: 'simpleComponent'">
-        <!--<ul data-bind="foreach: exchange_rates">
-            <li data-bind="text: $data"> </li>
-        </ul>-->
-
-        <!--<table>
-            <tr>
-                <td data-bind="i18n: 'currency_to'"> </td>
-                <td data-bind="i18n: 'rate'"> </td>
-            </tr>
-             ko foreach: exchange_rates
-            <tr>
-                <td data-bind="text: currency_to"> </td>
-                <td data-bind="text: rate"> </td>
-            </tr>
-            /ko
-        </table>-->
-        <h3>Title</h3>
-        <table>
-            <tr>
-                <td data-bind="i18n: 'Name'"> </td>
-                <td data-bind="i18n: 'Qty'"> </td>
-                <td data-bind="i18n: 'Price'"> </td>
-                <td data-bind="i18n: 'Total'"> </td>
-            </tr>
-            <!-- ko foreach: items -->
-            <tr>
-                <td data-bind="text: name"> </td>
-                <td data-bind="text: qty"> </td>
-                <td data-bind="text: price"> </td>
-                <td data-bind="text: $parent.rowTotal($data)"> </td>
-            </tr>
-            <!-- /ko -->
-        </table>
-        <div>
-            <div>
-                <span>
-                    <!-- ko i18n: 'Additional Charge:' -->
-                    <!--/ko-->
-                    <!-- ko text: additional_charge -->
-                    <!--/ko-->
-                </span>
-            </div>
-            <div>
-                <strong>
-                    <!-- ko i18n: 'Total:' -->
-                    <!-- /ko -->
-                    <!-- ko text: total() -->
-                    <!-- /ko -->
-                </strong>
-            </div>
-        </div>
+<div data-bind="scope: 'simpleComponent'">
+    <button type="button" class="action" data-trigger="trigger">
+        <span data-bind="i18n: 'Add item'"></span>
+    </button>
+    <div class="form-wrap" data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Popup title',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: jQuery.mage.__('Submit'),
+                class: 'action'
+            }]
+        }}">
+        <form id="add-item-form" action="" data-bind="submit: addItem">
+            <label for="">
+                <span><?=__("Enter item name"); ?></span>
+                <input type="text" name="itemName">
+            </label>
+            <label for="">
+                <span><?= __("Enter qty"); ?></span>
+                <input type="number" name="itemQty">
+            </label>
+            <label for="">
+                <span><?= __("Enter prise"); ?></span>
+                <input type="number" name="itemPrice">
+            </label>
+            <button type="submit" >Submit</button>
+        </form>
+    </div>
+    <h3 data-bind="text: label"> </h3>
+    <table>
+        <tr>
+            <th data-bind="i18n: 'Name'"> </th>
+            <th data-bind="i18n: 'Reduce qty'"> </th>
+            <th data-bind="i18n: 'Qty'"> </th>
+            <th data-bind="i18n: 'Enlarge qty'"> </th>
+            <th data-bind="i18n: 'Price'"> </th>
+            <th data-bind="i18n: 'Total'"> </th>
+            <th data-bind="i18n: 'Delete'"> </th>
+        </tr>
+        <!-- ko foreach: items -->
+        <tr>
+            <th data-bind="text: name"> </th>
+            <th><button data-bind="click: $parent.reduceQty.bind($parent)">-</button></th>
+            <th data-bind="text: qty"> </th>
+            <th><button data-bind="click: $parent.enlargeQty.bind($parent)">+</button></th>
+            <th data-bind="text: price"> </th>
+            <td data-bind="text: $parent.rowTotal($data)"> </td>
+            <td><button data-bind="click: function(){if($parent.items.length > 0){$parent.items.remove(this)}}">Delete</button></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <div>
+        <p>
+            <span>
+            <!-- ko i18n:  'Additional charge' --><!-- /ko -->:&nbsp;
+                <!-- ko text:  additional_charge($data) --><!-- /ko -->
+        </span>
+        </p>
+        <p>
+            <span>
+            <!-- ko i18n:  'Total' --><!-- /ko -->:&nbsp;
+                <!-- ko text:  total() --><!-- /ko -->
+        </span>
+        </p>
     </div>
 </div>
