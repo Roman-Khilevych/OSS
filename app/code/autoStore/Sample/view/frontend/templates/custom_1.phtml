@@ -1,0 +1,78 @@
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "simpleComponent": {
+                            "component": "autoStore_Sample/js/sample-view-model_1",
+                            "base_url": "<?= $block->escapeJs($block->getBaseUrl());?>"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+
+
+<div class="classes" data-bind="scope: 'simpleComponent'">
+<!--    <h2 data-bind="text: title">-->
+<!---->
+<!--    </h2>-->
+<!--    <pre data-bind="text: JSON.stringify(config, null, 2)">
+
+    </pre>-->
+<!--    <pre data-bind="text: output"> </pre>-->
+    <div data-bind="scope: 'simpleComponent'">
+        <!--<ul data-bind="foreach: exchange_rates">
+            <li data-bind="text: $data"> </li>
+        </ul>-->
+
+        <!--<table>
+            <tr>
+                <td data-bind="i18n: 'currency_to'"> </td>
+                <td data-bind="i18n: 'rate'"> </td>
+            </tr>
+             ko foreach: exchange_rates
+            <tr>
+                <td data-bind="text: currency_to"> </td>
+                <td data-bind="text: rate"> </td>
+            </tr>
+            /ko
+        </table>-->
+        <h3>Title</h3>
+        <table>
+            <tr>
+                <td data-bind="i18n: 'Name'"> </td>
+                <td data-bind="i18n: 'Qty'"> </td>
+                <td data-bind="i18n: 'Price'"> </td>
+                <td data-bind="i18n: 'Total'"> </td>
+            </tr>
+            <!-- ko foreach: items -->
+            <tr>
+                <td data-bind="text: name"> </td>
+                <td data-bind="text: qty"> </td>
+                <td data-bind="text: price"> </td>
+                <td data-bind="text: $parent.rowTotal($data)"> </td>
+            </tr>
+            <!-- /ko -->
+        </table>
+        <div>
+            <div>
+                <span>
+                    <!-- ko i18n: 'Additional Charge:' -->
+                    <!--/ko-->
+                    <!-- ko text: additional_charge -->
+                    <!--/ko-->
+                </span>
+            </div>
+            <div>
+                <strong>
+                    <!-- ko i18n: 'Total:' -->
+                    <!-- /ko -->
+                    <!-- ko text: total() -->
+                    <!-- /ko -->
+                </strong>
+            </div>
+        </div>
+    </div>
+</div>

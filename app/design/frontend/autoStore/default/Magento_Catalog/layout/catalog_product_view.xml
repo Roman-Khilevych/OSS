@@ -8,6 +8,7 @@
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <referenceBlock name="sale.reorder.sidebar" remove="true"/>
         <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <move element="catalog.product.related" destination="main.content" after="-"/>
         <move element="page.main.title" destination="product.info.main" before="-"/>
         <move element="product.info.overview" destination="product.info.main" after="product.info.price"/>
         <move element="product.info.upsell" destination="sidebar.additional"  before="-"/>
