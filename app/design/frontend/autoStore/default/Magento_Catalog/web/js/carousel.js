@@ -1,27 +1,29 @@
 define([
         'jquery',
-        'owlcarousel'
+        'Magento_Catalog/js/owl.carousel',
     ],
-    function () {
+    function ($) {
         'use strict';
 
-        jQuery(".owl-carousel").owlCarousel({
-            margin: 20,
-            nav: true,
-            items: 4,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                480: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                },
-                1024: {
-                    items: 4,
+        return function (config, element) {
+            $(element).owlCarousel({
+                margin: 20,
+                nav: true,
+                items: 4,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    480: {
+                        items: 2,
+                    },
+                    768: {
+                        items: 3,
+                    },
+                    1024: {
+                        items: 4,
+                    }
                 }
-            }
-        })
-});
+            });
+        }
+    });

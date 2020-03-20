@@ -3,7 +3,6 @@
     <body>
         <move element="page.main.title" destination="main" before="-"/>
         <referenceContainer name="content">
-            <block class="Magento\Catalog\Block\Category\View" name="category.products" template="Magento_Catalog::category/products.phtml">
                 <block class="Magento\Catalog\Block\Product\ListProduct" name="category.products.list" as="product_list" template="Magento_Catalog::product/list.phtml">
                     <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="category.product.addtowish" as="addtowish">
                         <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare"
@@ -15,14 +14,10 @@
                                name="category.product.addto.compare" as="compare"
                                template="Magento_Catalog::product/list/addto/compare.phtml"/>
                     </block>
-                    <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="product_list_toolbar" template="Magento_Catalog::product/list/toolbar.phtml">
-                        <block class="Magento\Theme\Block\Html\Pager" name="product_list_toolbar_pager"/>
-                    </block>
                     <action method="setToolbarBlockName">
                         <argument name="name" xsi:type="string">product_list_toolbar</argument>
                     </action>
                 </block>
-            </block>
         </referenceContainer>
     </body>
 </page>

@@ -1,10 +1,9 @@
 <?php
 
 /**
-
-autoStore theme.
-@author Vladislav Romaniuk vlad96r@protonmial.com
-@copyright 2020 Vlromaniuk
+ * autoStore default.
+ * @author Vladislav Romaniuk vlad96r@protonmial.com
+ * @copyright 2020 Vlromaniuk
  */
 
 
