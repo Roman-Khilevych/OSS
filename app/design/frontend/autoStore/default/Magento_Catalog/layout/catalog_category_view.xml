@@ -3,7 +3,7 @@
     <body>
         <move element="page.main.title" destination="main" before="-"/>
         <referenceContainer name="content">
-                <block class="Magento\Catalog\Block\Product\ListProduct" name="category.products.list" as="product_list" template="Magento_Catalog::product/list.phtml">
+                <block class="Magento\Catalog\Block\Product\ListProduct" name="category.products.list" template="Magento_Catalog::product/list.phtml">
                     <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="category.product.addtowish" as="addtowish">
                         <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare"
                                name="category.product.addto.wishlist" as="wishlist"
