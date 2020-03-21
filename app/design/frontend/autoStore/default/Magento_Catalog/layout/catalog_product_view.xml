@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.controls" htmlTag="div" htmlClass="product-info-controls" after="-"/>
+        </referenceContainer>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="catalog.product.related" destination="main.content" after="-"/>
+        <move element="product.info.upsell" destination="columns" before="div.sidebar.item"/>
+        <move element="product.info.options.wrapper.bottom" destination="product.info.controls" after="-"/>
+        <move element="product.info.extrahint" destination="product.info.controls" after="-"/>
+    </body>
+</page>

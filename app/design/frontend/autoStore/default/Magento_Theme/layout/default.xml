@@ -2,7 +2,10 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <update handle="default_head_blocks"/>
+    <head>
+        <css src="Magento_Theme::css/owl.carousel.min.css"/>
+        <css src="Magento_Theme::css/owl.theme.default.min.css"/>
+    </head>
     <body>
         <referenceBlock name="top.links">
             <block class="Magento\Cms\Block\Block" name="autoStore-currency-switcher">
