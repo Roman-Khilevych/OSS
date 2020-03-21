@@ -23,15 +23,15 @@
         }}">
         <form id="add-item-form" action="" data-bind="submit: addItem">
             <label for="">
-                <span><?=__("Enter item name"); ?></span>
+                <span data-bind="i18n: 'Enter item name'"></span>
                 <input type="text" name="itemName">
             </label>
             <label for="">
-                <span><?= __("Enter qty"); ?></span>
+                <span data-bind="i18n: 'Enter qty'"></span>
                 <input type="number" name="itemQty">
             </label>
             <label for="">
-                <span><?= __("Enter prise"); ?></span>
+                <span data-bind="i18n: 'Enter prise'"></span>
                 <input type="number" name="itemPrice">
             </label>
             <button type="submit" >Submit</button>

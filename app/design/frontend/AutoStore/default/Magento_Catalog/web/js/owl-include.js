@@ -5,8 +5,9 @@ define([
     function ($) {
         'use strict';
 
-        return function () {
-            $('.owl-carousel').owlCarousel({
+        return function (config, elem) {
+            console.log(arguments);
+            $(elem).owlCarousel({
                 loop: true,
                 margin: 0,
                 nav: true,
