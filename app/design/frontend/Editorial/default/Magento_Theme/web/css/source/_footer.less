@@ -1,0 +1,178 @@
+& when (@media-common = true) {
+    .page-footer {
+        background-color: @page-footer__background-color;
+        padding-bottom: 22px;
+
+        .footer.content {
+            max-width: @page_max-width;
+            padding: 25px 18px 25px 33px;
+            border-top: none;
+            margin-top: -3px;
+            position: relative;
+
+            .footer-section {
+                float: left;
+                box-sizing: border-box;
+
+                &.first {
+                    padding-right: 43px;
+
+                    .section-point {
+                        &:nth-child(4) {
+                            margin-bottom: 7px;
+                        }
+                    }
+                }
+
+                &.second,
+                &.third {
+                    padding-right: 37px;
+                }
+            }
+
+            .section-point {
+                font-size: 11px;
+                color: @section-point__color;
+                letter-spacing: 0.33px;
+                font-family: @font-family__montserrat;
+
+                &:not(:first-child) {
+                    margin-bottom: 1px;
+                }
+
+                .section-title {
+                    font-weight: @section-title__font-weight;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    padding: 0;
+                    margin-bottom: 18px;
+                    margin-top: 2px;
+                    font-size: 11px;
+                }
+
+                & > a {
+                    color: @link_color;
+                }
+            }
+        }
+
+        .newsletter {
+            &.block {
+                width: 262px;
+                margin-top: -3px;
+
+                .label {
+                    position: relative;
+                    overflow: visible;
+                    display: inline-block;
+                    width: 100%;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    font-weight: 600;
+                    letter-spacing: 0.33px;
+                    font-family: Montserrat;
+                    margin-bottom: 3px;
+                    height: auto;
+                }
+            }
+
+            .field {
+                .control {
+                    &::before {
+                        display: none;
+                    }
+
+                    input {
+                        .lib-form-fieldset(
+                            @_border: none,
+                            @_padding: @input__padding,
+                            @_margin: @input__margin
+                        );
+                        border-bottom: @input__border;
+                        background-color: @input__background-color;
+                        font-size: @input__font-size;
+                        letter-spacing: .5px;
+                    }
+
+                }
+            }
+
+            .actions {
+                display: block;
+                margin: 17px 0 0 2px;
+
+                .action {
+                    &.subscribe {
+                        .lib-button-primary(
+                            @_button-background: @action__background-color,
+                            @_button-color: @action__color,
+                            @_button-border: @action__border,
+                            @_button-font-weight: @action__font-weight,
+                            @_button-font-size: @action__font-size,
+                            @_button-background-hover: @action__background-color,
+                            @_button-border-hover: @action__border-hover
+                        );
+
+                        letter-spacing: 0.33px;
+                        padding: 6px 15px;
+                        width: 128px;
+                        border-radius: 0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__tablet) {
+    .footer-section {
+        width: 25%;
+        box-sizing: border-box;
+    }
+    .footer.content {
+        .footer-section {
+            &.first,
+            &.second,
+            &.third,
+            &.fourth {
+                padding-right: 10px;
+            }
+        }
+
+        .block {
+            &.newsletter {
+                float: none;
+            }
+        }
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-footer {
+        .footer.content {
+            .footer-section {
+                width: 100%;
+                float: none;
+                text-align: center;
+
+                &.first,
+                &.second,
+                &.third,
+                &.fourth {
+                    padding: 20px 5px;
+                }
+
+                .section-point {
+                    font-size: 18px;
+
+                    .section-title {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<!--<div class="test-js-wrap" data-mage-init='{"Magento_Cms/js/costum-js": {"baseUrl": "<?/*= $block->escapeJs($block->getBaseUrl())  */?>"}}'>
+    <span class="test-js-child">&nbsp;</span>
+</div>
+-->
+
+<!--<script type="text/x-magento-init">
+    {
+        ".test-js-wrap":{
+            "Magento_Cms/js/costum-js":{
+                "baseUrl": "<?/*= $block->escapeJs($block->getBaseUrl())  */?>",
+                "text": "Hello"
+            }
+        }
+    }
+</script>-->
+
+<style>
+    .test-js-wrap span{
+        display: block;
+    }
+</style>
+
+<div class="test-js-wrap" data-mage-init='{"customJs": {"baseUrl": "<?= $block->escapeJs($block->getBaseUrl())  ?>"}}'>
+    <span class="test-js-child">Test</span>
+    <span class="test-js-child2">Test</span>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".test-js-wrap":{
+            "customJs":{
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl())  ?>",
+                "text": "Hello2222",
+                "color": "green"
+            }
+        }
+    }
+</script>

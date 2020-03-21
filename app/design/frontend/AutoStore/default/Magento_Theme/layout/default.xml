@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">179</argument>
+                <argument name="logo_img_height" xsi:type="number">48</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="wish-list-link" template="Magento_Theme::link.phtml"/>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="currency.choice" after="store_language">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">currency_choice</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="catalog.topnav">
+            <block class="Magento\Cms\Block\Block" name="auto.store.menu.right" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">autostore_menu_right</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer.auto.store" after="store_switcher">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">auto_store_footer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Cms\Block\Block" name="advertising.auto.store" after="wishlist_sidebar">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">advertising_cms_block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="store_language" destination="header.panel" after="top.links"/>
+        <move element="wish-list-link" destination="header-wrapper" after="minicart"/>
+        <move element="page.main.title" destination="content" before="category.products"/>
+        <move element="sidebar.additional" destination="div.sidebar.main" after="sidebar.main"/>
+        <move element="copyright" destination="footer-container" after="footer"/>
+    </body>
+</page>

@@ -1,0 +1,95 @@
+<?php
+/**
+ * AutoStore Sample my-template template
+ *
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
+ */
+?>
+<!-- KO tasks -->
+<!--<span><? /*=__("Hello world")*/ ?></span>
+<div class="" data-bind="scope: 'simpleComponent'">
+    <h2 data-bind="text: title"><? /*=__("Hello magento)")*/ ?></h2>
+    <h2 data-bind="text: prise"></h2>
+    <h2 data-bind="text: base_url"></h2>
+    <pre data-bind="text: JSON.stringify(config, null, 2)"></pre>
+    <pre data-bind="text: output"></pre>
+</div>-->
+
+<!--<div class="array-test-ko" data-bind="scope: 'simpleComponent'">-->
+<!--<ul data-bind="foreach: exchange_rates">
+    <li data-bind="text: $data"></li>
+</ul>-->
+<!--<table data-bind="foreach: exchange_rates">
+    <tr>
+        <td data-bind="text: currency_to"></td>
+        <td data-bind="text: rate"></td>
+    </tr>
+</table>-->
+<!--</div>-->
+
+<!--<div class="array-test-ko" data-bind="scope: 'simpleComponent'">
+    <table>
+        <tr>
+            <th data-bind="i18n: 'Currency to'"></th>
+            <th data-bind="i18n: 'rate'"></th>
+        </tr>-->
+
+<!-- <tr>
+     <td data-bind="text: currency_to"></td>
+     <td data-bind="text: rate"></td>
+ </tr>-->
+
+<!--    </table>
+</div>-->
+
+<div class="array-test-ko" data-bind="scope: 'simpleComponent'">
+    <h3 data-bind="text: label"></h3>
+    <table>
+        <tr>
+            <th data-bind="i18n: 'Name'"></th>
+            <th data-bind="i18n: 'Qty'"></th>
+            <th data-bind="i18n: 'Price'"></th>
+            <th data-bind="i18n: 'Total'"></th>
+
+        </tr>
+        <!-- ko foreach: items -->
+        <tr>
+            <th data-bind="text: name"></th>
+            <th data-bind="text: qty"></th>
+            <th data-bind="text: price"></th>
+            <td data-bind="text: $parent.rowTotal($data)"></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <div>
+        <p>
+            <span>
+            <!-- ko i18n:  'Additional charge' --><!-- /ko -->:&nbsp;
+                <!-- ko text:  additional_charge --><!-- /ko -->
+        </span>
+        </p>
+        <p>
+            <span>
+            <!-- ko i18n:  'Total' --><!-- /ko -->:&nbsp;
+                <!-- ko text:  total() --><!-- /ko -->
+        </span>
+        </p>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "simpleComponent": {
+                        "component": "AutoStore_Sample/js/sample-view-model_1",
+                        "base_url": "<?= $block->escapeJs($block->getBaseUrl()); ?>",
+                         "prise": "100500"
+                    }
+                }
+            }
+        }
+    }
+</script>

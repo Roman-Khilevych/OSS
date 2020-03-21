@@ -1,0 +1,20 @@
+<?php
+/**
+ * AutoStore default Bundle catalog product view customize template
+ *
+ * @author Yuri Chlek yurichhlek@gmail.com
+ * @copyright 2020 Chlek
+ */
+?>
+
+<?php $_product = $block->getProduct(); ?>
+<?php if ($_product->isSaleable() && $block->hasOptions()) : ?>
+    <div class="bundle-actions">
+        <button id="bundle-slide"
+                class="action primary customize"
+                type="button">
+            <span><?= $block->escapeHtml(__('Customize and Add to Cart')); ?></span>
+        </button>
+        <?= $block->getBlockHtml('product.info.addto'); ?>
+    </div>
+<?php endif;?>
