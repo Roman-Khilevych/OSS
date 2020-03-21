@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Catalog::css/owl.carousel.css"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.social" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <move element="catalog.product.related" destination="main.content" after="-"/>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.overview" destination="product.info.main" after="product.info.price"/>
+        <move element="product.info.upsell" destination="sidebar.additional"  before="-"/>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="custom.tab" as="custom_tab" template="product/view/custom_tab.phtml" group="detailed_info">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
