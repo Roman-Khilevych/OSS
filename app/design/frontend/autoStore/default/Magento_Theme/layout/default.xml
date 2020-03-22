@@ -2,10 +2,6 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <css src="Magento_Theme::css/owl.carousel.min.css"/>
-        <css src="Magento_Theme::css/owl.theme.default.min.css"/>
-    </head>
     <body>
         <referenceBlock name="top.links">
             <block class="Magento\Cms\Block\Block" name="autoStore-currency-switcher">
@@ -28,6 +24,15 @@
                 </arguments>
             </block>
         </referenceBlock>
+        <referenceContainer name="columns">
+            <container name="div.sidebar.item" htmlTag="div" htmlClass="sidebar sidebar-item" after="div.sidebar.additional">
+                <block class="Magento\Cms\Block\Block" name="autoStore-sidebar-banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">autoStore-sidebar-banner</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
         <referenceContainer name="footer-container">
             <container name="footer-container-top" htmlTag="div" htmlClass="page-footer__content" before="footer">
                 <container name="footer.links" htmlTag="div" htmlClass="footer content top-block">
@@ -58,9 +63,19 @@
                 </container>
             </container>
         </referenceContainer>
+        <referenceBlock name="footer">
+            <container name="footer.copyright" htmlTag="div" htmlClass="copyright-wrapper" before="-">
+                <block class="Magento\Cms\Block\Block" name="autoStore-payment-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">autoStore-payment-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceBlock>
         <move element="store_language" destination="top.links" before="autoStore-currency-switcher"/>
         <move element="page.main.title" destination="content" before="category.products"/>
         <move element="catalog.compare.link" destination="header.actions"/>
+        <move element="copyright" destination="footer.copyright"/>
         <referenceBlock name="wish-list-link" remove="true"/>
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="store.links" remove="true"/>

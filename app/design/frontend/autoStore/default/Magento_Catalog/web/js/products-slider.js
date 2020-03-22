@@ -6,8 +6,9 @@ define([
         'use strict';
 
         return function (config, element) {
-            $(element).addClass('owl-carousel');
-            $(element).owlCarousel({
+            var target = $(element);
+            target.addClass('owl-carousel');
+            target.owlCarousel({
                 margin: 30,
                 nav: true,
                 items: 4,

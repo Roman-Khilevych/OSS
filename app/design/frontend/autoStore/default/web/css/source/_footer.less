@@ -123,7 +123,7 @@
             }
         }
 
-        .copyright {
+        & > .footer.content {
             margin: 0;
             .lib-typography(
                 @_color: @footer-copyright__text-color,
@@ -206,7 +206,7 @@
             }
         }
 
-        .copyright {
+        .copyright-wrapper {
             .copyright-container {
                 text-align: center;
             }
@@ -228,7 +228,7 @@
             }
         }
 
-        .copyright .payment-list {
+        .copyright-wrapper .payment-list {
             .flex-mixin();
             flex-wrap: wrap;
 
@@ -264,13 +264,13 @@
             width: 100%;
             padding: 0 @indent__m;
         }
+    }
 
-        & > .footer.content {
-            max-width: 100%;
-            box-sizing: border-box;
-        }
+    .page-wrapper .page-footer > .footer.content {
+        max-width: 100%;
+        box-sizing: border-box;
 
-        .footer.content .copyright > .copyright-wrapper {
+        .copyright-wrapper {
             width: 100%;
             margin: 0;
             padding: 0 12px;
