@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Catalog::css/owl.carousel.min.css"/>
+        <css src="Magento_Catalog::css/owl.theme.default.min.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.controls" htmlTag="div" htmlClass="product-info-controls" after="-"/>
+        </referenceContainer>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="customer.tab.details" as="custom_tab" group="detailed_info"
+                   after="-" template="Magento_Catalog::product/view/tab.custom.phtml">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+                    <argument name="sort_order" xsi:type="string">50</argument>
+                    <argument name="at_call" xsi:type="string">getPackaging</argument>
+                    <argument name="at_code" xsi:type="string">packaging</argument>
+                    <argument name="css_class" xsi:type="string">packaging</argument>
+                    <argument name="at_label" xsi:type="string">packaging </argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="packaging"</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="catalog.product.related" destination="main.content" after="-"/>
+        <move element="product.info.upsell" destination="columns" before="div.sidebar.item"/>
+        <move element="product.info.options.wrapper.bottom" destination="product.info.controls" after="-"/>
+        <move element="product.info.extrahint" destination="product.info.controls" after="-"/>
+    </body>
+</page>

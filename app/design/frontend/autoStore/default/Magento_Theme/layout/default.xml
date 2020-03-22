@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Magento\Cms\Block\Block" name="autoStore-currency-switcher">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">autoStore-currency-switcher</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">179</argument>
+                <argument name="logo_img_height" xsi:type="number">48</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="store.menu">
+            <block class="Magento\Cms\Block\Block" name="autoStore-nav-menu">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">autoStore-nav-menu</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="columns">
+            <container name="div.sidebar.item" htmlTag="div" htmlClass="sidebar sidebar-item" after="div.sidebar.additional">
+                <block class="Magento\Cms\Block\Block" name="autoStore-sidebar-banner">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">autoStore-sidebar-banner</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="footer-container-top" htmlTag="div" htmlClass="page-footer__content" before="footer">
+                <container name="footer.links" htmlTag="div" htmlClass="footer content top-block">
+                    <container name="" htmlTag="div" htmlClass="footer__content__contact-block">
+                        <block class="Magento\Cms\Block\Block" name="autoStore-contacts-block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">autoStore-contacts-block</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="" htmlTag="div" htmlClass="footer__content__links-block">
+                        <block class="Magento\Cms\Block\Block" name="autoStore-links-block1">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">autoStore-links-block1</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Cms\Block\Block" name="autoStore-links-block2">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">autoStore-links-block2</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Cms\Block\Block" name="autoStore-links-block3">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">autoStore-links-block3</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="footer">
+            <container name="footer.copyright" htmlTag="div" htmlClass="copyright-wrapper" before="-">
+                <block class="Magento\Cms\Block\Block" name="autoStore-payment-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">autoStore-payment-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceBlock>
+        <move element="store_language" destination="top.links" before="autoStore-currency-switcher"/>
+        <move element="page.main.title" destination="content" before="category.products"/>
+        <move element="catalog.compare.link" destination="header.actions"/>
+        <move element="copyright" destination="footer.copyright"/>
+        <referenceBlock name="wish-list-link" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="store.links" remove="true"/>
+        <referenceBlock name="store.settings" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+    </body>
+</page>

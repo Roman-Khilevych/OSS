@@ -49,20 +49,6 @@ module.exports = {
     }
 };
 module.exports = {
-    autoStore: {
-        area: 'frontend',
-        name: 'autoStore/default',
-        locale: 'en_US',
-        files: [
-            'css/styles-m',
-            'css/styles-l',
-            'css/email',
-            'css/email-inline'
-        ],
-        dsl: 'less'
-    }
-};
-module.exports = {
     testTheme: {
         area: 'frontend',
         name: 'testTheme/default',
@@ -76,3 +62,18 @@ module.exports = {
         dsl: 'less'
     }
 };
+module.exports = {
+    autoStore: {
+        area: 'frontend',
+        name: 'autoStore/default',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l',
+            'css/email',
+            'css/email-inline'
+        ],
+        dsl: 'less'
+    }
+};
+
