@@ -1,0 +1,97 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .toolbar.toolbar-products {
+    border: 1px solid @border-color__base;
+    background: @color-white-fog;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    .modes-mode {
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+
+    .modes-mode.active {
+      background: @button__background;
+      border: 1px solid @button__border;
+
+      &:before {
+        color: @autostore_input-icon-color;
+      }
+    }
+
+    .limiter {
+      display: block;
+    }
+
+    .toolbar-amount {
+      text-align: left;
+      flex-grow: 1;
+      padding: 0;
+    }
+
+    .toolbar-sorter {
+      position: relative;
+      margin-left: 50px;
+      padding: 0;
+
+      &::after {
+        content: @autostore-icon-chevron;
+        font-family: @autostore_icons-font-family;
+        font-weight: @font-weight__bolder;
+        right: 45px;
+        top: 10px;
+        font-size: 10px;
+        position: absolute;
+      }
+    }
+
+    .limiter-options,
+    .sorter-options {
+      border: 1px solid @border-color__base;
+      border-radius: 5px;
+      background-color: @color-white-fog;
+      padding: 5px 20px 4px 10px;
+      position: relative;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .control {
+      position: relative;
+
+      &::after {
+        .lib-font-awesome_autostore();
+        content: @autostore-icon-chevron;
+        right: 15px;
+        top: 10px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+  .page-main .columns .column.main .toolbar.toolbar-products {
+    display: none;
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .page-main .columns .column.main .toolbar.toolbar-products {
+    display: none;
+  }
+}

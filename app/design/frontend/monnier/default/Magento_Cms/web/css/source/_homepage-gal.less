@@ -1,0 +1,170 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  h2, h3, h6 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: @font-weight__bold;
+  }
+
+  .monnier-category-title {
+    font-size: @font-size_monnier_title;
+    margin: 1.8rem 0;
+    letter-spacing: .3rem;
+  }
+
+  .monnier-cart-title {
+    margin: 0;
+    font-size: @font-size_monnier_cart-title;
+    letter-spacing: .1rem;
+    font-family: @font-family__sackers-h-ghotic;
+  }
+
+  .logo-title {
+    font-family: @font-family__helvetica-roman;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    font-weight: @font-weight__bold;
+  }
+
+  .monnier-cart-subtitle {
+    letter-spacing: .15rem;
+    margin: 2rem 0 .4rem;
+  }
+
+  .page-wrapper .page-main {
+    max-width: @screen__xl;
+    padding: 0;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+
+  .editorial {
+    max-width: @screen__xl;
+    padding: 0 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    .left_side,
+    .right_side {
+      width: 50%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .images {
+        .monnier-cart-textcontent {
+          text-align: center;
+          padding: 0.9rem 1rem;
+          font-size: @font-size_monnier_smaller;
+          line-height: 1.5rem;
+          margin-bottom: .1rem;
+        }
+
+        .monnier-cart-link {
+          text-decoration: underline;
+          color: @product-name-link__color;
+          font-size: @font-size_monnier_content;
+          letter-spacing: .1rem;
+        }
+
+        .monnier-product-cart-image {
+          display: flex;
+          align-self: flex-start;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .images {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: calc(~"50% - 20px");
+    padding: 0 8px 28px 11px;
+  }
+
+  .right_side .images {
+    width: 100%;
+    position: relative;
+
+    .monnier-cart-textcontent {
+      padding: 10px 10%;
+    }
+  }
+
+  .image_block {
+    position: relative;
+
+    .hero_product {
+      position: absolute;
+      top: 32px;
+      left: 21px;
+      font-size: 67px;
+      text-transform: uppercase;
+      width: 260px;
+      line-height: 60px;
+    }
+  }
+
+  .image_content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+  .column.main {
+    .editorial {
+      flex-flow: column;
+      align-items: center;
+
+      .left_side,
+      .right_side {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .images {
+        width: calc(~'50% - 20px');
+        padding: 10px 10px 5px 10px;
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .columns {
+    .editorial {
+      .images {
+        width: calc(~"100% - 20px");
+      }
+
+      .left_side,
+      .right_side {
+        width: 100%;
+        align-items: center;
+      }
+
+      .image_block .hero_product {
+        font-size: 32px;
+      }
+    }
+  }
+}

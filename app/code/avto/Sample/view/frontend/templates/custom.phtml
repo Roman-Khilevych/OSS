@@ -1,0 +1,76 @@
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "simpleComponent": {
+                            "component": "avto_Sample/js/sample-view-model_1",
+                            "base_url": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                        },
+                        "simpleComponent": {
+                            "component": "avto_Sample/js/sample-view-model_2",
+                            "base_url": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+
+<!---->
+<!--<div class="classes" data-bind="scope: 'simpleComponent'">-->
+<!--    <h2 data-bind="text: title"></h2>-->
+<!--    <pre data-bind="text: JSON.stringify(config,null,2)"></pre>-->
+<!--    <pre data-bind="text: output"></pre>-->
+<!--</div>-->
+
+<!--<div class="" data-bind="scope: 'simpleComponent'">-->
+<!--    <ul data-bind="foreach:exchange_rates">-->
+<!--        <li data-bind="text: $data"></li>-->
+<!--    </ul>-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <th data-bind="i18n: 'Currency to'"></th>-->
+<!--            <th data-bind="i18n: 'Rate'"></th>-->
+<!--        </tr>-->
+<!--        <!-- ko foreach: exchange_rates -->-->
+<!--        <tr>-->
+<!--            <td data-bind="text: currency_to"></td>-->
+<!--            <td data-bind="text: rate"></td>-->
+<!--        </tr>-->
+<!--        <!-- /ko -->-->
+<!--    </table>-->
+<!--</div>-->
+
+<div class="" data-bind="scope: 'simpleComponent'">
+    <h3 data-bind="text:label"></h3>
+    <table>
+        <tr>
+            <th data-bind="i18n: 'name'"></th>
+            <th data-bind="i18n: 'qty'"></th>
+            <th data-bind="i18n: 'price'"></th>
+            <th data-bind="i18n: 'total'"></th>
+        </tr>
+        <!-- ko foreach: items -->
+        <tr>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: qty"></td>
+            <td data-bind="text: price"></td>
+            <td data-bind="text: $parent.rowTotal($data)"></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <div>
+    <!-- ko i18n: 'Additional charge:'-->
+    <!-- /ko -->
+    <!-- ko text: additional_charge -->
+    <!-- /ko -->
+    </div>
+    <div>
+        <strong>
+       <!-- ko i18n: 'total:'-->
+       <!-- /ko -->
+       <!-- ko text: total() --><!-- /ko -->
+        </strong>
+    </div>
+</div>

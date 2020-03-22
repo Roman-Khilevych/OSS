@@ -15,7 +15,7 @@ $hero_product = $block->hasData('hero_product') ? ($block->getData('hero_product
 <div class="images">
     <div class="image_block">
         <?php if ($image_name) : ?>
-            <img src="<?= $block->getViewFileUrl('images/' . $block->getData('img_name')); ?>" alt="<?= $block->getData('img_alt') ?>">
+            <img class="monnier-product-cart-image" src="<?= $block->getViewFileUrl('images/' . $block->getData('img_name')); ?>" alt="<?= $block->getData('img_alt') ?>">
         <?php endif;?>
         <?php if ($hero_product) : ?>
             <span class="hero_product"><?= $hero_product?></span>
@@ -23,14 +23,14 @@ $hero_product = $block->hasData('hero_product') ? ($block->getData('hero_product
     </div>
     <div class="image_content">
             <?php if ($image_subtitle) : ?>
-                <h6><?= $block->getData('img_subtitle')?></h6>
+                <h6 class="monnier-cart-subtitle"><?= $block->getData('img_subtitle')?></h6>
             <?php endif;?>
             <?php if ($image_title) : ?>
-                <h3><?= $block->getData('img_title')?></h3>
+                <h3 class="monnier-cart-title"><?= $block->getData('img_title')?></h3>
             <?php endif;?>
             <?php if ($image_text) : ?>
-                <p><?= $block->getData('img_text')?></p>
+                <p class="monnier-cart-textcontent"><?= $block->getData('img_text')?></p>
             <?php endif;?>
-        <a href="#"><?= __('link') ?></a>
+        <a href="#" class="monnier-cart-link"><?= __('link') ?></a>
     </div>
 </div>
